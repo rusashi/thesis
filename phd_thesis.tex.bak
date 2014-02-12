@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% A sample thesis using the cssethesis class
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Preamble
+%%
+
+\documentclass[a4paper,12pt,phdthesis,onehalfspace,oneside,openany,nocoursecode]{cssethesis}
+% * Include the option "pdflatex" above if you want to use pdflatex rather than
+% standard latex to compile your document
+% * Include the option "litreview" above if this is a literature review.
+% * Include the option "nocoursecode" so that the numerical course code is
+% suppressed after the course name.
+% * Include the option "oneside" if you don't want formatting for two-sided
+%   printing.
+% * Include option "thesisdraft" to get a timestamp and "Draft" message in
+%   the footer
+% * Include option "thesispsdraft" to get a timestamp and "Draft" message in
+%   the footer, along with a grey "DRAFT" in the margin. Note: this only
+%   works with latex, not pdflatex
+
+% Include "openany" to remove white pages before new chapters
+
+
+\usepackage[numbers, sort]{natbib}
+%\usepackage{natbib}% Use the natbib bibliography and citation package
+%\bibpunct{(}{)}{;}{a}{,}{,} % use more standard Harvard punctuation
+%\renewcommand{\cite}{\citep} % often a useful short-cut
+%\usepackage[centertags]{amsmath}
+
+\usepackage{amsthm,amsmath}
+%\usepackage{showlabels}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{algcompatible}
+%\usepackage{algpseudocode}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{newlfont}
+\usepackage{anysize}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage[pdftex,bookmarksnumbered,bookmarksopen,hyperindex,colorlinks,linkcolor=magenta,anchorcolor=red,citecolor=blue]{hyperref}%%%hyperref,dvipdfm,
+%backref to add links in the bibliography
+
+\hypersetup{linktocpage}%removes clickability from table of contents, only page numbers are clickable now
+
+%\usepackage[compact]{titlesec}
+%\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{}
+%\titlespacing*{\section}{0pt}{*0}{0pt}
+
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt} % optional
+%\fancyhead[L]{\nouppercase{\leftmark}}
+%\fancyhead[R]{\thepage}
+
+
+%\setlength{\headheight}{20pt}% adjust the value
+
+\renewcommand*{\arraystretch}{0.7} % multiplies the height of rows in tables by the specified number
+
+%\renewcommand\bibname{Bibliography}
+%\renewcommand\refname{Bibliography}
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{as}{Assumption}[chapter]
+\newtheorem{alg}{Algorithm}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\conv}{\mbox{conv}\,}
+\newcommand{\argmax}{\mbox{argmax}\,}
+\newcommand{\argmin}{\mbox{argmin}\,}
+
+\newcommand{\nid}{\noindent}
+
+
+
+\graphicspath{{figures/}}  %to be able to include graphs and pictures that are located in folder figures
+
+
+\numberwithin{equation}{chapter}%{section}
+
+
+% Definitions needed by the cssethesis class. See the documentation for
+% others
+\thesisauthor{Rustam Issabekov}
+\thesisauthorlastname{Issabekov}
+%\thesisauthorpreviousdegrees{MMS} % Optional
+%\thesisdepartment{Caulfield School of Information Technology} % Optional.
+%                  Clayton School of Information Technology is the default
+\thesisauthorstudentid{12345678} % Needed for litreview
+%\thesisauthoremail{nargizsultanova\@@students.ballarat.edu.au} % Optional. Note that the @ is
+                                             % given as \@@. This is not
+                                             % necessary in normal LaTeX,
+                                             % but it is if you use the
+                                             % amsmath package - so why not
+                                             % get into the habit?
+
+%\thesismonth{July} % Optional. Current month is used if this is not set
+%\thesisyear{2002} % Optional. Current year is used if this is not set
+
+\thesistitle{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX} %%%in water management
+\thesissupervisor{XXXXX}
+%\thesissupervisoremail{a.bagirov\@@ballarat.edu.au} % Optional
+\thesisassocsupervisor{XXXX} % Optional
+\thesiscosupervisor{XXXX} % Optional
+%\thesisassocsupervisoremail{d.yost\@@ballarat.edu.au} % Optional
+%\thesisdedication{I luv youse all} % Optional
+
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
+
+% start the document
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Front matter
+%%
+\frontmatter                    % start the thesis front matter.
+
+\thesistitlepage                % Generate the title page.
+%\thesiscopyrightpage            % Generate the copyright page.
+%\thesisdedicationpage           % Generate a dedication page (optional)
+
+\onehalfspace
+
+\phantomsection
+\begin{thesisabstract}          % generate the abstract page.
+%%%%%   THE TEXT OF THE ABSTRACT %%%%%%%%
+\end{thesisabstract}
+
+\doublespacing
+
+\phantomsection
+\thesisdeclarationpage          % generate the declaration page (optional).
+
+
+
+\begin{thesisacknowledgments}   % generate the acknowledgements page (optional).
+%%%%%   THE TEXT OF THE ACKNOWLEDGEMENTS %%%%%%%%
+\end{thesisacknowledgments}
+
+\tableofcontents                % Generate a table of contents.
+\listoftables                   % Generate a list of tables (optional).
+\listoffigures                  % Generate a list of figures (optional).
+
+
+\cleardoublepage%was having a problem with page number in contents, this fixes it but creates a problem in hyperref
+\phantomsection% this fixes hyperref
+\addcontentsline{toc}{chapter}{List of Publications}
+\input{./Listofpub}
+%\include{Lisofpub}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Main matter
+%%
+
+\mainmatter                     % start the thesis body.
+
+%\chapter{Introduction}
+
+\cleardoublepage%was having a problem with page number in contents, this fixes it but creates a problem in hyperrefer
+\phantomsection % this fixes hyperrefer
+\addcontentsline{toc}{chapter}{Introduction}
+
+%\include{chapter1-background}
+
+\include{lit-review}
+
+%\include{empirical-eval}
+\include{methodology}
+%\include{single-policy}
+
+%\include{multiple-policy-eval}P
+
+%\include{Q-Steering}
+
+%\include{case-study}
+
+
+
+\cleardoublepage%was having a problem with page number in contents, this fixes it but creates a problem in hyperref
+\phantomsection% this fixes hyperref
+\addcontentsline{toc}{chapter}{Conclusions}
+\include{conclusions}
+
+
+
+\bibliographystyle{ubthesis}
+%\bibliographystyle{plainnat}
+
+\cleardoublepage%was having a problem with page number in contents, this fixes it but creates a problem in hyperref
+\phantomsection% this fixes hyperref
+
+\addcontentsline{toc}{chapter}{\textbf{References}}
+\bibliography{phdreferences}
+
+%\nocite{*}
+
+\appendix % all \chapter{..} commands after this will generate appendices
+
+%\chapter{Conclusion}
+%\label{app:example}
+%An appendix before the backmatter gets an automatically generated letter by
+%which it can be referred to. This is Appendix~\ref{app:example}.
+
+%\chapter{Simulation Source Code}
+%You may want to investigate the \texttt{lgrind} program and package if you
+%wish to include source code in your thesis
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Back matter
+%%
+
+\backmatter
+%\section*{Conclusion}         % start the thesis back matter
+%\begin{thesisauthorvita}
+%\begin{spacing}{1}
+%Publications arising from this thesis include:
+%\begin{description}
+%\item[Author, A.\ and Bloggs, J.\ (2002),]
+%A really catchy title. In \emph{The 31st International Conference
+%on Non-specific Computing.} Capital City, Country.
+%\item[Bloggs, J.\ and Author , A. (2002),]
+%A very much longer and significantly less catchy title. in \emph {Workshop on
+%A Research Area}. Springfield, USA.
+%\end{description}
+%\end{spacing}
+%\end{thesisauthorvita}
+
+
+
+
+
+%\chapter{Last Thing} % Appendices after the \backmatter command do not
+                        % get a letter
+%This sort of appendix has no letter.
+
+
+
+
+\end{document}

@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: phd_thesis.aux
+A level-1 auxiliary file: lit-review.aux
+A level-1 auxiliary file: methodology.aux
+A level-1 auxiliary file: conclusions.aux
+The style file: ubthesis.bst
+Database file #1: phdreferences.bib
+Repeated entry---line 72 of file phdreferences.bib
+ : @article{aissani2008use
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Shelton2001"
+Warning--I didn't find a database entry for "BarrettN2008"
+Warning--I didn't find a database entry for "VamplewDBID2011"
+Warning--can't use both volume and number fields in bertsekas1995dynamic
+Warning--empty journal in pareto1896cours
+(There was 1 error message)

@@ -1,0 +1,130 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{aissani2008use}
+Aissani, N., Beldjilali, B. and Trentesaux, D., \emph{Use of machine learning
+  for continuous improvement of the real time heterarchical manufacturing
+  control system performances}, International Journal of Industrial and Systems
+  Engineering, 2008, vol.~3(4):pp. 474--497
+
+\bibitem{barrett2008learning}
+Barrett, L. and Narayanan, S., \emph{Learning all optimal policies with
+  multiple criteria}, in \emph{Proceedings of the 25th international conference
+  on Machine learning}, ACM, 2008 pp. 41--47
+
+\bibitem{bellman1956dynamic}
+Bellman, R., \emph{Dynamic programming and lagrange multipliers}, Proceedings
+  of the National Academy of Sciences of the United States of America, 1956,
+  vol.~42(10):p. 767
+
+\bibitem{berry2008phd}
+Berry, A.~M., \emph{Escaping the bounds of generality - unbounded bi-objective
+  optimisation}, Ph.D. thesis, University of Tasmania, 2008
+
+\bibitem{bertsekas1995dynamic}
+Bertsekas, D., \emph{Dynamic programming and optimal control}, vol.~1, Athena
+  Scientific Belmont, 1995
+
+\bibitem{castelletti2002reinforcement}
+Castelletti, A., Corani, G., Rizzolli, A., Soncinie-Sessa, R. and Weber, E.,
+  \emph{Reinforcement learning in the operational management of a water
+  system}, in \emph{IFAC Workshop on Modeling and Control in Environmental
+  Issues, Keio University, Yokohama, Japan}, 2002 pp. 325--330
+
+\bibitem{Feinberg93constrainedmarkov}
+Feinberg, E.~A., Feinberg, E.~A., Shwartz, A. and Shwartz, A.,
+  \emph{Constrained markov decision models with weighted discounted rewards},
+  Math. of Operations Research, 1993, vol.~20:pp. 302--320
+
+\bibitem{F6363312}
+Ferreira, L., Bianchi, R. and Ribeiro, C. H.~C., \emph{Multi-agent
+  multi-objective learning using heuristically accelerated reinforcement
+  learning}, in \emph{Robotics Symposium and Latin American Robotics Symposium
+  (SBR-LARS), 2012 Brazilian}, 2012 pp. 14--20, \doi{10.1109/SBR-LARS.2012.10}
+
+\bibitem{gabor1998multi}
+G{\'a}bor, Z., Kalm{\'a}r, Z. and Szepesv{\'a}ri, C., \emph{Multi-criteria
+  reinforcement learning.}, in \emph{ICML}, vol.~98, 1998 pp. 197--205
+
+\bibitem{Karlsson97learningto}
+Karlsson, J. and Ballard, D.~H., \emph{Learning to solve multiple goals}, 1997
+
+\bibitem{lizotte2010efficient}
+Lizotte, D.~J., Bowling, M.~H. and Murphy, S.~A., \emph{Efficient reinforcement
+  learning with multiple reward functions for randomized controlled trial
+  analysis}, in \emph{Proceedings of the 27th International Conference on
+  Machine Learning (ICML-10)}, 2010 pp. 695--702
+
+\bibitem{natarajan2005dynamic}
+Natarajan, S. and Tadepalli, P., \emph{Dynamic preferences in multi-criteria
+  reinforcement learning}, in \emph{Proceedings of the 22nd international
+  conference on Machine learning}, ACM, 2005 pp. 601--608
+
+\bibitem{pareto1896cours}
+Pareto, V., \emph{Cours d$\backslash$'economie politique}, 1896
+
+\bibitem{roijers2013survey}
+Roijers, D.~M., Vamplew, P., Whiteson, S. and Dazeley, R., \emph{A survey of
+  multi-objective sequential decision-making}, Journal of Artificial
+  Intelligence Research, 2013, vol.~48:pp. 67--113
+
+\bibitem{shabani2009incorporating}
+Shabani, N., \emph{Incorporating flood control rule curves of the columbia
+  river hydroelectric system in a multireservoir reinforcement learning
+  optimization model}, Ph.D. thesis, University of British Columbia, 2009
+
+\bibitem{Sutton90time-derivativemodels}
+Sutton, R.~S. and Barto, A.~G., \emph{Time-derivative models of pavlovian
+  reinforcement}, in \emph{Learning and Computational Neuroscience: Foundations
+  of Adaptive Networks}, MIT Press, 1990 pp. 497--537
+
+\bibitem{tanner2009rl}
+Tanner, B. and White, A., \emph{Rl-glue: Language-independent software for
+  reinforcement-learning experiments}, The Journal of Machine Learning
+  Research, 2009, vol.~10:pp. 2133--2136
+
+\bibitem{vamplew2011empirical}
+Vamplew, P., Dazeley, R., Berry, A., Issabekov, R. and Dekker, E.,
+  \emph{Empirical evaluation methods for multiobjective reinforcement learning
+  algorithms}, Machine learning, 2011, pp. 1--30
+
+\bibitem{vamplew2008limitations}
+Vamplew, P., Yearwood, J., Dazeley, R. and Berry, A., \emph{On the limitations
+  of scalarisation for multi-objective reinforcement learning of pareto
+  fronts}, AI 2008: Advances in Artificial Intelligence, 2008, pp. 372--378
+
+\bibitem{van2012scalarized}
+Van~Moffaert, K. and Drugan, A., Madalina~M, \emph{Scalarized multi-objective
+  reinforcement learning: Novel design techniques}, IEEE SSCI, 2012,
+  vol.~13:pp. 94--103
+
+\bibitem{van2013hypervolume}
+Van~Moffaert, K., Drugan, M.~M. and Now{\'e}, A., \emph{Hypervolume-based
+  multi-objective reinforcement learning}, in \emph{Evolutionary
+  Multi-Criterion Optimization}, pp. 352--366, Springer Berlin Heidelberg, 2013
+
+\bibitem{watkins1992q}
+Watkins, C.~J. and Dayan, P., \emph{Q-learning}, Machine learning, 1992,
+  vol.~8(3-4):pp. 279--292
+
+\bibitem{Yaman20111290}
+Yaman, F., Walsh, T.~J., Littman, M.~L. and desJardins, M., \emph{Democratic
+  approximation of lexicographic preference models}, Artificial Intelligence,
+  2011, vol. 175(7–8):pp. 1290 -- 1307, ISSN 0004-3702,
+  \doi{http://dx.doi.org/10.1016/j.artint.2010.11.012},
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0004370210002018},
+  representing, Processing, and Learning Preferences: Theoretical and Practical
+  Challenges
+
+\bibitem{zitzler1999pareto}
+Zitzler, E. and Thiele, L., \emph{Multiobjective evolutionary algorithms: a
+  comparative case study and the strength pareto approach}, Evolutionary
+  Computation, IEEE Transactions on, 1999, vol.~3(4):pp. 257--271, ISSN
+  1089-778X, \doi{10.1109/4235.797969}
+
+\end{thebibliography}

@@ -1,0 +1,42 @@
+\BOOKMARK [0][]{section*.1}{Abstract}{}% 1
+\BOOKMARK [0][]{section*.2}{Statement of Authorship}{}% 2
+\BOOKMARK [0][]{chapter*.3}{Acknowledgments}{}% 3
+\BOOKMARK [0][]{chapter*.5}{List of Tables}{}% 4
+\BOOKMARK [0][]{chapter*.6}{List of Figures}{}% 5
+\BOOKMARK [0][]{section*.7}{List of Publications}{}% 6
+\BOOKMARK [0][]{section*.9}{Introduction}{}% 7
+\BOOKMARK [0][]{chapter.1}{1 Literature review.}{}% 8
+\BOOKMARK [1][]{section.1.1}{1.1 Elements of reinforcement learning}{chapter.1}% 9
+\BOOKMARK [2][]{subsection.1.1.1}{1.1.1 The Problem.}{section.1.1}% 10
+\BOOKMARK [2][]{subsection.1.1.2}{1.1.2 Agent and environment}{section.1.1}% 11
+\BOOKMARK [2][]{subsection.1.1.3}{1.1.3 Agent's goals.}{section.1.1}% 12
+\BOOKMARK [2][]{subsection.1.1.4}{1.1.4 Dynamic Programming influence.}{section.1.1}% 13
+\BOOKMARK [2][]{subsection.1.1.5}{1.1.5 Q-Learning.}{section.1.1}% 14
+\BOOKMARK [2][]{subsection.1.1.6}{1.1.6 Off-policy and On-policy algorithms.}{section.1.1}% 15
+\BOOKMARK [2][]{subsection.1.1.7}{1.1.7 S.A.R.S.A.}{section.1.1}% 16
+\BOOKMARK [1][]{section.1.2}{1.2 Multi-objective Optimization.}{chapter.1}% 17
+\BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Multi-objective Problem.}{section.1.2}% 18
+\BOOKMARK [2][]{subsection.1.2.2}{1.2.2 Tradeoffs.}{section.1.2}% 19
+\BOOKMARK [2][]{subsection.1.2.3}{1.2.3 Dominance.}{section.1.2}% 20
+\BOOKMARK [2][]{subsection.1.2.4}{1.2.4 The Pareto Front.}{section.1.2}% 21
+\BOOKMARK [2][]{subsection.1.2.5}{1.2.5 Selecting a solution in the Pareto Front.}{section.1.2}% 22
+\BOOKMARK [1][]{section.1.3}{1.3 Multi-objective Reinforcement Learning Research.}{chapter.1}% 23
+\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Linear Temporal Difference Learning.}{section.1.3}% 24
+\BOOKMARK [2][]{subsection.1.3.2}{1.3.2 Non-linear Temporal Difference Learning.}{section.1.3}% 25
+\BOOKMARK [2][]{subsection.1.3.3}{1.3.3 Simultaneous Learning of More Than One Policy.}{section.1.3}% 26
+\BOOKMARK [0][]{chapter.2}{2 Empirical Evaluation.}{}% 27
+\BOOKMARK [1][]{section.2.1}{2.1 Introduction.}{chapter.2}% 28
+\BOOKMARK [1][]{section.2.2}{2.2 The Details of the Empirical Evaluation Study.}{chapter.2}% 29
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Performance metrics.}{section.2.2}% 30
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Experiment Structure.}{section.2.2}% 31
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Bechmarking Software.}{section.2.2}% 32
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Evaluation of the algorithms}{section.2.2}% 33
+\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Single policy algorithms}{section.2.2}% 34
+\BOOKMARK [2][]{subsection.2.2.6}{2.2.6 Multi-policy algorithms.}{section.2.2}% 35
+\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 36
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 37
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 38
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 39
+\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 40
+\BOOKMARK [0][]{section*.18}{Conclusions}{}% 41
+\BOOKMARK [0][]{section*.19}{References}{}% 42

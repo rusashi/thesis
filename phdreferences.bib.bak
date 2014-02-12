@@ -1,0 +1,207 @@
+
+@article{roijers2013survey,
+  title={A Survey of Multi-Objective Sequential Decision-Making},
+  author={Roijers, Diederik M and Vamplew, Peter and Whiteson, Shimon and Dazeley, Richard},
+  journal={Journal of Artificial Intelligence Research},
+  volume={48},
+  pages={67--113},
+  year={2013}
+}
+@inproceedings{natarajan2005dynamic,
+  title={Dynamic preferences in multi-criteria reinforcement learning},
+  author={Natarajan, Sriraam and Tadepalli, Prasad},
+  booktitle={Proceedings of the 22nd international conference on Machine learning},
+  pages={601--608},
+  year={2005},
+  organization={ACM}
+}
+@inproceedings{barrett2008learning,
+  title={Learning all optimal policies with multiple criteria},
+  author={Barrett, Leon and Narayanan, Srini},
+  booktitle={Proceedings of the 25th international conference on Machine learning},
+  pages={41--47},
+  year={2008},
+  organization={ACM}
+}
+@MISC{Karlsson97learningto,
+    author = {Jonas Karlsson and Dana H. Ballard},
+    title = {Learning to Solve Multiple Goals},
+    year = {1997}
+}
+@ARTICLE{Feinberg93constrainedmarkov,
+    author = {Eugene A. Feinberg and Eugene A. Feinberg and Adam Shwartz and Adam Shwartz},
+    title = {Constrained Markov Decision Models With Weighted Discounted Rewards},
+    journal = {Math. of Operations Research},
+    year = {1993},
+    volume = {20},
+    pages = {302--320}
+}
+@inproceedings{castelletti2002reinforcement,
+  title={Reinforcement learning in the operational management of a water system},
+  author={Castelletti, Andrea and Corani, Giorgio and Rizzolli, A and Soncinie-Sessa, R and Weber, Enrico},
+  booktitle={IFAC Workshop on Modeling and Control in Environmental Issues, Keio University, Yokohama, Japan},
+  pages={325--330},
+  year={2002}
+}
+@article{vamplew2008limitations,
+  title={On the Limitations of Scalarisation for Multi-objective Reinforcement Learning of Pareto Fronts},
+  author={Vamplew, Peter and Yearwood, John and Dazeley, Richard and Berry, Adam},
+  journal={AI 2008: Advances in Artificial Intelligence},
+  pages={372--378},
+  year={2008},
+  publisher={Springer}
+}
+@INPROCEEDINGS{F6363312,
+author={Ferreira, L.A. and Bianchi, R.A.C. and Ribeiro, C. H C},
+booktitle={Robotics Symposium and Latin American Robotics Symposium (SBR-LARS), 2012 Brazilian},
+title={Multi-agent Multi-objective Learning Using Heuristically Accelerated Reinforcement Learning},
+year={2012},
+pages={14-20},
+keywords={learning (artificial intelligence);multi-agent systems;predator-prey systems;action-value;heuristic function;modular approach;multi-agent multiobjective learning;multiple objectives;multiples agents;predator-prey problem;reinforcement learning;Accelerated aging;Acceleration;Convergence;Heuristic algorithms;Learning;Learning systems;Vectors;Artificial Intelligence;Machine Learning;Multiagent systems},
+doi={10.1109/SBR-LARS.2012.10},}
+@article{aissani2008use,
+  title={Use of machine learning for continuous improvement of the real time heterarchical manufacturing control system performances},
+  author={Aissani, Nassima and Beldjilali, Bouziane and Trentesaux, Damien},
+  journal={International Journal of Industrial and Systems Engineering},
+  volume={3},
+  number={4},
+  pages={474--497},
+  year={2008},
+  publisher={Inderscience Publishers}
+}
+@article{aissani2008use,
+  title={Use of machine learning for continuous improvement of the real time heterarchical manufacturing control system performances},
+  author={Aissani, Nassima and Beldjilali, Bouziane and Trentesaux, Damien},
+  journal={International Journal of Industrial and Systems Engineering},
+  volume={3},
+  number={4},
+  pages={474--497},
+  year={2008},
+  publisher={Inderscience Publishers}
+}
+@phdthesis{shabani2009incorporating,
+  title={Incorporating flood control rule curves of the Columbia river hydroelectric system in a multireservoir reinforcement learning optimization model},
+  author={Shabani, Nazanin},
+  year={2009},
+  school={University of British Columbia}
+}
+@inproceedings{gabor1998multi,
+  title={Multi-criteria Reinforcement Learning.},
+  author={G{\'a}bor, Zolt{\'a}n and Kalm{\'a}r, Zsolt and Szepesv{\'a}ri, Csaba},
+  booktitle={ICML},
+  volume={98},
+  pages={197--205},
+  year={1998}
+}
+@article{van2012scalarized,
+  title={Scalarized multi-objective reinforcement learning: Novel design techniques},
+  author={Van Moffaert, Kristof and Drugan, Madalina M, Ann},
+  journal={IEEE SSCI},
+  volume={13},
+  pages={94--103},
+  year={2012}
+}
+@incollection{van2013hypervolume,
+  title={Hypervolume-based multi-objective reinforcement learning},
+  author={Van Moffaert, Kristof and Drugan, Madalina M and Now{\'e}, Ann},
+  booktitle={Evolutionary Multi-Criterion Optimization},
+  pages={352--366},
+  year={2013},
+  publisher={Springer Berlin Heidelberg}
+}
+@book{sutton1998reinforcement,
+  title={Reinforcement learning: An introduction},
+  author={Sutton, Richard S and Barto, Andrew G},
+  volume={1},
+  number={1},
+  year={1998},
+  publisher={Cambridge Univ Press}
+}
+@article{watkins1992q,
+  title={Q-learning},
+  author={Watkins, Christopher JCH and Dayan, Peter},
+  journal={Machine learning},
+  volume={8},
+  number={3-4},
+  pages={279--292},
+  year={1992},
+  publisher={Springer}
+}
+@article{pareto1896cours,
+  title={Cours d$\backslash$'economie politique},
+  author={Pareto, Vilfredo},
+  year={1896},
+  publisher={F. Rouge}
+}
+@article{bellman1956dynamic,
+  title={Dynamic programming and Lagrange multipliers},
+  author={Bellman, Richard},
+  journal={Proceedings of the National Academy of Sciences of the United States of America},
+  volume={42},
+  number={10},
+  pages={767},
+  year={1956},
+  publisher={National Academy of Sciences}
+}
+@book{bertsekas1995dynamic,
+  title={Dynamic programming and optimal control},
+  author={Bertsekas, Dimitri},
+  volume={1},
+  number={2},
+  year={1995},
+  publisher={Athena Scientific Belmont}
+}
+@article{vamplew2011empirical,
+  title={Empirical evaluation methods for multiobjective reinforcement learning algorithms},
+  author={Vamplew, Peter and Dazeley, Richard and Berry, Adam and Issabekov, Rustam and Dekker, Evan},
+  journal={Machine learning},
+  pages={1--30},
+  year={2011},
+  publisher={Springer}
+}
+@PHDTHESIS{berry2008phd,
+  title={Escaping the Bounds of Generality - Unbounded Bi-Objective Optimisation},
+  author={Adam Michael Berry},
+  school={University of Tasmania},
+  year={2008}
+}
+@ARTICLE{zitzler1999pareto,
+author={Zitzler, E. and Thiele, L.},
+journal={Evolutionary Computation, IEEE Transactions on},
+title={Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach},
+year={1999},
+volume={3},
+number={4},
+pages={257-271},
+doi={10.1109/4235.797969},
+ISSN={1089-778X}
+}
+@article{tanner2009rl,
+  title={RL-Glue: Language-independent software for reinforcement-learning experiments},
+  author={Tanner, Brian and White, Adam},
+  journal={The Journal of Machine Learning Research},
+  volume={10},
+  pages={2133--2136},
+  year={2009},
+  publisher={JMLR. org}
+}
+@inproceedings{lizotte2010efficient,
+  title={Efficient reinforcement learning with multiple reward functions for randomized controlled trial analysis},
+  author={Lizotte, Daniel J and Bowling, Michael H and Murphy, Susan A},
+  booktitle={Proceedings of the 27th International Conference on Machine Learning (ICML-10)},
+  pages={695--702},
+  year={2010}
+}
+@INPROCEEDINGS{Sutton90time-derivativemodels,
+    author = {Richard S. Sutton and Andrew G. Barto},
+    title = {Time-derivative models of Pavlovian reinforcement},
+    booktitle = {Learning and Computational Neuroscience: Foundations of Adaptive Networks},
+    year = {1990},
+    pages = {497--537},
+    publisher = {MIT Press}
+}
+@MISC{Yaman_democraticapproximation,
+    author = {Fusun Yaman and Thomas J. Walsh and Michael L. Littman and Marie Desjardins},
+    title = {Democratic Approximation of Lexicographic Preference Models},
+    year = {2010}
+}
