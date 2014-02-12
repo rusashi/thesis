@@ -65,18 +65,25 @@ One important remark - the reference point must be consistent when evaluating ap
 \subsection{Experiment Structure.}
 
 \subsubsection{Single-Policy Algorithms.}
-Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement} or Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of weights; One weight for each objective. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified set of weights.
+Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement} or Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of preferences. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified preferences.
 
-To illustrate the work of single policy algorithms consider the following example; A simple MDP was constructed, it consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic and each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.
+To illustrate the work of single policy algorithms consider the following example; A simple MDP was constructed, it consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic i.e. each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{decisionTree.png}
-\caption{Blue circles represent states; Black arrows represent the actions. In every state left and right actions are available. State transition is deterministic and an action always leads to the same next state. Next to every arrow there is a vector of immediate rewards for choosing this action.}
+\caption{Blue circles represent states; Black arrows represent the actions. In every state left and right actions are available. State transition is deterministic and an action always leads to the same next state. Next to every arrow there is a vector of immediate rewards for choosing this action. The overall return starting from starting state is shown at the bottom of each branch.}
 \label{fig:decisionTree}
 \end{figure}
 
-One can identify four different policies. Essentially, every branch of this tree is a unique policy with associated return.   
+One can identify four different policies. Essentially, every branch of this tree is a unique policy with associated return. Every policy.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{exampleMDPFront.png}
+\caption{Blue circles represent states; Black arrows represent the actions. In every state left and right actions are available. State transition is deterministic and an action always leads to the same next state. Next to every arrow there is a vector of immediate rewards for choosing this action. The overall return starting from starting state is shown at the bottom of each branch.}
+\label{fig:decisionTree}
+\end{figure}
 
 \subsection{Bechmarking Software.}
 As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\

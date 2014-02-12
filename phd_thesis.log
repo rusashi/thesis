@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  11 FEB 2014 21:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  11 FEB 2014 23:19
 entering extended mode
-**C:/Users/rusashi/Documents/publications/my_thesis/phd_thesis.tex
-(C:/Users/rusashi/Documents/publications/my_thesis/phd_thesis.tex
+**C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
+(C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\rusashi\Documents\publications\my_thesis\cssethesis.cls
+(C:\Users\rusashi\Documents\publications\thesis\cssethesis.cls
 Document Class: cssethesis 2005/10/18 v1.7 Monash Caulfield and Clayton Schools
  of Information Technology thesis class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
@@ -176,7 +176,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\rusashi\Documents\publications\my_thesis\algorithm.sty
+(C:\Users\rusashi\Documents\publications\thesis\algorithm.sty
 Package: algorithm 
 
 Document Style `algorithm' - floating environment
@@ -194,7 +194,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \@float@every@algorithm=\toks29
 \c@algorithm=\count107
 )
-(C:\Users\rusashi\Documents\publications\my_thesis\algorithmic.sty
+(C:\Users\rusashi\Documents\publications\thesis\algorithmic.sty
 Package: algorithmic 
 
 Document Style `algorithmic' - environment
@@ -411,9 +411,9 @@ Package hyperref Info: Option `linktocpage' set `true' on input line 52.
 LaTeX Warning: Unused global option(s):
     [onehalfspace].
 
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.aux
-(C:\Users\rusashi\Documents\publications\my_thesis\lit-review.aux)
-(C:\Users\rusashi\Documents\publications\my_thesis\methodology.aux
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
+(C:\Users\rusashi\Documents\publications\thesis\lit-review.aux)
+(C:\Users\rusashi\Documents\publications\thesis\methodology.aux
 
 LaTeX Warning: Label `ParetoDominance' multiply defined.
 
@@ -435,7 +435,7 @@ LaTeX Warning: Label `ParetoDominance' multiply defined.
 
 LaTeX Warning: Label `ParetoDominance' multiply defined.
 
-) (C:\Users\rusashi\Documents\publications\my_thesis\conclusions.aux))
+) (C:\Users\rusashi\Documents\publications\thesis\conclusions.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
 LaTeX Font Info:    ... okay on input line 134.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
@@ -513,8 +513,8 @@ LaTeX Info: Redefining \ref on input line 134.
 LaTeX Info: Redefining \pageref on input line 134.
 LaTeX Info: Redefining \nameref on input line 134.
 
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.out)
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.out)
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.out)
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.out)
 \@outlinefile=\write3
 
 <UBlogo.pdf, id=171, 77.28876pt x 78.2925pt>
@@ -526,7 +526,7 @@ Package pdftex.def Info: UBlogo.pdf used on input line 142.
 
 
 {C:/Users/rusashi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
-rusashi/Documents/publications/my_thesis/UBlogo.pdf>] [2]
+rusashi/Documents/publications/thesis/UBlogo.pdf>] [2]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
@@ -547,33 +547,33 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [3] [4
 
 ]
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.toc [5
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.toc [5
 
 ])
 \tf@toc=\write4
  [6]
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.lot)
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lot)
 \tf@lot=\write5
  [7
 
 ]
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.lof [8
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lof [8
 
 ])
 \tf@lof=\write6
  [9]
-(C:\Users\rusashi\Documents\publications\my_thesis\Listofpub.tex) [10
+(C:\Users\rusashi\Documents\publications\thesis\Listofpub.tex) [10
 
 
 ]
-(C:\Users\rusashi\Documents\publications\my_thesis\lit-review.tex
+(C:\Users\rusashi\Documents\publications\thesis\lit-review.tex
 Chapter 1.
 [1
 
 
 
 
-] <agent-env-cycle.png, id=296, 336.65775pt x 145.7445pt>
+] <agent-env-cycle.png, id=298, 336.65775pt x 145.7445pt>
 File: agent-env-cycle.png Graphic file (type png)
 
 <use agent-env-cycle.png>
@@ -584,7 +584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-[2 <C:/Users/rusashi/Documents/publications/my_thesis/agent-env-cycle.png>]
+[2 <C:/Users/rusashi/Documents/publications/thesis/agent-env-cycle.png>]
 [3] [4] [5] [6] [7] [8] [9]
 Overfull \hbox (1.71065pt too wide) in paragraph at lines 143--144
 []\OT1/cmr/m/n/12 The re-in-force-ment learn-ing equiv-a-lent of pol-icy it-er-
@@ -601,13 +601,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 159.
  [10] [11] [12]
-[13] <paretofront.png, id=364, 219.82124pt x 175.857pt>
+[13] <paretofront.png, id=366, 219.82124pt x 175.857pt>
 File: paretofront.png Graphic file (type png)
  <use paretofront.png>
 Package pdftex.def Info: paretofront.png used on input line 238.
 (pdftex.def)             Requested size: 197.83728pt x 158.26984pt.
 
-[14] [15 <C:/Users/rusashi/Documents/publications/my_thesis/paretofront.png>]
+[14] [15 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
 Overfull \hbox (22.71126pt too wide) in paragraph at lines 264--265
 []\OT1/cmr/m/n/12 Assume so-lu-tion $\OML/cmm/m/it/12 a[]$ \OT1/cmr/m/n/12 max-
 i-mizes this given op-ti-miza-tion prob-lem. Let $[] = (\OML/cmm/m/it/12 f[]\OT
@@ -647,7 +647,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
 
-[25]) [26] (C:\Users\rusashi\Documents\publications\my_thesis\methodology.tex
+[25]) [26] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -703,7 +703,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-<hypervolume.png, id=451, 244.5135pt x 213.79875pt>
+<hypervolume.png, id=453, 244.5135pt x 213.79875pt>
 File: hypervolume.png Graphic file (type png)
  <use hypervolume.png>
 Package pdftex.def Info: hypervolume.png used on input line 58.
@@ -713,167 +713,176 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-[31] <decisionTree.png, id=460, 543.02875pt x 304.13625pt>
+[31] <decisionTree.png, id=462, 543.02875pt x 304.13625pt>
 File: decisionTree.png Graphic file (type png)
 
 <use decisionTree.png>
 Package pdftex.def Info: decisionTree.png used on input line 74.
 (pdftex.def)             Requested size: 325.81975pt x 182.48315pt.
+ [32 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>] <example
+MDPFront.png, id=469, 530.98375pt x 377.41pt>
+File: exampleMDPFront.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+<use exampleMDPFront.png>
+Package pdftex.def Info: exampleMDPFront.png used on input line 89.
+(pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
 
- []
-
-[32 <C:/Users/rusashi/Documents/publications/my_thesis/hypervolume.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-[33 <C:/Users/rusashi/Documents/publications/my_thesis/decisionTree.png (PNG co
+[33 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy)
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+[34 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PNG co
 py)>]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<glue.png, id=472, 494.84875pt x 274.02374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+<glue.png, id=480, 494.84875pt x 274.02374pt>
 File: glue.png Graphic file (type png)
  <use glue.png>
-Package pdftex.def Info: glue.png used on input line 94.
+Package pdftex.def Info: glue.png used on input line 107.
 (pdftex.def)             Requested size: 445.35977pt x 246.61908pt.
- [34] [35 <C:/Users/rusashi/Documents/publications/my_thesis/glue.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+ [35] [36 <C:/Users/rusashi/Documents/publications/thesis/glue.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 [37]
-
-Package natbib Warning: Citation `Shelton2001' on page 38 undefined on input li
-ne 139.
-
-
-Package natbib Warning: Citation `BarrettN2008' on page 38 undefined on input l
-ine 139.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-<2alghypervolume.png, id=490, 344.487pt x 223.43475pt>
+[38]
+
+Package natbib Warning: Citation `Shelton2001' on page 39 undefined on input li
+ne 152.
+
+
+Package natbib Warning: Citation `BarrettN2008' on page 39 undefined on input l
+ine 152.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+<2alghypervolume.png, id=498, 344.487pt x 223.43475pt>
 File: 2alghypervolume.png Graphic file (type png)
 
 <use 2alghypervolume.png>
-Package pdftex.def Info: 2alghypervolume.png used on input line 144.
+Package pdftex.def Info: 2alghypervolume.png used on input line 157.
 (pdftex.def)             Requested size: 310.03542pt x 201.08942pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[38 <C:/Users/rusashi/Documents/publications/my_thesis/2alghypervolume.png>]
-<2alghypervolumeovertime.png, id=495, 434.8245pt x 223.43475pt>
+[39 <C:/Users/rusashi/Documents/publications/thesis/2alghypervolume.png>]
+<2alghypervolumeovertime.png, id=504, 434.8245pt x 223.43475pt>
 File: 2alghypervolumeovertime.png Graphic file (type png)
 
 <use 2alghypervolumeovertime.png>
-Package pdftex.def Info: 2alghypervolumeovertime.png used on input line 155.
+Package pdftex.def Info: 2alghypervolumeovertime.png used on input line 168.
 (pdftex.def)             Requested size: 391.33841pt x 201.08942pt.
 
 
-Package natbib Warning: Citation `VamplewDBID2011' on page 39 undefined on inpu
-t line 160.
+Package natbib Warning: Citation `VamplewDBID2011' on page 40 undefined on inpu
+t line 173.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-[39 <C:/Users/rusashi/Documents/publications/my_thesis/2alghypervolumeovertime.
-png>]
+[40 <C:/Users/rusashi/Documents/publications/thesis/2alghypervolumeovertime.png
+>]
 
-Package natbib Warning: Citation `VamplewDBID2011' on page 40 undefined on inpu
-t line 184.
+Package natbib Warning: Citation `VamplewDBID2011' on page 41 undefined on inpu
+t line 197.
 
-<dst.png, id=501, 281.25075pt x 204.765pt>
+<dst.png, id=509, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
-Package pdftex.def Info: dst.png used on input line 191.
+Package pdftex.def Info: dst.png used on input line 204.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
- [40]
-<dstPareto.png, id=506, 345.08925pt x 215.00325pt>
+ [41]
+<dstPareto.png, id=514, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
-Package pdftex.def Info: dstPareto.png used on input line 200.
+Package pdftex.def Info: dstPareto.png used on input line 213.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
 
-<pw.png, id=507, 249.93375pt x 252.945pt>
+<pw.png, id=515, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
-Package pdftex.def Info: pw.png used on input line 210.
+Package pdftex.def Info: pw.png used on input line 223.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
- [41 <C:/Users/rusashi/Documents/publications/my_thesis/dst.png> <C:/Users/rusa
-shi/Documents/publications/my_thesis/dstPareto.png>]
-<pwParetoFront.png, id=512, 524.55975pt x 243.91125pt>
+ [42 <C:/Users/rusashi/Documents/publications/thesis/dst.png> <C:/Users/rusashi
+/Documents/publications/thesis/dstPareto.png>] <pwParetoFront.png, id=520, 524.
+55975pt x 243.91125pt>
 File: pwParetoFront.png Graphic file (type png)
- <use pwParetoFront.png>
-Package pdftex.def Info: pwParetoFront.png used on input line 219.
+
+<use pwParetoFront.png>
+Package pdftex.def Info: pwParetoFront.png used on input line 232.
 (pdftex.def)             Requested size: 472.0994pt x 219.51808pt.
 
-Overfull \hbox (16.85529pt too wide) in paragraph at lines 219--220
+Overfull \hbox (16.85529pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
-[42 <C:/Users/rusashi/Documents/publications/my_thesis/pw.png>]
-<rg.png, id=517, 269.20575pt x 269.20575pt>
+[43 <C:/Users/rusashi/Documents/publications/thesis/pw.png>]
+<rg.png, id=525, 269.20575pt x 269.20575pt>
 File: rg.png Graphic file (type png)
  <use rg.png>
-Package pdftex.def Info: rg.png used on input line 236.
+Package pdftex.def Info: rg.png used on input line 249.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
- [43 <C:/Users/rusashi/Documents/publications/my_thesis/pwParetoFront.png>]
+ [44 <C:/Users/rusashi/Documents/publications/thesis/pwParetoFront.png>]
 
-Package natbib Warning: Citation `BarrettN2008' on page 44 undefined on input l
-ine 241.
+Package natbib Warning: Citation `BarrettN2008' on page 45 undefined on input l
+ine 254.
 
-<rgpareto.png, id=522, 457.10776pt x 171.039pt>
+<rgpareto.png, id=530, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
  <use rgpareto.png>
-Package pdftex.def Info: rgpareto.png used on input line 245.
+Package pdftex.def Info: rgpareto.png used on input line 258.
 (pdftex.def)             Requested size: 365.68669pt x 136.83138pt.
-) [44 <C:/Users/rusashi/Documents/publications/my_thesis/rg.png> <C:/Users/rusa
-shi/Documents/publications/my_thesis/rgpareto.png>]
+) [45 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/rusashi
+/Documents/publications/thesis/rgpareto.png>]
 No file conclusions.tex.
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.bbl [45
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [46
 
 
 
 
 
 
-] [46]
+] [47]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -889,16 +898,16 @@ Underfull \hbox (badness 1325) in paragraph at lines 116--123
 /cmr/m/n/12 , Ar-ti-fi-cial In-tel-li-gence, 2011,
  []
 
-[47]) [48]
+[48]) [49]
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
-(C:\Users\rusashi\Documents\publications\my_thesis\phd_thesis.aux
-(C:\Users\rusashi\Documents\publications\my_thesis\lit-review.aux)
-(C:\Users\rusashi\Documents\publications\my_thesis\methodology.aux)
-(C:\Users\rusashi\Documents\publications\my_thesis\conclusions.aux))
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
+(C:\Users\rusashi\Documents\publications\thesis\lit-review.aux)
+(C:\Users\rusashi\Documents\publications\thesis\methodology.aux)
+(C:\Users\rusashi\Documents\publications\thesis\conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `phd_thesis.out' has not changed.
@@ -914,13 +923,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
 ### semi simple group (level 1) entered at line 146 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7922 strings out of 493921
- 114824 string characters out of 3147275
- 202661 words of memory out of 3000000
- 10884 multiletter control sequences out of 15000+200000
+ 7930 strings out of 493921
+ 114848 string characters out of 3147275
+ 203063 words of memory out of 3000000
+ 10889 multiletter control sequences out of 15000+200000
  15241 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,8n,30p,1410b,623s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,8n,30p,1407b,623s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
@@ -936,9 +945,9 @@ m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on phd_thesis.pdf (58 pages, 643047 bytes).
+Output written on phd_thesis.pdf (59 pages, 653274 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 407 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
+ 412 words of extra memory for PDF output out of 10000 (max. 10000000)
 
