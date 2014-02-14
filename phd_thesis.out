@@ -29,14 +29,11 @@
 \BOOKMARK [1][]{section.2.2}{2.2 The Details of the Empirical Evaluation Study.}{chapter.2}% 29
 \BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Performance metrics.}{section.2.2}% 30
 \BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Experiment Structure.}{section.2.2}% 31
-\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Bechmarking Software.}{section.2.2}% 32
-\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Evaluation of the algorithms}{section.2.2}% 33
-\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Single policy algorithms}{section.2.2}% 34
-\BOOKMARK [2][]{subsection.2.2.6}{2.2.6 Multi-policy algorithms.}{section.2.2}% 35
-\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 36
-\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 37
-\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 38
-\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 39
-\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 40
-\BOOKMARK [0][]{section*.18}{Conclusions}{}% 41
-\BOOKMARK [0][]{section*.19}{References}{}% 42
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Benchmarking Software.}{section.2.2}% 32
+\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 33
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 34
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 35
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 36
+\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 37
+\BOOKMARK [0][]{section*.19}{Conclusions}{}% 38
+\BOOKMARK [0][]{section*.20}{References}{}% 39

@@ -2,11 +2,11 @@
 
 \section{Introduction.}
 
-To conduct an empirical study one needs means to compare different algorithms. Traditional multi-objective optimization have repositories of data sets, with each data set describing a particular problem. These data sets allow us to identify weaknesses or advantages of different algorithms. They also allow us to make a cross-comparison between different algorithms.\\
+To conduct an empirical study one needs means to compare different algorithms. For example for classification algorithms there are repositories of data sets, with each data set describing a particular problem. These data sets allow researches to identify weaknesses or advantages of their algorithms. They also allow them to make cross-comparison between different algorithms.
 
-Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from traditional multi-objective optimization. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. Unlike the general multi-objective optimization, in reinforcement learning a test problem is not a static data set but rather a software which reacts dynamically to the actions of an agent.So traditional machine learning data sets could not be used in realms of reinforcement learning. \\
+Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from research areas like classification or clustering. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. In reinforcement learning a test problem is not a static data set but rather a software which reacts dynamically to the actions of an agent.
 
-The absence of central repository of test problems lead to the fact that every published paper is disconnected from all other papers in terms of test problems. All papers described in literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high. \\
+The absence of central repository of test problems lead to the fact that every published paper is disconnected from all other papers in terms of test problems. All papers described in literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high.
 
 Last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
 \begin{itemize}
@@ -15,12 +15,11 @@ Last section of the first chapter reviewed some of the most important research i
   \item Each algorithm should be subjected to a number of different test problems, to identify a realistic domain of application.
 \end{itemize}
 
-One can also notice the absence of common methodology across all reviewed papers. Thus we cannot easily compare the results of an algorithm presented in one paper with the results of different algorithm. Each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers.\\
+One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of different algorithm. Each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers.
 
 The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical evaluations but only to prior versions of the same algorithms.
 
-One of the difficulties associated with with empirical evaluation of existing algorithms is that different methodologies are exploited by different researcher. One major example can clarify the point. In multi-objective optimization the quality of the algorithm is evaluated by how close the approximated Pareto front is to the true Pareto front of the problem. Currently, there is a vast number of proposed performance metrics which allow to assess how close the solution is to the true one. Clearly, it is impossible to chose from two algorithms when you know that the results provided in a published papers were obtained with different set of performance metrics in each paper. \\
-
+One of the difficulties associated with an empirical evaluation of existing algorithms is that different methodologies are exploited by different researchers. One major example can clarify the point. In multi-objective optimization the quality of the algorithm is evaluated by how close the approximated Pareto front is to the true Pareto front of the problem. Currently, there is a vast number of proposed performance metrics which allow to assess how close the solution is to the true one. Clearly, it is impossible to chose from two algorithms when you know that the results provided in a published papers were obtained with different set of performance metrics in each paper.
 
 \section{The Details of the Empirical Evaluation Study.}
 
@@ -31,8 +30,7 @@ All of the works reviewed in the literature review chapter have the same limitat
   \item Each author or team of authors used their own evaluating methodology which complicates cross-comparison.
 \end{itemize}
 
-
-This document will use the methodology previously proposed by Vamplew et al. (2011)\cite{vamplew2011empirical}. This paper outlined very important aspects that should be introduced:
+This document will use the methodology previously proposed by Vamplew et al. (2011)\nocite{vamplew2011empirical}. This paper outlined very important aspects that should be introduced:
 \begin{itemize}
   \item MORL algorithms should be tested on a wider range of test problems, and the properties of these problems should be understood to aid in interpreting the variations in the performance of algorithms.
   \item Standard benchmark problems and standard implementations of these problems should be established so as to facilitate comparison of the performance of different algorithms.
@@ -41,17 +39,17 @@ This document will use the methodology previously proposed by Vamplew et al. (20
 
 \subsection{Performance metrics.}
 
-Every multi-objective problem implies existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm. Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set. And every algorithm does it differently, capturing specific points of the true front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions thus previous results in multi-objective optimization could easily be used in MORL. \\
+Every multi-objective problem implies existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm. Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set. And every algorithm does it differently, capturing specific points of the true front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions thus previous results in multi-objective optimization could easily be used in MORL.
 
-Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation covers the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy. \\
+Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation covers the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
 
-Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, a composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\cite{berry2008phd}) showed a preference of such composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization. \\
+Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, a composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\nocite{berry2008phd}) showed a preference of such composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization.
 
 \subsubsection{Hypervolume metric.}
 
-The hypervolume metric(Zitzler and Thiele, 1999\cite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which was created by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}. The reference point can be used as a tuning mechanism and allows greater flexibility. \\
+The hypervolume metric(Zitzler and Thiele, 1999\nocite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which was created by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}. The reference point can be used as a tuning mechanism and allows greater flexibility.
 
-Given two learning algorithms, we can run them on the same test problem. After that we get a Pareto front approximation from each algorithm and calculate the hypervolume for each approximation. The approximation which produced a higher value of the hypervolume is a better approximation to the true Pareto front. This is proven to be true both for convergence and diversity. \\
+Given two learning algorithms, we can run them on the same test problem. After that we get a Pareto front approximation from each algorithm and calculate the hypervolume for each approximation. The approximation which produced a higher value of the hypervolume is a better approximation to the true Pareto front. This is proven to be true both for convergence and diversity.
 
 \begin{figure}[ht]
 \centering
@@ -65,9 +63,10 @@ One important remark - the reference point must be consistent when evaluating ap
 \subsection{Experiment Structure.}
 
 \subsubsection{Single-Policy Algorithms.}
+
 Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement} or Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of preferences. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified preferences.
 
-To illustrate the work of single policy algorithms consider the following example; A simple MDP was constructed, it consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic i.e. each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.
+To illustrate the work of single policy algorithms consider the following example; A simple MDP was constructed, it consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic i.e. each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.\\
 
 \begin{figure}[ht]
 \centering
@@ -78,12 +77,12 @@ To illustrate the work of single policy algorithms consider the following exampl
 
 One can identify four different policies for this example MDP. Essentially, every branch of this tree is a unique policy with it's associated return.
 
-It is possible to look at this problem from a different perspective - from the objective space. Figure~\ref{fig:exampleMDPFront} shows two dimensional objective space for the example MDP problem. Each blue dot corresponds to a unique policy and it's coordinates are exactly this policy's return. Overall there are four points in the objective space, one for each policy. One can notice that this four points together constitute the Pareto front for this problem. This is because the example MDP problem doesn't have dominated policies.
+It is possible to look at this problem from a different perspective - from the objective space. Figure~\ref{fig:exampleMDPFront} shows two dimensional objective space for the example MDP problem. Each blue dot corresponds to a unique policy and it's coordinates are exactly this policy's return. Overall there are four points in the objective space, one for each policy. One can notice that this four points together constitute the Pareto front for this problem. This is because the example MDP problem doesn't have dominated policies.\\
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{exampleMDPFront.png}
-\caption{Blue circles represent states; Black arrows represent the actions. In every state left and right actions are available. State transition is deterministic and an action always leads to the same next state. Next to every arrow there is a vector of immediate rewards for choosing this action. The overall return starting from starting state is shown at the bottom of each branch.}
+\caption{Each blue dot is a unique policy from the example MDP problem. \textbf{NOTE:} Because the example MDP does not have dominated policies all four available policies together constitute the Pareto front for this problem.}
 \label{fig:exampleMDPFront}
 \end{figure}
 
@@ -104,11 +103,11 @@ Even though the algorithm was able to identify one element of the Pareto front, 
   \item Combine all recorded points into an approximation of the Pareto front.
 \end{enumerate}
 
+This experiment setting will allow to create an effective approximation of the Pareto front of an underlying problem. It is vital to have this approximation if one is to compare the performances of different algorithms.
 
+\subsubsection{Multi-Policy Algorithms.}
 
-
-
-\subsection{Bechmarking Software.}
+\subsection{Benchmarking Software.}
 As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\
 
 Even though test problems may have nothing in common in terms of realistic domains they represent, they still share those means of interaction with an agent or learning algorithm. Moreover in every problem the information that is passed between an agent and an environment is of very similar nature: the agent informs the environment about his preferred action, the environment notifies the agent about the consequences of that particular action. \\
@@ -139,55 +138,6 @@ The plug-in nature of the the RL-glue perfectly addresses three aspects of adequ
 \end{itemize}
 
 Originally, RL-Glue is a software for single objective reinforcement learning but it can be adapted to multi-objective(which is also a part of this thesis) by replacing scalar reward signal with vector-valued. \\
-
-\subsection{Evaluation of the algorithms}
-
-This research project aims to empirically evaluate algorithms belonging to two important classes: single policy algorithms and multi-policy algorithms. Though hypervolume performance metric will be used in both cases, there is important distinction between two approaches. The following two subsections will be devoted to explaining the methodology of empirical evaluation underlying both approaches.
-
-\subsection{Single policy algorithms}
-
-Multi-objective reinforcement learning covers a lot of real life problems. Which metric to use to evaluate different algorithms pretty much depends on the problem itself. Some of the problems have coherent objectives. For example consider a problem where one tries to maximize profit from introducing new technology but also needs to take into account the cost of introducing this new technology. These is a good example of the problem with coherent objectives. As was mentioned in literature review section single agent approaches are more suitable to this class of problems. This is also an example of the single policy problem where despite of the multiple number of objectives it is still perfectly acceptable to reduce number of objectives to a single optimization criteria and thus work to a single policy. Because all objectives are coherent no special metrics are required to perform the evaluation of the algorithms suitable for this task. One only need to pick a correct algorithms to compare like linear scalarisation. The weighted sum which is the core of the algorithm is itself a suitable metric to compare algorithms. \\
-
-However, single agent algorithms are also suitable to problems where goals are isolated or even in conflict with each other. In this scenario it is no longer meaningful to use metric such as weighted sum because obviously objectives are of different nature. And obvious question arises - how to compare two multi-objective algorithms if their goals are not related to each other? Hypervolume metric is designed to evaluate the quality of the approximated Pareto front. But, unlike multi-policy algorithms, single-policy ones do not produce an approximation to the entire front, instead only a particular point of the front is learned by the algorithm. This particular point is basically predefined by the appropriate assignment of preferences to each of the objectives. So the traditional hypervolume metric is of no use. However, each of the points from the Pareto front could be found by varying preferences of the objectives. In this manner the approximation to the entire front could be found and hypervolume metric could be applied to evaluate the quality of the found Pareto front. This research project will employ this technique to evaluate single-policy algorithms. \\
-
-The evaluation of two single-policy algorithms could be broken into stages:
-
-\begin{itemize}
-
-\item Create a range of preferences.
-
-\item Use created range of preferences to find an approximation to the Pareto front of algorithm A.
-
-\item Use created range of preferences to find an approximation to the Pareto front of algorithm B.
-
-\item Use hypervolume to find which of the algorithms performed better.
-
-\end{itemize}
-
-\subsection{Multi-policy algorithms.}
-
-In contrast to single policy algorithms, multi-policy algorithms try to find an approximation to the entire Pareto front. Examples of this class of algorithms are approaches proposed by (Shelton, \cite{Shelton2001}) and (Barrett, Narayanan, \cite{BarrettN2008}). To compare algorithms of this nature we need to use metric which will assess the quality of the approximated Pareto front. This is a perfect spot to apply hypervolume metric. \\
-
-\begin{figure}[ht]
-\vskip 0.2in
-\centering
-\includegraphics[scale=0.9]{2alghypervolume.png}
-\caption{Example of using the hypervolume metric to evaluate two algorithms.}
-\vskip -0.2in
-\label{ParetoDominance}
-\end{figure}
-
-Contrary to single-policy algorithms, which at every moment of time are learning only a single point of the Pareto front, multi-policy algorithms at every moment have an approximation to the entire Pareto front. Thus it is possible to use hypervolume metric through the progress of the experiment and asses the quality of approximated front on the go. This metric should be calculated at specified time intervals. Thus it will be possible to evaluate the progress of the compared algorithms. This allows to identify which algorithms converge faster. \\
-
-\begin{figure}[ht]
-\vskip 0.2in
-\centering
-\includegraphics[scale=0.9]{2alghypervolumeovertime.png}
-\caption{Example of calculating the hypervolume metric at specified time intervals to keep track of the progress of the algorithms.}
-\label{ParetoDominance}
-\end{figure}
-
-As was mentioned in (Vamplew et al, \cite{VamplewDBID2011}) the exact time intervals should be determined with respect to a particular test problem due to varying difficulty and level of stochasticity of test problems. \\
 
 \section{Benchmarks.}
 

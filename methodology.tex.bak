@@ -80,16 +80,32 @@ One can identify four different policies for this example MDP. Essentially, ever
 
 It is possible to look at this problem from a different perspective - from the objective space. Figure~\ref{fig:exampleMDPFront} shows two dimensional objective space for the example MDP problem. Each blue dot corresponds to a unique policy and it's coordinates are exactly this policy's return. Overall there are four points in the objective space, one for each policy. One can notice that this four points together constitute the Pareto front for this problem. This is because the example MDP problem doesn't have dominated policies.
 
-Consider any single-policy algorithm, for example one discussed in Castelleti et al. (2002)\nocite{castelletti2002reinforcement}. This algorithm requires a set of weights to be specified before the algorithm can start learning; Let $ \textbf{w} = \{0.4,0.6\} $ be this set of weights. Essentially, this algorithm is the multi-objective reinforcement learning adaptation of the linear-weighted average algorithm from general multi-objective optimization. Linear-weighted average algorithm will find which of the available solutions ( policies) will maximize the dot product of the return vector and the weight vector.
-
-
-
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{exampleMDPFront.png}
 \caption{Blue circles represent states; Black arrows represent the actions. In every state left and right actions are available. State transition is deterministic and an action always leads to the same next state. Next to every arrow there is a vector of immediate rewards for choosing this action. The overall return starting from starting state is shown at the bottom of each branch.}
 \label{fig:exampleMDPFront}
 \end{figure}
+
+Consider any single-policy algorithm, for example one discussed in Castelleti et al. (2002)\nocite{castelletti2002reinforcement}. This algorithm requires a set of weights to be specified before the algorithm can start learning; Let $ \textbf{w} = \{0.4,0.6\} $ be this set of weights. Essentially, this algorithm is the multi-objective reinforcement learning adaptation of the linear-weighted average algorithm from general multi-objective optimization. Linear-weighted average algorithm will find which of the available solutions ( policies) will maximize the dot product of the return vector and the weight vector. In case of the example MDP, the policy with the return of [60,60] (see Figure~\ref{fig:exampleMDPOneMarkedPolicy}) will maximize the weighted average. The single-policy algorithm will learn the Q-function associated with this policy.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{exampleMDPOneMarkedPolicy.png}
+\caption{The blue dot which represents the policy with return [60,60] is marked with red circle around. The single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot.}
+\label{fig:exampleMDPOneMarkedPolicy}
+\end{figure}
+
+Even though the algorithm was able to identify one element of the Pareto front, it is still preferable to find the whole approximation of the front. The only way to achieve this with single policy algorithms is to reset the preferences every time the algorithm tries to identify another member of the Pareto front. This requires a special experiment design:
+
+\begin{enumerate}
+  \item Initialize an array of preferences, where each preference is an array itself(for example a set of weights).
+  \item For each item in the array of preferences run a single-policy algorithm for a specified number of episodes. After the algorithm has converged, extract the greediest Q-value of a starting state and record it. \textbf{NOTE:} Notice that a'priori an experimenter cannot identify which member of the Pareto front will be targeted by a certain set of preferences. One can only wait until the algorithm has learned the Q-function of a policy which is associated with the set of preferences. After that the greediest Q-value of the starting state will identify which point in the Pareto front was identified.
+  \item Combine all recorded points into an approximation of the Pareto front.
+\end{enumerate}
+
+This experiment setting will allow to create an effective approximation of the Pareto front of an underlying problem. It is vital to have this approximation if one is to compare the performances of different algorithms.
+
 
 \subsection{Bechmarking Software.}
 As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\
