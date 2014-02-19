@@ -107,6 +107,67 @@ This experiment setting will allow to create an effective approximation of the P
 
 \subsubsection{Multi-Policy Algorithms.}
 
+Single-policy algorithms are initialized with a set of parameters, usually its a set of weights - one for each objective. Eventually, this set of parameters gets mapped into one of the policies and the algorithm will learn the Q-function for this policy. As was mentioned before, an experimenter needs to prepare a number of sets of preferences (weights), and hopefully those sets will approximate the Pareto front and restart the experiment for every set of preferences. 
+
+This experiment setting is not very efficient - not only it takes more computer time but also significantly complicates an experiment design. Instead of sequential working with each set of parameters one can work with all sets of parameters at the same time. For example, an algorithm might be given the following set - $ \{\;\{0.7,0.3\}, \{0.3,0.7\}\;\} $. Here the algorithm works with two sets of weights. Each set of weights represents the relative importance of each objective to an experimenter. Ideally, both sets will get mapped into different policies, although they both might get mapped into the same policy.  The algorithm then should learn the Q-functions for those mapped policies.
+
+In this setting, one of the mapped policies is used as an active policy; It's Q-function is used during action-selection period. Other mapped policies are used only for learning purposes.
+
+Simultaneous learning is possible due to sharing of immediate reward for each set of weights.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{reasonForMPLearning.png}
+\caption{The blue dot which represents the policy with return [60,60] is marked with red circle around. The single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot.}
+\label{fig:exampleMDPOneMarkedPolicy}
+\end{figure}
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[!htb]
+    \caption{\textbf{Left-hand side table} is the Q-function for the state $s_{t+1}$ for the first set of preferences. \textbf{Right-hand side table} is the Q-function for the state $s_{t+1}$ for the second set of preferences.}
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t+1}$ & [60,40] & [40,60]
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t+1}$ & [60,40] & [40,60]
+        \end{tabular}
+    \end{minipage}
+\end{table}
+
+This two Q-functions are identical because both actions lead to the terminal state and only immediate reward is used during update. On the other hand, consider what happens when the update is calculated for the state $s_{t}$. Remember the update rule for the Q-learning algorithm: 
+
+$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[!htb]
+    \caption{\textbf{Left-hand side table} is the Q-function for the state $s_{t+1}$ for the first set of preferences. \textbf{Right-hand side table} is the Q-function for the state $s_{t+1}$ for the second set of preferences.}
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t}$ & [60,40] & [40,60]
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t+1}$ & [60,40] & [40,60]
+        \end{tabular}
+    \end{minipage}
+\end{table}
+
 \subsection{Benchmarking Software.}
 As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\
 
