@@ -107,19 +107,19 @@ This experiment setting will allow to create an effective approximation of the P
 
 \subsubsection{Multi-Policy Algorithms.}
 
-Single-policy algorithms are initialized with a set of parameters, usually its a set of weights - one for each objective. Eventually, this set of parameters gets mapped into one of the policies and the algorithm will learn the Q-function for this policy. As was mentioned before, an experimenter needs to prepare a number of sets of preferences (weights), which hopefully will approximate the Pareto front and restart the experiment for every set of preferences. 
+Single-policy algorithms are initialized with a set of parameters, usually its a set of weights - one for each objective. Eventually, this set of parameters gets mapped into one of the policies and the algorithm will learn the Q-function for this policy. As was mentioned before, an experimenter needs to prepare a number of sets of preferences (weights), and hopefully those sets will approximate the Pareto front and restart the experiment for every set of preferences. 
 
-This experiment setting is not very efficient - not only it takes more computer time but also significantly complicates an experiment design. Instead of sequential working with each set of parameters one can work with all sets of parameters at the same time. For example, an algorithm might be given the following set - $ \{\;\{0.7,0.3\}, \{0.3,0.7\}\;\} $. Here the algorithm works with two sets of parameters; Ideally, both sets will get mapped into different policies, although they both might get mapped into the same policy.  The algorithm then should learn the Q-functions for those mapped policies.
+This experiment setting is not very efficient - not only it takes more computer time but also significantly complicates an experiment design. Instead of sequential working with each set of parameters one can work with all sets of parameters at the same time. For example, an algorithm might be given the following set - $ \{\;\{0.7,0.3\}, \{0.3,0.7\}\;\} $. Here the algorithm works with two sets of weights. Each set of weights represents the relative importance of each objective to an experimenter. Ideally, both sets will get mapped into different policies, although they both might get mapped into the same policy.  The algorithm then should learn the Q-functions for those mapped policies.
 
-In this setting, one of the policies is used as .
+In this setting, one of the mapped policies is used as an active policy; It's Q-function is used during action-selection period. Other mapped policies are used only for learning purposes.
 
-Simultaneous learning is possible due to sharing of immediate reward for each set of weights.
+Simultaneous learning of multiple policies is possible because state-transition provides enough information for more than one policy to be successfully updated. As an example consider a state-transition situation on Figure ~\ref{fig:reasonForMPLearning}. 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{reasonForMPLearning.png}
 \caption{The blue dot which represents the policy with return [60,60] is marked with red circle around. The single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot.}
-\label{fig:exampleMDPOneMarkedPolicy}
+\label{fig:reasonForMPLearning}
 \end{figure}
 
 {\renewcommand{\arraystretch}{1.2}
