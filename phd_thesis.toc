@@ -38,11 +38,11 @@
 \contentsline {subsection}{\numberline {2.2.2}Experiment Structure.}{32}{subsection.2.2.2}
 \contentsline {subsubsection}{Single-Policy Algorithms.}{32}{section*.20}
 \contentsline {subsubsection}{Multi-Policy Algorithms.}{35}{section*.24}
-\contentsline {subsection}{\numberline {2.2.3}Benchmarking Software.}{37}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Benchmarks.}{40}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Deep sea treasure.}{41}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}MO-Puddleworld.}{43}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.2.3}Benchmarking Software.}{38}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Benchmarks.}{41}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Deep sea treasure.}{42}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}MO-Puddleworld.}{44}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}MO-Mountain Car.}{44}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{44}{subsection.2.3.4}
-\contentsline {chapter}{Conclusions}{46}{section*.34}
-\contentsline {chapter}{\textbf {References}}{46}{section*.35}
+\contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{45}{subsection.2.3.4}
+\contentsline {chapter}{Conclusions}{47}{section*.34}
+\contentsline {chapter}{\textbf {References}}{47}{section*.35}
