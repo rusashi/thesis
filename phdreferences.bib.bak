@@ -200,8 +200,19 @@ ISSN={1089-778X}
     pages = {497--537},
     publisher = {MIT Press}
 }
-@MISC{Yaman_democraticapproximation,
-    author = {Fusun Yaman and Thomas J. Walsh and Michael L. Littman and Marie Desjardins},
-    title = {Democratic Approximation of Lexicographic Preference Models},
-    year = {2010}
+@article{Yaman20111290,
+title = "Democratic approximation of lexicographic preference models ",
+journal = "Artificial Intelligence ",
+volume = "175",
+number = "7–8",
+pages = "1290 - 1307",
+year = "2011",
+note = "Representing, Processing, and Learning Preferences: Theoretical and Practical Challenges ",
+issn = "0004-3702",
+doi = "http://dx.doi.org/10.1016/j.artint.2010.11.012",
+url = "http://www.sciencedirect.com/science/article/pii/S0004370210002018",
+author = "Fusun Yaman and Thomas J. Walsh and Michael L. Littman and Marie desJardins",
+keywords = "Lexicographic models",
+keywords = "Preference learning",
+keywords = "Bayesian methods "
 }

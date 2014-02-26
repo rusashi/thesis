@@ -32,15 +32,15 @@
 \contentsline {chapter}{Introduction}{1}{section*.9}
 \contentsline {chapter}{\numberline {2}Empirical Evaluation.}{27}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction.}{27}{section.2.1}
-\contentsline {section}{\numberline {2.2}The Details of the Empirical Evaluation Study.}{29}{section.2.2}
+\contentsline {section}{\numberline {2.2}The Empirical Evaluation Methodology.}{29}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Performance metrics.}{30}{subsection.2.2.1}
 \contentsline {subsubsection}{Hypervolume metric.}{31}{section*.18}
 \contentsline {subsection}{\numberline {2.2.2}Experiment Structure.}{32}{subsection.2.2.2}
 \contentsline {subsubsection}{Single-Policy Algorithms.}{32}{section*.20}
 \contentsline {subsubsection}{Multi-Policy Algorithms.}{35}{section*.24}
-\contentsline {subsection}{\numberline {2.2.3}Benchmarking Software.}{38}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Benchmarks.}{41}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Deep sea treasure.}{42}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.2.3}Benchmarking Software.}{39}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Benchmarks.}{42}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Deep sea treasure.}{43}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}MO-Puddleworld.}{44}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}MO-Mountain Car.}{44}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{45}{subsection.2.3.4}

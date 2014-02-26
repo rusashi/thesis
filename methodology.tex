@@ -2,26 +2,32 @@
 
 \section{Introduction.}
 
-To conduct an empirical study one needs means to compare different algorithms. For example for classification algorithms there are repositories of data sets, with each data set describing a particular problem. These data sets allow researches to identify weaknesses or advantages of their algorithms. They also allow them to make cross-comparison between different algorithms.
+Whiteson and Littman (2011)\nocite{whiteson2011introduction} argued the importance of the empirical evaluation due to the natural limitations of other means to assess algorithms:
+
+\begin{itemize}
+  \item Subjective assessment (intuitive understanding) of an algorithm is prone to initial erroneous assumptions. 
+  \item Theoretical assessment (rigorous proof) often results in the mismatch of actual performance in a realistic domain with predicted theoretical performance. This is due to the fact that in realistic domains assumptions (that were used during rigorous proof) do not always hold.
+\end{itemize}
+Thus the empirical evaluation is an important part of a research process.
+
+To conduct an empirical study one needs means to compare different algorithms. For example, classification algorithms are tested on data sets from special repositories. These data sets guarantee that different algorithms will be tested on the same set of benchmarks and thus they introduce more consistency into an assessment. They also allow an experimenter to make cross-comparison between different algorithms.
 
 Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from research areas like classification or clustering. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. In reinforcement learning a test problem is not a static data set but rather a software which reacts dynamically to the actions of an agent.
 
-The absence of central repository of test problems lead to the fact that every published paper is disconnected from all other papers in terms of test problems. All papers described in literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high.
+The absence of a central repository of test problems lead to the fact that every published paper (prior to 2011\footnote{Vamplew et all. (2011)\nocite{vamplew2011empirical} introduced a number of test problems which were picked up later by other researchers.}) is disconnected from all other papers in terms of test problems. All papers described in the literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two\footnote{Peter, I still need some time to clarify how many test problems I will use, after that I will correct this section if needed}. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high, thereby allowing meaningful comparisons to be made between different algorithms.
 
-Last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
+The last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
 \begin{itemize}
-  \item Information about the structure of a reward function. Whether the reward is intrinsic or extrinsic may have a profound effect on the performance of some algorithms.
+  \item Information about the structure of a reward function. Whether the reward is intrinsic or extrinsic\footnote{Peter, can you suggest the papaer I should cite here?} may have a profound effect on the performance of some algorithms.
   \item Each test problem must be built around particular property, which can be observed in realistic domains, such as the shape of the Pareto front.
   \item Each algorithm should be subjected to a number of different test problems, to identify a realistic domain of application.
 \end{itemize}
 
-One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of different algorithm. Each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers.
+One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of a different algorithm. Even if the same test problem is used, each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers. One major example can clarify the point. In multi-objective optimization the quality of an algorithm is evaluated by how close the algorithm approximates the Pareto front of a problem. Different methodologies measure this notion of "closeness" in a different way\footnote{Peter, can you suggest which paper I should cite here?} and therefore it becomes meaningless to compare the results which were obtained using different methodologies.
 
-The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical evaluations but only to prior versions of the same algorithms.
+The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical comparisons but only to prior versions of the same algorithms.
 
-One of the difficulties associated with an empirical evaluation of existing algorithms is that different methodologies are exploited by different researchers. One major example can clarify the point. In multi-objective optimization the quality of the algorithm is evaluated by how close the approximated Pareto front is to the true Pareto front of the problem. Currently, there is a vast number of proposed performance metrics which allow to assess how close the solution is to the true one. Clearly, it is impossible to chose from two algorithms when you know that the results provided in a published papers were obtained with different set of performance metrics in each paper.
-
-\section{The Details of the Empirical Evaluation Study.}
+\section{The Empirical Evaluation Methodology.}
 
 All of the works reviewed in the literature review chapter have the same limitations:
 \begin{itemize}
@@ -39,26 +45,26 @@ This document will use the methodology previously proposed by Vamplew et al. (20
 
 \subsection{Performance metrics.}
 
-Every multi-objective problem implies existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm. Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set. And every algorithm does it differently, capturing specific points of the true front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions thus previous results in multi-objective optimization could easily be used in MORL.
+Every multi-objective problem implies the existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm.
 
-Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation covers the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
+Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set, and algorithms may vary in how well they estimate the front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions and so metrics previously considered in multi-objective optimization could easily be used in MORL.
+
+Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation cover the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
 
 Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, a composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\nocite{berry2008phd}) showed a preference of such composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization.
 
 \subsubsection{Hypervolume metric.}
 
-The hypervolume metric(Zitzler and Thiele, 1999\nocite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which was created by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}. The reference point can be used as a tuning mechanism and allows greater flexibility.
+The hypervolume metric (Zitzler and Thiele, 1999\nocite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which is dominated by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}. It is important to note that the reference point must be consistent across different experiments because the value of the hypervolume is directly affected by the choice of the reference point. Even the same approximate Pareto front will give different values of hypervolume if different reference points are used, not to mention the ones produced by different algorithms. Thus it is safe to say that the choice of the reference point must be a part of the definition of the benchmark.
 
-Given two learning algorithms, we can run them on the same test problem. After that we get a Pareto front approximation from each algorithm and calculate the hypervolume for each approximation. The approximation which produced a higher value of the hypervolume is a better approximation to the true Pareto front. This is proven to be true both for convergence and diversity.
+Given two learning algorithms, an experimenter can run them on the same test problem. Each algorithm will produce its approximate Pareto front. The experimenter can then calculate each approximation's hypervolume. The approximation which produces a higher value of the hypervolume is a better approximation to the true Pareto front. Importantly, improvements in any of the scalar measures of quality (diversity, cardinality and accuracy) will all be reflected in an increased value for hypervolume.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.9]{hypervolume.png}
-\caption{The figure shows how points from a Pareto front approximation and a reference point together form the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point.}
+\caption{The figure shows how points from a Pareto front approximation and a reference point together define the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point. The hyperolume of the enclosed region can be used as a measure of the quality of the frontal approximation.}
 \label{fig:hyperVolume}
 \end{figure}
-
-One important remark - the reference point must be consistent when evaluating approximations obtained by different learning algorithms. \\
 
 \subsection{Experiment Structure.}
 
@@ -189,48 +195,49 @@ Table \ref{table:updatedQfunctionsfortplusone} shows updated Q-functions for the
 
 This example was made to illustrate that it is possible to learn Q-functions for more than one policy at the same time. However, this requires a special experiment design:
 \begin{enumerate}
-  \item Initialize an array of preferences, where each preference is an array itself(for example a set of weights). 
+  \item Initialize an array of preferences, where each preference is an array itself(for example a set of weights).
   \item Create and initialize a number of Q-functions - one for each set of preferences.
-  \item Run a specified number of episodes. In every episode, during every state-transition, use received immediate reward to update every Q-function. 
-  \item After learning is finished, run a greedy episode for each Q-function (if an environment's state-transition is deterministic) and record the resulting return. 
+  \item Run a specified number of episodes. In every episode, during every state-transition, use received immediate reward to update every Q-function.
+  \item After learning is finished, run a greedy episode for each Q-function (if an environment's state-transition is deterministic) and record the resulting return.
   \item Combine all returns into an approximation of the Pareto front.
 \end{enumerate}
 
 \subsection{Benchmarking Software.}
-As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\
+As was mentioned before a test problem in reinforcement learning is a dynamic piece of software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This is due to the inherent interactive nature of the the agent-environment cycle. For example every test problem should have the means (function or method) to accept an action from the agent. As well as means (again function or a method) to pass information about state-transition and reward functions to the agent.
 
-Even though test problems may have nothing in common in terms of realistic domains they represent, they still share those means of interaction with an agent or learning algorithm. Moreover in every problem the information that is passed between an agent and an environment is of very similar nature: the agent informs the environment about his preferred action, the environment notifies the agent about the consequences of that particular action. \\
+Even though test problems may have nothing in common in terms of realistic domains they represent, they still share those means of interaction with an agent or learning algorithm. Moreover in every problem the information that is passed between an agent and an environment is of very similar nature: the agent informs the environment about his preferred action, the environment notifies the agent about the consequences of that particular action.
 
-For a long time nobody took advantage of that fact; Not only different programming techniques were used to implement the interaction between the agent and the environment but also different programming languages and different platforms were used. This created a natural level of complexity which prevented the exchange of learning algorithms and test problems. \\
+For a long time nobody took advantage of that fact; Not only different programming techniques were used to implement the interaction between the agent and the environment but also different programming languages and different platforms were used. Even if two authors used the same test problem it is possible that differences may exist in their implementations of that problem. This created a natural level of complexity which prevented the exchange of learning algorithms and test problems.
 
-Eventually Tanner and White (2009)\nocite{tanner2009rl} created an open source software called RL-Glue. This software lays a foundation for empirical studies in reinforcement learning because it provides a necessary set of standards which allow to connect the test problems with the learning algorithms from different researchers without creation of this mundane connecting code. Essentially, RL-Glue, by introducing a set of standard functions , allows to plug-in agents, environments and experiments from different authors even created in different languages. \\
+Eventually Tanner and White (2009)\nocite{tanner2009rl} created an open source software called RL-Glue. This software lays a foundation for empirical studies in reinforcement learning because it provides a necessary set of standards which allows to connect the test problems with the learning algorithms from different researchers. The framework handles all hard work of connecting and passing information between algorithms and problems. For example, an experimenter who wants to test his newly developed algorithm on a set of well established test benchmarks does not need to think about how his code will interact with different problems; He just encapsulates the logic of his algorithm into standard functions, after that RL-Glue will be able to connect this algorithm to any test problem. Essentially, RL-Glue, by introducing a set of standard functions , allows to plug-in agents, environments and experiments from different authors even created in different languages.
 
-RL-Glue consists of the three main modules: an agent, an environment and an experiment. The agent is the module which encapsulates the learning algorithm. The environment is the module which encapsulates a particular test problem. The experiment is the program which serves as traditional main function and is responsible for running the agent through the environment and collecting all the data obtained by the agent. The experiment module is place where researcher controls how many episodes or how many trials should be performed by the agent. All the interaction between the modules is handled by a central server. \\
+RL-Glue consists of three main modules as shown in Figure \ref{fig:rlglue}: an agent, an environment and an experiment. The agent is the module which encapsulates a learning algorithm. The environment is the module which encapsulates a particular test problem. The experiment module is a place where a researcher controls how many time steps per episode or how many episodes should be performed by the agent. All the interaction between the modules is handled by a central server RL-Glue server.
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{glue.png}
-\caption{The RL-Glue standard.}
+\caption{This diagram depicts the interaction between all modules. As can be seen from the figure all modules are connected to a central RL-Glue server which in turn facilitate the exchange of information between all modules. This figure is from original Tanner and White (2009) RL-Glue publication.}
 \vskip -0.2in
-\label{rlglue}
+\label{fig:rlglue}
 \end{figure}
 The plug-in nature of the the RL-glue perfectly addresses three aspects of adequate methodology that were outlined before. Namely:
 
 \begin{itemize}
 
-\item The agent module encapsulates the learning algorithm to be evaluated. Each learning algorithm is a separate plug-in. Multiple number of the learning algorithms could be attached to the RL-glue simultaneously. This allows to evaluate multiple number of the algorithms simultaneously. A researcher just chooses which of the connected agents will be evaluated.
+\item The agent module encapsulates the learning algorithm. Each learning algorithm is a separate plug-in. Multiple numbers of learning algorithms can be attached to the RL-Glue simultaneously. This allows an experimenter to evaluate multiple algorithms simultaneously. A researcher just chooses which of the connected agents will be evaluated.
 
-\item The environment module tackles aspect number two of the adequate methodology. Because the environment module is well-documented and well-standardized in terms of standard programming interfaces it allows to create standard test problems. This modules eliminates the need of connecting codes needed at the present moment. With plug-in architecture the researcher only needs to download a test problem and plug it into running RL-glue server without any connecting code.
+\item The environment module tackles aspect number two of the adequate methodology. Because the environment module is well-documented and well-standardized in terms of standard programming interfaces it allows the creation and reuse of standard test problems. This module eliminates connecting code needed previously. With plug-in architecture the researcher only needs to download a test problem and plug it into a running RL-Glue server without writing any code to connect the problem and the algorithm.
 
-\item The experiment module tackles aspect number three of the adequate methodology. The experiment module is the plug-in where the researcher chooses the particular test problem and the particular learning algorithms that will be evaluated against that test problem. The experiment module is also a place where all the statistics is gathered and analyzed. This is achieved by introducing a standard message protocol between the agent module and the experiment module. Using this message protocol the agents can send information about learned Q-functions and policies to the experiment module. This is also a place where different performance metrics are applied. Each performance metric is created as a library with external functions which encapsulates the inner routines. Such performance metrics are stored separately in the library files and also could be accessible to the public. For example Hypervolume performance metric will be introduced to RL-glue as a part of this thesis and will be available publicly. So if any other researcher wants to use it, the only job left to do is to download it and add to the existing libraries. When the performance metric library is downloaded and introduced to RL-glue it offers an interface of public functions which accept information obtained from the agent.
+\item The experiment module tackles aspect number three of the adequate methodology. The experiment module is the plug-in where the researcher chooses the particular test problem and the particular learning algorithms that will be evaluated against that test problem. The experiment module is also a place where all the statistics are gathered and analyzed. This is achieved by introducing a standard message protocol between the agent module and the experiment module. Using this message protocol the agents can send information about learned Q-functions and policies to the experiment module. This is also a place where different performance metrics are applied. Each performance metric is created as a library with external functions which encapsulates the inner routines. Such performance metrics are stored separately in the library files and also could be accessible to the public. For example hypervolume performance metric will be introduced to RL-Glue as a part of this thesis and will be available publicly.
 
 \end{itemize}
 
-Originally, RL-Glue is a software for single objective reinforcement learning but it can be adapted to multi-objective(which is also a part of this thesis) by replacing scalar reward signal with vector-valued. \\
+Originally, RL-Glue is a software for single objective reinforcement learning but it can be adapted to multi-objective (which is also a part of this thesis) by replacing scalar reward signal with a vector-valued signal.
 
 \section{Benchmarks.}
 
-Each benchmark or test problem is created to address a particular aspects of real-life problems. Thus a rich library of benchmarks should be available to adequately assess a learning algorithm. A suite of these benchmarks will allow to look at the learning from different point of views. Combined together, the benchmarks will allow to evaluate how different algorithms cope with following aspects of real-life problems:
+Each benchmark or test problem is created to address a particular aspect of real-life problems. Thus a rich library of benchmarks should be available to adequately assess a learning algorithm. A suite of these benchmarks will allow to look at the learning from different point of views. Combined together, the benchmarks will allow to evaluate how different algorithms cope with following aspects of real-life problems:
 
 \begin{itemize}
 
@@ -253,7 +260,7 @@ Each benchmark or test problem is created to address a particular aspects of rea
 Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms.
 
 \subsection{Deep sea treasure.}
-This test problem is a grid world consisting 10 rows and 11 columns as shown on figure \ref{fig:DSTOverview}. The grid represents undersea surface with multiple number of treasure spots available. One small remark - is that each treasure spot may have different treasure value. The agent is represented as a submarine. Four actions available to the agent - left, right, up, down. Each of the actions move submarine by one square in appropriate direction. First objective is pretty obvious - to find as much as possible of treasure. Second objective is to minimize time spent. \\
+This test problem is a grid world consisting 10 rows and 11 columns as shown on Figure \ref{fig:DSTOverview}. The grid represents undersea surface with multiple number of treasure spots available. One small remark - is that each treasure spot may have different treasure value. The agent is represented as a submarine. Four actions available to the agent - left, right, up, down. Each of the actions move submarine by one square in appropriate direction. First objective is pretty obvious - to find as much as possible of treasure. Second objective is to minimize time spent. \\
 \begin{figure}[ht]
 \vskip 0.2in
 \centering

@@ -112,6 +112,11 @@ Van~Moffaert, K., Drugan, M.~M. and Now{\'e}, A., \emph{Hypervolume-based
 Watkins, C.~J. and Dayan, P., \emph{Q-learning}, Machine learning, 1992,
   vol.~8(3-4):pp. 279--292
 
+\bibitem{whiteson2011introduction}
+Whiteson, S. and Littman, M.~L., \emph{Introduction to the special issue on
+  empirical evaluations in reinforcement learning}, Machine learning, 2011,
+  vol.~84(1):pp. 1--6
+
 \bibitem{Yaman20111290}
 Yaman, F., Walsh, T.~J., Littman, M.~L. and desJardins, M., \emph{Democratic
   approximation of lexicographic preference models}, Artificial Intelligence,

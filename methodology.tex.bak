@@ -2,26 +2,32 @@
 
 \section{Introduction.}
 
-To conduct an empirical study one needs means to compare different algorithms. For example for classification algorithms there are repositories of data sets, with each data set describing a particular problem. These data sets allow researches to identify weaknesses or advantages of their algorithms. They also allow them to make cross-comparison between different algorithms.
+Whiteson and Littman (2011)\nocite{whiteson2011introduction} argued the importance of the empirical evaluation due to the natural limitations of other means to assess algorithms:
+
+\begin{itemize}
+  \item Subjective assessment (intuitive understanding) of an algorithm is prone to initial erroneous assumptions. 
+  \item Theoretical assessment (rigorous proof) often results in the mismatch of actual performance in a realistic domain with predicted theoretical performance. This is due to the fact that in realistic domains assumptions (that were used during rigorous proof) do not always hold.
+\end{itemize}
+Thus the empirical evaluation is an important part of a research process.
+
+To conduct an empirical study one needs means to compare different algorithms. For example, classification algorithms are tested on data sets from special repositories. These data sets guarantee that different algorithms will be tested on the same set of benchmarks and thus they introduce more consistency into an assessment. They also allow an experimenter to make cross-comparison between different algorithms.
 
 Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from research areas like classification or clustering. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. In reinforcement learning a test problem is not a static data set but rather a software which reacts dynamically to the actions of an agent.
 
-The absence of central repository of test problems lead to the fact that every published paper is disconnected from all other papers in terms of test problems. All papers described in literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high.
+The absence of a central repository of test problems lead to the fact that every published paper (prior to 2011\footnote{Vamplew et all. (2011)\nocite{vamplew2011empirical} introduced a number of test problems which were picked up later by other researchers.}) is disconnected from all other papers in terms of test problems. All papers described in the literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two\footnote{Peter, I still need some time to clarify how many test problems I will use, after that I will correct this section if needed}. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high, thereby allowing meaningful comparisons to be made between different algorithms.
 
-Last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
+The last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
 \begin{itemize}
-  \item Information about the structure of a reward function. Whether the reward is intrinsic or extrinsic may have a profound effect on the performance of some algorithms.
+  \item Information about the structure of a reward function. Whether the reward is intrinsic or extrinsic\footnote{Peter, can you suggest the papaer I should cite here?} may have a profound effect on the performance of some algorithms.
   \item Each test problem must be built around particular property, which can be observed in realistic domains, such as the shape of the Pareto front.
   \item Each algorithm should be subjected to a number of different test problems, to identify a realistic domain of application.
 \end{itemize}
 
-One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of different algorithm. Each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers.
+One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of a different algorithm. Even if the same test problem is used, each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers. One major example can clarify the point. In multi-objective optimization the quality of an algorithm is evaluated by how close the algorithm approximates the Pareto front of a problem. Different methodologies measure this notion of "closeness" in a different way\footnote{Peter, can you suggest which paper I should cite here?} and therefore it becomes meaningless to compare the results which were obtained using different methodologies.
 
-The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical evaluations but only to prior versions of the same algorithms.
+The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical comparisons but only to prior versions of the same algorithms.
 
-One of the difficulties associated with an empirical evaluation of existing algorithms is that different methodologies are exploited by different researchers. One major example can clarify the point. In multi-objective optimization the quality of the algorithm is evaluated by how close the approximated Pareto front is to the true Pareto front of the problem. Currently, there is a vast number of proposed performance metrics which allow to assess how close the solution is to the true one. Clearly, it is impossible to chose from two algorithms when you know that the results provided in a published papers were obtained with different set of performance metrics in each paper.
-
-\section{The Details of the Empirical Evaluation Study.}
+\section{The Empirical Evaluation Methodology.}
 
 All of the works reviewed in the literature review chapter have the same limitations:
 \begin{itemize}
@@ -39,26 +45,26 @@ This document will use the methodology previously proposed by Vamplew et al. (20
 
 \subsection{Performance metrics.}
 
-Every multi-objective problem implies existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm. Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set. And every algorithm does it differently, capturing specific points of the true front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions thus previous results in multi-objective optimization could easily be used in MORL.
+Every multi-objective problem implies the existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm.
 
-Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation covers the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
+Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set, and algorithms may vary in how well they estimate the front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions and so metrics previously considered in multi-objective optimization could easily be used in MORL.
+
+Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation cover the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
 
 Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, a composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\nocite{berry2008phd}) showed a preference of such composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization.
 
 \subsubsection{Hypervolume metric.}
 
-The hypervolume metric(Zitzler and Thiele, 1999\nocite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which was created by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}. The reference point can be used as a tuning mechanism and allows greater flexibility.
+The hypervolume metric (Zitzler and Thiele, 1999\nocite{zitzler1999pareto}) is a well-recommended composite metric which is used to evaluate the quality of an approximate Pareto front found by a learning algorithm. It measures the volume of the objective space region which is dominated by the points in the found Pareto front approximation. One additional point is also added before the volume is measured. This point is dominated by all points in the Pareto front approximation and serves as a reference point. An example is shown in figure~\ref{fig:hyperVolume}.
 
-Given two learning algorithms, we can run them on the same test problem. After that we get a Pareto front approximation from each algorithm and calculate the hypervolume for each approximation. The approximation which produced a higher value of the hypervolume is a better approximation to the true Pareto front. This is proven to be true both for convergence and diversity.
+Given two learning algorithms, an experimenter can run them on the same test problem. Each algorithm will produce its approximate Pareto front. The experimenter can then calculate each approximation's hypervolume. The approximation which produces a higher value of the hypervolume is a better approximation to the true Pareto front. This is proven to be true both for convergence and diversity.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.9]{hypervolume.png}
-\caption{The figure shows how points from a Pareto front approximation and a reference point together form the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point.}
+\caption{The figure shows how points from a Pareto front approximation and a reference point together define the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point. The hyperolume of the enclosed region can be used as a measure of the quality of the frontal approximation.}
 \label{fig:hyperVolume}
 \end{figure}
-
-One important remark - the reference point must be consistent when evaluating approximations obtained by different learning algorithms. \\
 
 \subsection{Experiment Structure.}
 
@@ -113,24 +119,24 @@ This experiment setting is not very efficient - not only it takes more computer 
 
 In this setting, one of the mapped policies is used as an active policy; It's Q-function is used during action-selection period. Other mapped policies are used only for learning purposes.
 
-Simultaneous learning of multiple policies is possible because state-transition dynamics provides enough information for more than one policy to be successfully updated. As an example consider state-transition depicted on Figure~\ref{fig:reasonForMPLearning}. Let $ \vec{w}_{1}=\{0.7,0.3\} $  and $ \vec{w}_{2}=\{0.3,0.7\} $ be two weight vectors. Each vector represents relative importance of objectives. Weight vectors $ \vec{w}_{1} $  and $ \vec{w}_{2} $ will get mapped to policies $ \pi_{\vec{w}_{1}} $  and $ \pi_{\vec{w}_{2}} $ respectively. Let $ \pi_{\vec{w}_{1}} $  and $ \pi_{\vec{w}_{2}} $ be deterministic policies.
+Simultaneous learning of multiple policies is possible because state-transition dynamics provides enough information for more than one policy to be successfully updated. As an example consider state-transition depicted on Figure~\ref{fig:reasonForMPLearning}. Let $ \vec{w}^{1}=\{0.7,0.3\} $  and $ \vec{w}^{2}=\{0.3,0.7\} $ be two weight vectors. Each vector represents relative importance of each objective. Weight vectors $ \vec{w}^{1} $  and $ \vec{w}^{2} $ will get mapped into policies $ \pi^{\vec{w}^{1}} $  and $ \pi^{\vec{w}^{2}} $ respectively. Let both policies be deterministic.
 
-Further let $ \pi_{\vec{w}_{1}} $ be an active policy. At time step $ t $ action-selection was made according to active policy $ \pi_{\vec{w}_{1}} $ and let $ a_{t}=left $. Pair $ (s_{t}, a_{t}) $ makes the environment to transition to state $ s_{t+1} $ and the immediate reward [20,20] is received by the learning algorithm.
+Further let $ \pi^{\vec{w}^{1}} $ be an active policy. At time step $ t $ action-selection was made according to active policy $ \pi^{\vec{w}_{1}} $ and let $ a_{t}=left $. Pair $ (s_{t}, a_{t}) $ makes an environment to transition to state $ s_{t+1} $ and the immediate reward [20,20] is received by a learning algorithm.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{reasonForMPLearning.png}
-\caption{The blue dot which represents the policy with return [60,60] is marked with red circle around. The single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot.}
+\caption{An example state-transition. At time step $t$ the algorithm chose action $a_{t}\;=\;left$ according to the active policy $\pi^{\vec{w}^{1}}$. This resulted in transition to a state $s_{t+1}$ and immediate reward [20,20] was received by the algorithm. Even though policy $\pi^{\vec{w}^{2}}$ was not involved into action-selection it is still possible to update it's value of $Q(s_{t},a_{t})$.}
 \label{fig:reasonForMPLearning}
 \end{figure}
 
-At time step $ t+1 $ it is time to update $ Q(s_{t}, a_{t}) $ for both $ \pi_{\vec{w}_{1}} $  and $ \pi_{\vec{w}_{2}} $. To update $ Q(s_{t}, a_{t}) $ the algorithm will need to identify greedy action for the state $ s_{t+1} $ and use Q-value of that greedy action in combination with the immediate reward. For each policy the greedy action might be different but the immediate reward will be the same. This allows to update Q-function for the policy $ \pi_{\vec{w}_{2}} $ even though the state-transition was generated by the policy $ \pi_{\vec{w}_{1}} $.
+At time step $ t+1 $ the algorithm needs to update $ Q(s_{t}, a_{t}) $ for both $ \pi^{\vec{w}_{1}} $  and $ \pi^{\vec{w}_{2}} $. To update $ Q(s_{t}, a_{t}) $ the algorithm needs to identify greedy action for a state $ s_{t+1} $ and use Q-value of that greedy action in combination with the immediate reward. For each policy the greedy action might be different but the immediate reward will be the same. This allows to update Q-function for the policy $ \pi^{\vec{w}^{2}} $ even though the state-transition was generated by the policy $ \pi^{\vec{w}^{1}} $.
 
-Table \ref{table:Qfunctionsfortplusone} shows shows the Q-functions for the state $ s_{t+1} $ for both policies $ \pi_{\vec{w}_{1}} $  and $ \pi_{\vec{w}_{2}} $. These two Q-functions are identical because both actions lead to the terminal state and only immediate reward is used during the update. 
+Table \ref{table:Qfunctionsfortplusone} shows the Q-functions for the state $ s_{t+1} $ for both policies $ \pi^{\vec{w}^{1}} $  and $ \pi^{\vec{w}^{2}} $. These two Q-functions are identical because both actions lead to the terminal state and only immediate reward is used during the update.
 
 {\renewcommand{\arraystretch}{1.2}
 \begin{table}[!htb]
-    \caption{\textbf{Left-hand side table} is the Q-function for the state $s_{t+1}$ for the policy $ \pi_{\vec{w}_{1}} $. \textbf{Right-hand side table} is the Q-function for the state $s_{t+1}$ for the policy $ \pi_{\vec{w}_{2}} $.}
+    \caption{\textbf{Left-hand side table} is the Q-function for the state $s_{t+1}$ for the policy $ \pi^{\vec{w}^{1}} $. \textbf{Right-hand side table} is the Q-function for the state $s_{t+1}$ for the policy $ \pi^{\vec{w}^{2}} $.}
     \begin{minipage}{.5\linewidth}
       \centering
         \begin{tabular}{c|c|c}
@@ -150,25 +156,51 @@ Table \ref{table:Qfunctionsfortplusone} shows shows the Q-functions for the stat
     \label{table:Qfunctionsfortplusone}
 \end{table}
 
-For each policy the greedy action is the action which will maximize the weighted sum:
-
-$$ \displaystyle\sum_{i=1}^{n} w_{i}f_{i}(a). $$
-
-For the policy $ \pi_{\vec{w}^{1}} $ the weight vector is $ \vec{w}^{1}=\{0.7,0.3\} $ and thus the greedy action will be $ left $ because
-
+For each policy $\pi$ the greedy action at time step $t+1$ is an action $a$ which will maximize the weighted sum:
+$$ \displaystyle\sum_{i=1}^{n} w^{\pi}_{i}Q^{\pi}_{i}(s_{t+1},a), $$
+where $n$ is the number of objectives. For the policy $ \pi^{\vec{w}^{1}} $ the weight vector is $ \vec{w}^{1}=\{0.7,0.3\} $ and the greedy action is $ left $ because
 $$ (60 \times 0.7) + (40 \times 0.3) > (40 \times 0.7) + (60 \times 0.3). $$
-
-On the other hand for the policy $ \pi_{\vec{w}^{2}} $ the weight vector is $ \vec{w}^{2}=\{0.3,0.7\} $ and the greedy action will be $ right $ because
+Here $ (60 \times 0.7) + (40 \times 0.3) $ is the dot product $ \vec{w}^{1} \cdot Q^{\pi^{\vec{w}^{1}}}(s_{t+1},left) $ and $ (40 \times 0.7) + (60 \times 0.3) $ is the dot product $ \vec{w}^{1} \cdot Q^{\pi^{\vec{w}^{1}}}(s_{t+1},right) $. As you can see the dot product for action $left$ produces a higher value than the dot product for action $right$. The weight vector $\vec{w}^{1}$ has a higher value for the first objective. This will be translated into higher priority of the first objective and taking action $left$ in state $s_{t+1}$ results in higher expected return for the first objective. On the other hand for the policy $ \pi^{\vec{w}^{2}} $ the weight vector is $ \vec{w}^{2}=\{0.3,0.7\} $ and the greedy action is $ right $ because
 
 $$ (60 \times 0.3) + (40 \times 0.7) < (40 \times 0.3) + (60 \times 0.7). $$
+Here $ (60 \times 0.3) + (40 \times 0.7) $ is the dot product $ \vec{w}^{2} \cdot Q^{\pi^{\vec{w}^{2}}}(s_{t+1},left) $ and $ (40 \times 0.3) + (60 \times 0.7) $ is the dot product $ \vec{w}^{2} \cdot Q^{\pi^{\vec{w}^{2}}}(s_{t+1},right) $.
 
-Thus the update rule for $ Q^{ \pi^{\vec{w}^{1}} }(s_{t},a_{t}) $ will take the following form:
+Update rule for $ Q^{ \pi^{\vec{w}^{1}} }(s_{t},a_{t}) $ will take the following form:
 $$ Q^{ \pi^{\vec{w}^{1}} }(s_{t},a_{t}) \leftarrow Q^{ \pi^{\vec{w}^{1}} }(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; Q^{ \pi^{\vec{w}^{1}} }(s_{t+1},left) - Q^{ \pi^{\vec{w}^{1}} }(s_{t},a_{t})\;\right]. $$
-And the update rule for $ Q^{ \pi^{\vec{w}^{2}} }(s_{t},a_{t}) $ will take the following form:
+And update rule for $ Q^{ \pi^{\vec{w}^{2}} }(s_{t},a_{t}) $ will take the following form:
 $$ Q^{ \pi^{\vec{w}^{2}} }(s_{t},a_{t}) \leftarrow Q^{ \pi^{\vec{w}^{2}} }(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; Q^{ \pi^{\vec{w}^{2}} }(s_{t+1},right) - Q^{ \pi^{\vec{w}^{2}} }(s_{t},a_{t})\;\right]. $$
+Table \ref{table:updatedQfunctionsfortplusone} shows updated Q-functions for the state $s_{t}$ for both policies $\pi^{\vec{w}^{1}}$ and $\pi^{\vec{w}^{2}}$.
 
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[!htb]
+    \caption{\textbf{Left-hand side table} is the Q-function for the state $s_{t}$ for the policy $ \pi_{\vec{w}_{1}} $. \textbf{Right-hand side table} is the Q-function for the state $s_{t}$ for the policy $ \pi_{\vec{w}_{2}} $. Action $right$ was omitted from both Q-functions because it did not play any role in transition from state $s_{t}$ to state $s_{t+1}$.}
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t}$ & [80,60] & ...
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{c|c|c}
+            state $\backslash$ action & left & right \\
+            \hline
+            $s_{t}$ & [60,80] & ...
+        \end{tabular}
+    \end{minipage}
+    \label{table:updatedQfunctionsfortplusone}
+\end{table}
 
-
+This example was made to illustrate that it is possible to learn Q-functions for more than one policy at the same time. However, this requires a special experiment design:
+\begin{enumerate}
+  \item Initialize an array of preferences, where each preference is an array itself(for example a set of weights).
+  \item Create and initialize a number of Q-functions - one for each set of preferences.
+  \item Run a specified number of episodes. In every episode, during every state-transition, use received immediate reward to update every Q-function.
+  \item After learning is finished, run a greedy episode for each Q-function (if an environment's state-transition is deterministic) and record the resulting return.
+  \item Combine all returns into an approximation of the Pareto front.
+\end{enumerate}
 
 \subsection{Benchmarking Software.}
 As was mentioned before a test problem in reinforcement learning is a dynamic software, which actively responds and changes according to the actions from an agent. The agent is also of dynamic nature and in the similar manner dynamically reacts to the changes in the test problem. This due to the inherent dynamic nature of the the agent-environment cycle. For example every test problem should have the means(function or method) to accept an action from the agent. As well as means(again function or a method) to pass information about state-transition and reward functions. \\
@@ -177,7 +209,7 @@ Even though test problems may have nothing in common in terms of realistic domai
 
 For a long time nobody took advantage of that fact; Not only different programming techniques were used to implement the interaction between the agent and the environment but also different programming languages and different platforms were used. This created a natural level of complexity which prevented the exchange of learning algorithms and test problems. \\
 
-Eventually Tanner and White (2009)\cite{tanner2009rl} created an open source software called RL-Glue. This software lays a foundation for empirical studies in reinforcement learning because it provides a necessary set of standards which allow to connect the test problems with the learning algorithms from different researchers without creation of this mundane connecting code. Essentially, RL-Glue, by introducing a set of standard functions , allows to plug-in agents, environments and experiments from different authors even created in different languages. \\
+Eventually Tanner and White (2009)\nocite{tanner2009rl} created an open source software called RL-Glue. This software lays a foundation for empirical studies in reinforcement learning because it provides a necessary set of standards which allow to connect the test problems with the learning algorithms from different researchers without creation of this mundane connecting code. Essentially, RL-Glue, by introducing a set of standard functions , allows to plug-in agents, environments and experiments from different authors even created in different languages. \\
 
 RL-Glue consists of the three main modules: an agent, an environment and an experiment. The agent is the module which encapsulates the learning algorithm. The environment is the module which encapsulates a particular test problem. The experiment is the program which serves as traditional main function and is responsible for running the agent through the environment and collecting all the data obtained by the agent. The experiment module is place where researcher controls how many episodes or how many trials should be performed by the agent. All the interaction between the modules is handled by a central server. \\
 \begin{figure}[ht]
@@ -224,44 +256,35 @@ Each benchmark or test problem is created to address a particular aspects of rea
 
 \end{itemize}
 
-(Vamplew et al, \cite{VamplewDBID2011}) already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms.
+Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms.
 
 \subsection{Deep sea treasure.}
-This test problem is a grid world consisting 10 rows and 11 columns as shown on figure 3.5. The grid represents undersea surface with multiple number of treasure spots available. One small remark - is that each treasure spot may have different treasure value. The agent is represented as a submarine. Four actions available to the agent - left, right, up, down. Each of the actions move submarine by one square in appropriate direction. First objective is pretty obvious - to find as much as possible of treasure. Second objective is to minimize time spent. \\
+This test problem is a grid world consisting 10 rows and 11 columns as shown on figure \ref{fig:DSTOverview}. The grid represents undersea surface with multiple number of treasure spots available. One small remark - is that each treasure spot may have different treasure value. The agent is represented as a submarine. Four actions available to the agent - left, right, up, down. Each of the actions move submarine by one square in appropriate direction. First objective is pretty obvious - to find as much as possible of treasure. Second objective is to minimize time spent. \\
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{dst.png}
 \caption{Grid world for Deep Sea Treasure problem.}
-\label{ParetoDominance}
+\label{fig:DSTOverview}
 \end{figure}
 
-This problem comes with a known Pareto front which is shown in Figure 3.6. The form of the front is globally concave with number of local concavities.
+This problem comes with a known Pareto front which is shown in Figure \ref{fig:DSTFront}. The form of the front is globally concave with number of local concavities.
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{dstPareto.png}
 \caption{Pareto front for Deep Sea Treasure problem.}
-\label{ParetoDominance}
+\label{fig:DSTFront}
 \end{figure}
 
 \subsection{MO-Puddleworld.}
-This test problem represents 2 dimensional world with puddles located across the world as shown in Figure 3.7. Each episode agents starts at a random location and must reach the goal position(top-right corner) while avoiding the puddles. Four actions available to the agent - left, right, up, down. In this problem reward vector is represented as two penalties: first applied each time step until goal state is reached, second applied when the agent enters a puddle.
+This test problem represents 2 dimensional world with puddles located across the world as shown in Figure \ref{fig:PWOverview}. Each episode agents starts at a random location and must reach the goal position(top-right corner) while avoiding the puddles. Four actions available to the agent - left, right, up, down. In this problem reward vector is represented as two penalties: first applied each time step until goal state is reached, second applied when the agent enters a puddle.
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{pw.png}
 \caption{Grid world for the Puddleworld problem.}
-\label{ParetoDominance}
-\end{figure}
-
-The Puddleworld problem also comes with a known Pareto front which is shown in Figure 3.8.
-\begin{figure}[ht]
-\vskip 0.2in
-\centering
-\includegraphics[scale=0.9]{pwParetoFront.png}
-\caption{Pareto front for the Puddleworld problem.}
-\label{ParetoDominance}
+\label{fig:PWOverview}
 \end{figure}
 
 From first inspection it is seen that the shape of the front is convex but at a closer inspection reveals a number of concavities and linearities. \\
@@ -272,20 +295,20 @@ This test problem represents a valley with a car that must escape from the valle
 throttle forward, full throttle backward, and zero throttle. A penalty of -1 is received on all states except the goal state. There are two additional penalties: -1 for earch reverse acceleration and -1 for each forward acceleration. So totally reward vector consists of three elements. \\
 
 \subsection{Resource gathering.}
-This test problem represents 2 dimensional grid world. Two types of resources are available for gathering - gold and gems. The goal of the agent is to gather either of both of the resources. Also there are locations where the hero can be attacked, the chance of being attacked is 10 percent. If the attack happens then the agent loses all gathered resources and returns to base. Four actions available to the agent - left, right, up, down. Each of the actions move the agent by one square in appropriate direction. The reward vector consists of three elements and is structured in the following way - [enemy, gold, gems]. \\
+This test problem represents 2 dimensional grid world. Two types of resources are available for gathering - gold and gems. The goal of an agent is to gather resources (either one of them or both). Also there are locations where the hero can be attacked, the chance of being attacked is 10 percent, see Figure \ref{fig:RGOverview} for details. If the attack happens then the agent loses all gathered resources and returns to base. Four actions available to the agent - left, right, up, down. Each of the actions move the agent by one square in appropriate direction. The reward vector consists of three elements and is structured in the following way - [enemy, gold, gems]. \\
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.6]{rg.png}
 \caption{Grid world for the Resource Gathering problem.}
-\label{ParetoDominance}
+\label{fig:RGOverview}
 \end{figure}
 
-(Barrett, Narayanan, \cite{BarrettN2008}) used Convex Hull Value Iteration algorithm and found six optimal policies as shown on Figure 3.10.
+Barrett and Narayanan (2008)\nocite{barrett2008learning} used Convex Hull Value Iteration algorithm and found six optimal policies as shown on Figure \ref{fig:RGAlloptimalPolicies}
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.8]{rgpareto.png}
 \caption{Optimal Policies for the Resource Gathering problem.}
-\label{ParetoDominance}
+\label{fig:RGAlloptimalPolicies}
 \end{figure} 
