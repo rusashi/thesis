@@ -42,7 +42,7 @@
 \contentsline {section}{\numberline {2.3}Benchmarks.}{42}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Deep sea treasure.}{43}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}MO-Puddleworld.}{44}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}MO-Mountain Car.}{44}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{45}{subsection.2.3.4}
-\contentsline {chapter}{Conclusions}{47}{section*.34}
-\contentsline {chapter}{\textbf {References}}{47}{section*.35}
+\contentsline {subsection}{\numberline {2.3.3}MO-Mountain Car.}{45}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{46}{subsection.2.3.4}
+\contentsline {chapter}{Conclusions}{48}{section*.34}
+\contentsline {chapter}{\textbf {References}}{48}{section*.35}

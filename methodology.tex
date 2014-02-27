@@ -5,7 +5,7 @@
 Whiteson and Littman (2011)\nocite{whiteson2011introduction} argued the importance of the empirical evaluation due to the natural limitations of other means to assess algorithms:
 
 \begin{itemize}
-  \item Subjective assessment (intuitive understanding) of an algorithm is prone to initial erroneous assumptions. 
+  \item Subjective assessment (intuitive understanding) of an algorithm is prone to initial erroneous assumptions.
   \item Theoretical assessment (rigorous proof) often results in the mismatch of actual performance in a realistic domain with predicted theoretical performance. This is due to the fact that in realistic domains assumptions (that were used during rigorous proof) do not always hold.
 \end{itemize}
 Thus the empirical evaluation is an important part of a research process.
@@ -257,59 +257,79 @@ Each benchmark or test problem is created to address a particular aspect of real
 
 \end{itemize}
 
-Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms.
+Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms. We will use this these benchmarks as the basis for the empirical studies reported in this thesis.
+
+Some of the benchmarks presented in Vamplew et al (2011)\nocite{vamplew2011empirical} are already being widely adopted in the MORL community. For example, Van Moffaert et al. (2012)\nocite{vamplew2011empirical} and ...
 
 \subsection{Deep sea treasure.}
-This test problem is a grid world consisting 10 rows and 11 columns as shown on Figure \ref{fig:DSTOverview}. The grid represents undersea surface with multiple number of treasure spots available. One small remark - is that each treasure spot may have different treasure value. The agent is represented as a submarine. Four actions available to the agent - left, right, up, down. Each of the actions move submarine by one square in appropriate direction. First objective is pretty obvious - to find as much as possible of treasure. Second objective is to minimize time spent. \\
+This test problem is a 10 by 11 grid world as shown on Figure \ref{fig:DSTOverview}. The grid represents undersea surface with multiple number of treasure spots available. Each treasure spot has a different treasure value. The agent is represented as a submarine. Four actions are available to the agent - left, right, up, down. Each of the actions move the submarine by one square in appropriate direction; If an action results in the agent moving outside of the grid world then the agent is returned to his previous location. A reward signal for this problem is a two dimensional vector; The first component represents the amount of treasure that was found during a single episode, while the second component of the reward signal is an accumulated penalty over an episode (-1 for each move).
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{dst.png}
-\caption{Grid world for Deep Sea Treasure problem.}
+\caption{Grid world for Deep Sea Treasure problem. This Figure comes from Vamplew et al (2011).}
 \label{fig:DSTOverview}
 \end{figure}
 
-This problem comes with a known Pareto front which is shown in Figure \ref{fig:DSTFront}. The form of the front is globally concave with number of local concavities.
+The Deep Sea Treasure is an episodic test problem. Each episode the agent is placed in the top-left corner of the gird world. During the exploration of the world the agent may find one of the treasure spots. Also, every time step the agent receives -1 penalty (to encourage shortest path learning); The episode finishes when the agent locates one of the treasures. After that the agent is returned to the starting state.
+
+Also this test problem comes with a known Pareto front which is shown in Figure \ref{fig:DSTFront}. The form of the front is globally concave with number of local concavities.
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{dstPareto.png}
-\caption{Pareto front for Deep Sea Treasure problem.}
+\caption{Pareto front for Deep Sea Treasure problem. This Figure comes from Vamplew et al (2011).}
 \label{fig:DSTFront}
 \end{figure}
 
 \subsection{MO-Puddleworld.}
-This test problem represents 2 dimensional world with puddles located across the world as shown in Figure \ref{fig:PWOverview}. Each episode agents starts at a random location and must reach the goal position(top-right corner) while avoiding the puddles. Four actions available to the agent - left, right, up, down. In this problem reward vector is represented as two penalties: first applied each time step until goal state is reached, second applied when the agent enters a puddle.
+This test problem is a two dimensional grid world with puddles located across the world as shown on Figure \ref{fig:PWOverview}. Each episode the agent starts at a random location and must reach the goal position(top-right corner) while avoiding the puddles. Four actions are available to the agent - left, right, up, down. In this test problem the reward signal is represented as a two dimensional vector; The first component is an accumulated time step penalty over an episode (-1 for each move), while the second component of the reward vector is an accumulated puddle penalty (each time the agent walks into a puddle a penalty is given to the agent).
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.9]{pw.png}
-\caption{Grid world for the Puddleworld problem.}
+\caption{Grid world for the Puddleworld problem. This Figure comes from Vamplew et al (2011)}
 \label{fig:PWOverview}
 \end{figure}
 
-From first inspection it is seen that the shape of the front is convex but at a closer inspection reveals a number of concavities and linearities. \\
+MO-Puddleworld is also an episodic problem. Each episode the agent starts in a random or fixed location and must find its way to the goal state; Once the agent reaches the goal state, the episode is finished and the agent is returned to the start state.
 
+MO-Puddleworld is a modification of the original Puddleworld problem (Boyan and Moore, 1995\nocite{boyan1995generalization}). Although several modifications were introduced:
+
+\begin{itemize}
+  \item One composite reward signal of the original Puddleworld was broken into a two component vector as described above.
+  \item Calculation of the puddle penalty is slightly changed - the 400 multiplication is omitted.
+  \item Original problem had a noise movement which was added during every move of the agent. It was ommited in the MO-Puddleworld.
+  \item The goal state in the original problem was a triangular shape but it was enlarged to a full 0.05 square in the MO-Puddleworld.
+\end{itemize}
 
 \subsection{MO-Mountain Car.}
-This test problem represents a valley with a car that must escape from the valley. But the car's engine is to weak to overcome the gravity so the car should climb left side of the valley with reverse acceleration to build enough potential energy to escape from the right side. Three actions available to the agent - full
-throttle forward, full throttle backward, and zero throttle. A penalty of -1 is received on all states except the goal state. There are two additional penalties: -1 for earch reverse acceleration and -1 for each forward acceleration. So totally reward vector consists of three elements. \\
+This test problem represents a valley with a car that must escape from the valley. But the car's engine is to weak to overcome the gravity force so the car must first climb a hill on the left side of the valley with reverse acceleration to build enough momentum to escape from the valley through the hill on the right side. Three actions are available to the agent - full throttle forward, full throttle backward, and zero throttle. A penalty of -1 is received on all states except the goal state. There are two additional penalties: -1 for each reverse acceleration and -1 for each forward acceleration.
+
+As well as the MO-Puddleworld, the MO-Mountain Car is also a modification of the original single objective problem (Sutton, 1996\nocite{sutton1996generalization}). The original problem was modified by extending the reward signal from a scalar representation to a three component vector as described above. 
 
 \subsection{Resource gathering.}
-This test problem represents 2 dimensional grid world. Two types of resources are available for gathering - gold and gems. The goal of an agent is to gather resources (either one of them or both). Also there are locations where the hero can be attacked, the chance of being attacked is 10 percent, see Figure \ref{fig:RGOverview} for details. If the attack happens then the agent loses all gathered resources and returns to base. Four actions available to the agent - left, right, up, down. Each of the actions move the agent by one square in appropriate direction. The reward vector consists of three elements and is structured in the following way - [enemy, gold, gems]. \\
+This test problem, originally proposed by Barrett and Narayanan (2008)\nocite{barrett2008learning}, represents a 2-dimensional grid world. Two types of resources are available for gathering - gold and gems. The goal of the agent is to gather resources (either one of them or both). Also there are locations where the hero can be attacked, the chance of being attacked is 10 percent, see Figure \ref{fig:RGOverview} for details. If the attack happens then the agent loses all gathered resources and receives a negative reward for the "enemy" objective; The agent is also returned to the base after the attack. Four actions are available to the agent - left, right, up, down. Each of the actions move the agent by one square in appropriate direction.
+
+The reward signal is a 3-dimensional vector where the first component shows the penalty if the enemy attack has happened, the second component shows how much gold was collected during an episode and the third component shows how much gems were collected.
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.6]{rg.png}
-\caption{Grid world for the Resource Gathering problem.}
+\caption{Grid world for the Resource Gathering problem. The Figure is taken from Barrett and Narayanan (2008).}
 \label{fig:RGOverview}
 \end{figure}
 
 Barrett and Narayanan (2008)\nocite{barrett2008learning} used Convex Hull Value Iteration algorithm and found six optimal policies as shown on Figure \ref{fig:RGAlloptimalPolicies}
+
 \begin{figure}[ht]
 \vskip 0.2in
 \centering
 \includegraphics[scale=0.8]{rgpareto.png}
-\caption{Optimal Policies for the Resource Gathering problem.}
+\caption{Optimal Policies for the Resource Gathering problem. The left hand side picture shows all non-dominated policies in the problem's state-space, while the right hand side shows the same policies in the objective space. The Figure is taken from Barrett and Narayanan (2008).}
 \label{fig:RGAlloptimalPolicies}
 \end{figure} 

@@ -30,6 +30,11 @@ Berry, A.~M., \emph{Escaping the bounds of generality - unbounded bi-objective
 Bertsekas, D., \emph{Dynamic programming and optimal control}, vol.~1, Athena
   Scientific Belmont, 1995
 
+\bibitem{boyan1995generalization}
+Boyan, J. and Moore, A.~W., \emph{Generalization in reinforcement learning:
+  Safely approximating the value function}, Advances in neural information
+  processing systems, 1995, pp. 369--376
+
 \bibitem{castelletti2002reinforcement}
 Castelletti, A., Corani, G., Rizzolli, A., Soncinie-Sessa, R. and Weber, E.,
   \emph{Reinforcement learning in the operational management of a water
@@ -77,6 +82,11 @@ Roijers, D.~M., Vamplew, P., Whiteson, S. and Dazeley, R., \emph{A survey of
 Shabani, N., \emph{Incorporating flood control rule curves of the columbia
   river hydroelectric system in a multireservoir reinforcement learning
   optimization model}, Ph.D. thesis, University of British Columbia, 2009
+
+\bibitem{sutton1996generalization}
+Sutton, R.~S., \emph{Generalization in reinforcement learning: Successful
+  examples using sparse coarse coding}, Advances in neural information
+  processing systems, 1996, pp. 1038--1044
 
 \bibitem{Sutton90time-derivativemodels}
 Sutton, R.~S. and Barto, A.~G., \emph{Time-derivative models of pavlovian

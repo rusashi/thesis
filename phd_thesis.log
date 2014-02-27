@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  25 FEB 2014 23:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  26 FEB 2014 14:55
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -709,69 +709,61 @@ Package pdftex.def Info: glue.png used on input line 219.
 <dst.png, id=520, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
-Package pdftex.def Info: dst.png used on input line 267.
+Package pdftex.def Info: dst.png used on input line 270.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
 
 <dstPareto.png, id=522, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
-Package pdftex.def Info: dstPareto.png used on input line 276.
+Package pdftex.def Info: dstPareto.png used on input line 282.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
- [43 <C:/Users/rusashi/Documents/publications/thesis/dst.png>]
+ [43]
 <pw.png, id=528, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
-Package pdftex.def Info: pw.png used on input line 286.
+Package pdftex.def Info: pw.png used on input line 293.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 295--297
-
- []
-
-[44 <C:/Users/rusashi/Documents/publications/thesis/dstPareto.png>]
-<rg.png, id=534, 269.20575pt x 269.20575pt>
+ [44 <C:/Users/rusashi/Documents/publications/thesis/dst.png>] [45 <C:/Users/ru
+sashi/Documents/publications/thesis/dstPareto.png>] [46 <C:/Users/rusashi/Docum
+ents/publications/thesis/pw.png>] <rg.png, id=543, 269.20575pt x 269.20575pt>
 File: rg.png Graphic file (type png)
  <use rg.png>
-Package pdftex.def Info: rg.png used on input line 303.
+Package pdftex.def Info: rg.png used on input line 322.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
- [45 <C:/Users/rusashi/Documents/publications/thesis/pw.png>]
-<rgpareto.png, id=541, 457.10776pt x 171.039pt>
+
+<rgpareto.png, id=545, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
  <use rgpareto.png>
-Package pdftex.def Info: rgpareto.png used on input line 312.
+Package pdftex.def Info: rgpareto.png used on input line 332.
 (pdftex.def)             Requested size: 365.68669pt x 136.83138pt.
-) [46 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/rusashi
+) [47 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/rusashi
 /Documents/publications/thesis/rgpareto.png>]
 No file conclusions.tex.
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [47
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [48
 
 
 
 
 
 
-] [48]
+] [49]
+[50]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 
-Underfull \hbox (badness 1043) in paragraph at lines 121--128
+Underfull \hbox (badness 1043) in paragraph at lines 131--138
 []\OT1/cmr/m/n/12 Yaman, F., Walsh, T. J., Littman, M. L. and des-Jardins, M., 
 \OT1/cmr/m/it/12 Demo-cratic
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 121--128
+Underfull \hbox (badness 1325) in paragraph at lines 131--138
 \OT1/cmr/m/it/12 ap-prox-i-ma-tion of lex-i-co-graphic pref-er-ence mod-els\OT1
 /cmr/m/n/12 , Ar-ti-fi-cial In-tel-li-gence, 2011,
  []
 
-[49]) [50]
+) [51]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
  (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
@@ -791,13 +783,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
 ### semi simple group (level 1) entered at line 149 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8937 strings out of 493921
- 133547 string characters out of 3147275
- 225163 words of memory out of 3000000
- 11878 multiletter control sequences out of 15000+200000
+ 8946 strings out of 493921
+ 133800 string characters out of 3147275
+ 225603 words of memory out of 3000000
+ 11884 multiletter control sequences out of 15000+200000
  15241 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,12n,39p,1209b,712s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,39p,1209b,714s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
@@ -814,9 +806,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on phd_thesis.pdf (60 pages, 654627 bytes).
+Output written on phd_thesis.pdf (61 pages, 658654 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
+ 690 PDF objects out of 1000 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
  383 words of extra memory for PDF output out of 10000 (max. 10000000)
 

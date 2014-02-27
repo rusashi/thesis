@@ -216,3 +216,22 @@ keywords = "Lexicographic models",
 keywords = "Preference learning",
 keywords = "Bayesian methods "
 }
+
+@article{whiteson2011introduction,
+  title={Introduction to the special issue on empirical evaluations in reinforcement learning},
+  author={Whiteson, Shimon and Littman, Michael L},
+  journal={Machine learning},
+  volume={84},
+  number={1},
+  pages={1--6},
+  year={2011},
+  publisher={Springer}
+}
+@article{boyan1995generalization,
+  title={Generalization in reinforcement learning: Safely approximating the value function},
+  author={Boyan, Justin and Moore, Andrew W},
+  journal={Advances in neural information processing systems},
+  pages={369--376},
+  year={1995},
+  publisher={Morgan Kaufmann Publishers}
+}
