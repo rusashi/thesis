@@ -13,13 +13,13 @@
 \BOOKMARK [2][]{subsection.1.1.4}{1.1.4 Dynamic Programming influence.}{section.1.1}% 13
 \BOOKMARK [2][]{subsection.1.1.5}{1.1.5 Q-Learning.}{section.1.1}% 14
 \BOOKMARK [2][]{subsection.1.1.6}{1.1.6 Off-policy and On-policy algorithms.}{section.1.1}% 15
-\BOOKMARK [2][]{subsection.1.1.7}{1.1.7 S.A.R.S.A.}{section.1.1}% 16
+\BOOKMARK [2][]{subsection.1.1.7}{1.1.7 SARSA.}{section.1.1}% 16
 \BOOKMARK [1][]{section.1.2}{1.2 Multi-objective Optimization.}{chapter.1}% 17
 \BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Multi-objective Problem.}{section.1.2}% 18
 \BOOKMARK [2][]{subsection.1.2.2}{1.2.2 Tradeoffs.}{section.1.2}% 19
 \BOOKMARK [2][]{subsection.1.2.3}{1.2.3 Dominance.}{section.1.2}% 20
 \BOOKMARK [2][]{subsection.1.2.4}{1.2.4 The Pareto Front.}{section.1.2}% 21
-\BOOKMARK [2][]{subsection.1.2.5}{1.2.5 Selecting a solution in the Pareto Front.}{section.1.2}% 22
+\BOOKMARK [2][]{subsection.1.2.5}{1.2.5 Selecting a Solution in The Pareto Front.}{section.1.2}% 22
 \BOOKMARK [1][]{section.1.3}{1.3 Multi-objective Reinforcement Learning Research.}{chapter.1}% 23
 \BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Linear Temporal Difference Learning.}{section.1.3}% 24
 \BOOKMARK [2][]{subsection.1.3.2}{1.3.2 Non-linear Temporal Difference Learning.}{section.1.3}% 25

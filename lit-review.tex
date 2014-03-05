@@ -132,29 +132,13 @@ The advantage of the policy iteration over the value iteration lies within the p
 
 \subsection{Q-Learning.}
 
-Policy iteration doesn't directly translates to the realms of the reinforcement learning as it requires the knowledge of a model of an environment (knowledge of reward and transition functions). Look at the update rule for the policy evaluation:
+Policy iteration does not directly translate to the realms of the reinforcement learning as it requires the knowledge of a model of an environment (knowledge of reward and transition functions). Look at the update rule for the policy evaluation:
 $$ V_{k+1}^{\pi_{i}}(s) = \displaystyle\sum_{s'}T(s,\pi_{i}(s),s')\;[R(s,\pi_{i}(s),s')+\gamma V_{k}^{\pi_{i}}(s')]. $$
-
 And the update rule for the policy improvement:
 $$ \pi_{i+1}(s) = \arg\max_{a}\displaystyle\sum_{s'}T(s,a,s')\;[R(s,a,s')+\gamma V_{k}^{\pi_{i}}(s')]. $$
+They both require the knowledge of the functions $T$ and $R$, where $T$ is a state-transition function and $R$ is a reward function.
 
-They both require the knowledge of the functions $T$ and $R$, where $T$ is transition function and $R$ is a reward function.
-
-The reinforcement learning equivalent of policy iteration is called \textit{Q-Learning} (Watkins, 1992\nocite{watkins1992q}). Q-Learning, like DP value iteration, makes sure that any randomly initialized Q function converges to optimal action-value function $Q^{*}$. See Algorithm~\ref{alg:q-learning} for details.
-
-Q-Learning is a temporal-difference learning algorithm (Sutton and Barto, 1990\nocite{Sutton90time-derivativemodels}). The value iteration algorithm uses an expected value operator which requires knowledge of the state-transition function. Temporal-difference learning algorithms work around this by modifying update rule to work with raw experience. The update rule is slightly modified but essentially it does the same job only without the expected value operator:
-
-$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
-
-Q-Learning requires several criteria to be met:
-\begin{itemize}
-  \item Underlying problem must be a Markov Decision Process.
-  \item Learning rate $ \alpha $ should decrease to zero.
-  \item Every state-action pair should be tried infinitely many times.
-\end{itemize}
-However, in practice the algorithm converges without some of this strict criteria. For example, in many cases the algorithm is able to converge with fixed $ \alpha $ parameter.
-
-
+Reinforcement learning equivalent of policy iteration is called \textit{Q-Learning} (Watkins, 1992\nocite{watkins1992q}). Q-Learning, like DP value iteration, makes sure that any randomly initialized Q function converges to optimal action-value function $Q^{*}$. See Algorithm~\ref{alg:q-learning} for details.
 \begin{algorithm}[tb]
    \caption{Q-Learning}
    \label{alg:q-learning}
@@ -171,25 +155,38 @@ However, in practice the algorithm converges without some of this strict criteri
    \UNTIL{no more episodes}
 \end{algorithmic}
 \end{algorithm}
+Q-Learning is a temporal-difference learning algorithm (Sutton and Barto, 1990\nocite{Sutton90time-derivativemodels}). The value iteration algorithm uses an expected value operator which requires knowledge of the state-transition function. Temporal-difference learning algorithms work around this by modifying update rule to work with raw experience. The update rule is slightly modified but essentially it does the same job only without the expected value operator:
+
+$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
+
+Q-Learning requires several criteria to be met:
+\begin{itemize}
+  \item Underlying problem must be a Markov Decision Process.
+  \item Learning rate $ \alpha $ should decrease to zero.
+  \item Every state-action pair should be tried infinitely many times.
+\end{itemize}
+However, in practice the algorithm converges without some of these strict criteria. For example, in many cases the algorithm is able to converge with fixed $ \alpha $ parameter.
 
 \subsection{Off-policy and On-policy algorithms.}
-One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns will differ from the value of the starting state predicted by learnt optimal Q-function. That is there will be a difference between the learned optimal Q-function and the actual results while the agent is learning. This behaviour is due to:
+Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown for a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return. 
+
+One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns may differ from the value of the starting state predicted by the learned optimal Q-function. That is there will be a difference between the learned optimal Q-function and the actual results while the agent is learning. This behaviour is due to:
 \begin{itemize}
   \item Q-learning learns the value of optimal sequence of actions given any starting state.
   \item The algorithm will introduce a randomness into action-selection process to insure that every state-action pair is selected (required by proof of convergence). Thus the actual sequence of actions taken by the agent will almost never be optimal.
 \end{itemize}
 
-Off-policy algorithms, such as Q-learning, do not record the actual value of each state-action pair; They miss the fact that during each action-selection phase there might be a random action with potential negative outcome. As a result the agent might easily identify the greediest action among available actions but it will miss the fact that taking that greedy action might potentially result in big penalties.
+Off-policy algorithms, such as Q-learning, do not record the actual value of each state-action pair, rather they record optimal value; They miss the fact that during each action-selection phase there might be a random action with potential negative outcome. As a result the agent might easily identify the greediest action among available actions but it will miss the fact that taking that greedy action might potentially result in big penalties due to possible exploratory actions.
 
 On the other hand, on-policy methods do take into account the randomness associated with the action selection mechanism of the policy being followed. Thus the values $ Q_{\pi}(s,a) $, for each state action pair, reflect the average of all sequences of actions that are possible under the policy $ \pi $.
 
-The Q-learning is ideal for applications where an identification of optimal policy is the only goal. That is when there is no harm done if the agent has performed a particulary bad sequence of actions. An example is escaping from a maze - the goal is to find an optimal escape route. It doesn't matter how many times the agent was circling around the maze while exploring. On the other hand, if a Mars rover is exploring the surface of the planet, it becomes very expensive and potentially dangerous for the equipment.
+Q-learning is ideal for applications where an identification of optimal policy is the only goal. That is when there is no harm done to the agent itself or other involved parties if the agent has performed an action which results in big penalties. An example is escaping from a maze - the goal is to find an optimal escape route. It doesn't matter how many times the agent was circling around the maze while exploring. On the other hand, if a Mars rover is exploring the surface of the planet, it becomes very expensive and potentially dangerous for the equipment.
 
 
 
-\subsection{S.A.R.S.A.}
+\subsection{SARSA.}
 
-Sarsa is the on-policy temporal-difference algorithm similar to Q-learning. Both algorithms are very similar; The only difference is the update rule employed in each of the algorithms. The Q-learning has the following update rule:
+Sarsa is a temporal-difference algorithm similar to Q-learning, except it is an on-policy method. Both algorithms are very similar; The only difference is the update rule employed in each of the algorithms. The Q-learning has the following update rule:
 
 $$ Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma\; max_{a'}Q(s',a') - Q(s,a)]. $$
 
@@ -242,8 +239,8 @@ Now we can reformulate multi-objective problem as the problem of locating any of
 \end{figure}
 
 
-\subsection{Selecting a solution in the Pareto Front.}
-
+\subsection{Selecting a Solution in The Pareto Front.}
+\label{sec:Selecting-a-solution-in-the-Pareto-Front}
 To reach a point in the Pareto front we need a scalar index which will reflect the preference between any two points. We can introduce a function $v$ defined on the $range \;set\; R$ with the following property:
 $$ v(x_{1},..., x_{n}) \geq v(y_{1},..., y_{n}) $$
 if and only if the point $ (x_{1},..., x_{n}) $ is more preferable or equal to the point $ (y_{1},..., y_{n}) $.
@@ -269,7 +266,7 @@ And we already know that point \textbf{x} is the maximum of the given optimizati
 
 The more weight we apply to the specified objective the more favourable to the specified objective will be the identified point of the Pareto front. This allows us to perceive weights as a form of preference. However, setting the preferences a priori means human interaction and sometimes it is not so clear how to set these preferences.
 
-Another limitation of these approach is the inability to locate concave points of the Pareto front. For example if the Pareto front has a concave shape then this approach will only locate extreme points.
+Another limitation of this approach is the inability to locate concave points of the Pareto front. For example if the Pareto front has a concave shape then this approach will only locate extreme points.
 
 \subsubsection{Lexicographical Ordering.}
 Another widely used approach is to order objective functions $ f_{1}(),...,f_{n}() $ according to their importance.
@@ -282,25 +279,25 @@ This approach is intuitively easy to understand and in fact in many problems it 
 
 \section{Multi-objective Reinforcement Learning Research.}
 
-Reinforcement learning initially was applied to find optimal policies in single objective problems. However, in recent years there was a significant increase in the interest towards multi-objective reinforcement learning. This can be explained by the fact that sometimes it is just impossible to express a sophisticated problem in terms of just single objective, and naturally this gave rise to the multi-objective reinforcement learning. For further motivation refer to Roijers et al. (2013)\nocite{roijers2013survey}.
+Reinforcement learning initially was applied to find optimal policies in single objective problems. However, in recent years there has been a significant increase in the interest towards multi-objective reinforcement learning. This can be explained by the fact that sometimes it is just impossible to express a sophisticated problem in terms of just a single objective, and naturally this gave rise to multi-objective reinforcement learning. For further motivation refer to Roijers et al. (2013)\nocite{roijers2013survey}.
 
-This section will review the main work done on temporal-difference multi-objective reinforcement learning. It is only a review of the most seminal works, for more details please refer to Roijers et al. (2013)\nocite{roijers2013survey}. First subsection will review temporal-difference methods based on the linear scalarization; Second subsection will consider non-linear methods. This separation is caused partially because linear methods are proven to converge while non-linear may not.   
+This section will review the main work done on temporal-difference multi-objective reinforcement learning. It is only a review of the most seminal works, for more details please refer to Roijers et al. (2013)\nocite{roijers2013survey}. The first subsection will review temporal-difference methods based on the linear scalarization while the second subsection will consider non-linear methods. This separation is selected partially because linear methods are proven to converge while non-linear may not.
 
 \subsection{Linear Temporal Difference Learning.}
 
-Before linear scalarization was used in reinforcement learning, Feinberg and Shwartz (1993)\nocite{Feinberg93constrainedmarkov} wrote an extensive paper on using linear scalarization in constrained markov decision models. The authors proved the existence of optimal policies in such models and also proved that linear scalarization is able to identify members of the Pareto front. Even though this paper didn't mention reinforcement learning, it provided the necessary theoretical foundations for other researchers to try out linear scalarization in multi-objective reinforcement learning.
+Before linear scalarization (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}) was used in reinforcement learning, Feinberg and Shwartz (1993)\nocite{Feinberg93constrainedmarkov} wrote an extensive paper on using linear scalarization in constrained Markov decision models. The authors proved the existence of optimal policies in such models and also proved that linear scalarization is able to identify members of the Pareto front. Even though this paper didn't mention reinforcement learning, it provided the necessary theoretical foundations for other researchers to try out linear scalarization in multi-objective reinforcement learning.
 
 Karlsson (1997)\nocite{Karlsson97learningto}, in his PhD thesis, first tried to combine Q-learning algorithm and linear scalarization. The author argues that when dealing with multi-criteria problem, it is much better to break a complex state space into a number of smaller state spaces, so called modules. For each module we maintain a separate Q-function. It helps to avoid relearning when dealing with a complex task consisting of a number of independent sub-tasks.
 
-Having multiple separate Q-functions, Karlsson faced a problem of how to administer the action selection process. He used the so called "greatest mass method". To determine a value of some action under this method, one needs to add this action's Q-values from all modules. An action with the greatest overall sum is pronounced the greedy action. Essentially, this method is just a linear scalarization with all weights equal to one.
+Having multiple separate Q-functions, Karlsson faced a problem of how to administer the action selection process. He used the so called "greatest mass method". To determine a value of some action under this method, one needs to sum this action's Q-values across all modules. An action with the greatest overall sum is pronounced the greedy action. Essentially, this method is just a linear scalarization with all weights equal to one.
 
 The author provided details of his test environment, which he called the simple driving domain (SDD). The SDD is a grid world with roads crossing it vertically and horizontally. The world is populated with different objects: street signs, traffic lights and obstacles. An agent controls a car. The agent has four goals: stay on a road, avoid obstacles, negotiate streetlights, follow street signs. All tasks are independent of each other. The author specifically created independent sub-tasks to test the modular approach.
 
 The main point of Karlsson's research was to investigate how agents behave when the complex state space is decomposed into smaller sub-spaces. For this purpose he also created one agent which maintained a complex structure of the state space (monolithic approach). His results show that in many scenarios the modular approach performs as well as monolithic approach, while having a significant advantage in terms of speed of convergence.
 
-Castelleti et al. (2002)\nocite{castelletti2002reinforcement} further explored linear scalarization. They were interested in applying reinforcement learning methods to a water reservoir management. As a case study they chose Lake Como, which located in Northern Italy. This lake provides water supply to agricultural districts and hydroelectrical power plants.
+Castelleti et al. (2002)\nocite{castelletti2002reinforcement} further explored linear scalarization. They were interested in applying reinforcement learning methods to a water reservoir management. As a case study they chose Lake Como, which is located in Northern Italy. This lake provides water supply to agricultural districts and hydroelectrical power plants.
 
-It is possible to model this problem as an MDP. State information includes: current water level and information about natural water income. Actions govern how much water to release from the reservoir. In this paper the authors used two objectives: provide water and avoid flooding.
+It is possible to model this problem as an MOMDP. State information includes: current water level and information about natural water income. Actions govern how much water to release from the reservoir. In this paper the authors used two objectives: provide water and avoid flooding.
 
 Unlike the work of (1997)\nocite{Karlsson97learningto}, the researchers didn't break the complex state space into smaller ones. However essentially their approach is the same - to identify greedy actions, one combines Q-values of each objective into a weighted sum. Only in this case, weighted sum is no longer uniform and weights could be arbitrary (as long as they sum to 1). They called their algorithm Qlp (Q-Learning planning). The authors approximated the Pareto front by having multiple independent tests - each test for one weight set.
 
@@ -308,7 +305,7 @@ In the experimental results section the authors compared their proposed approach
 
 It is important to notice that it was probably the earliest work where non-uniform weights were used.
 
-Natarajan and Tadepalli (2005)\nocite{natarajan2005dynamic} used linear scalarization to sequentially learn all optimal policies. All the papers discussed so far
+Natarajan and Tadepalli (2005)\nocite{natarajan2005dynamic} used linear scalarization to sequentially learn multiple optimal policies. All the papers discussed so far
 organized trials in similar manner:
 
 \begin{enumerate}

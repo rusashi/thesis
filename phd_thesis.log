@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  26 FEB 2014 14:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  4 MAR 2014 15:38
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -586,29 +586,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
 [2 <C:/Users/rusashi/Documents/publications/thesis/agent-env-cycle.png>]
 [3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (1.71065pt too wide) in paragraph at lines 143--144
-[]\OT1/cmr/m/n/12 The re-in-force-ment learn-ing equiv-a-lent of pol-icy it-er-
-a-tion is called \OT1/cmr/m/it/12 Q-Learning \OT1/cmr/m/n/12 (Watkins,
- []
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 143.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 164.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 159.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
  [10] [11] [12]
-[13] <paretofront.png, id=354, 219.82124pt x 175.857pt>
+[13] [14] <paretofront.png, id=361, 219.82124pt x 175.857pt>
 File: paretofront.png Graphic file (type png)
- <use paretofront.png>
-Package pdftex.def Info: paretofront.png used on input line 238.
-(pdftex.def)             Requested size: 197.83728pt x 158.26984pt.
 
-[14] [15 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
-Overfull \hbox (22.71126pt too wide) in paragraph at lines 264--265
+<use paretofront.png>
+Package pdftex.def Info: paretofront.png used on input line 235.
+(pdftex.def)             Requested size: 197.83728pt x 158.26984pt.
+ [15 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
+Overfull \hbox (22.71126pt too wide) in paragraph at lines 261--262
 []\OT1/cmr/m/n/12 Assume so-lu-tion $\OML/cmm/m/it/12 a[]$ \OT1/cmr/m/n/12 max-
 i-mizes this given op-ti-miza-tion prob-lem. Let $[] = (\OML/cmm/m/it/12 f[]\OT
 1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; :::; f[]\
@@ -616,44 +612,44 @@ OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 ))$,
  []
 
 [16]
-Overfull \hbox (12.50363pt too wide) in paragraph at lines 283--283
+Overfull \hbox (12.50363pt too wide) in paragraph at lines 280--280
 []\OT1/cmr/bx/n/17.28 Multi-objective Re-in-force-ment Learn-ing Re-search. 
  []
 
-[17] [18]
+[17] [18] [19]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 [20] [21] [22] [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--397
+Underfull \hbox (badness 10000) in paragraph at lines 392--394
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 401--403
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
-[25]) [26] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
+) [26] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
 Chapter 2.
 [27
 
 
 
-] [28] [29] [30] [31] <hypervolume.png, id=450, 244.5135pt x 213.79875pt>
+] [28] [29] [30] [31] <hypervolume.png, id=451, 244.5135pt x 213.79875pt>
 File: hypervolume.png Graphic file (type png)
 
 <use hypervolume.png>
@@ -664,7 +660,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-<decisionTree.png, id=452, 543.02875pt x 304.13625pt>
+<decisionTree.png, id=453, 543.02875pt x 304.13625pt>
 File: decisionTree.png Graphic file (type png)
  <use decisionTree.png>
 Package pdftex.def Info: decisionTree.png used on input line 79.
@@ -675,14 +671,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<exampleMDPFront.png, id=459, 530.98375pt x 377.41pt>
+<exampleMDPFront.png, id=460, 530.98375pt x 377.41pt>
 File: exampleMDPFront.png Graphic file (type png)
 
 <use exampleMDPFront.png>
 Package pdftex.def Info: exampleMDPFront.png used on input line 90.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
 
-<exampleMDPOneMarkedPolicy.png, id=461, 530.98375pt x 377.41pt>
+<exampleMDPOneMarkedPolicy.png, id=462, 530.98375pt x 377.41pt>
 File: exampleMDPOneMarkedPolicy.png Graphic file (type png)
 
 <use exampleMDPOneMarkedPolicy.png>
@@ -692,7 +688,7 @@ Package pdftex.def Info: exampleMDPOneMarkedPolicy.png used on input line 99.
 )>] [34 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PN
 G copy)>] [35 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMark
 edPolicy.png (PNG copy)>]
-<reasonForMPLearning.png, id=480, 273.02pt x 353.32pt>
+<reasonForMPLearning.png, id=481, 273.02pt x 353.32pt>
 File: reasonForMPLearning.png Graphic file (type png)
 
 <use reasonForMPLearning.png>
@@ -700,38 +696,38 @@ Package pdftex.def Info: reasonForMPLearning.png used on input line 128.
 (pdftex.def)             Requested size: 163.81326pt x 211.99364pt.
  [36] [37 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.p
 ng (PNG copy)>] [38] [39]
-<glue.png, id=506, 494.84875pt x 274.02374pt>
+<glue.png, id=507, 494.84875pt x 274.02374pt>
 File: glue.png Graphic file (type png)
  <use glue.png>
 Package pdftex.def Info: glue.png used on input line 219.
 (pdftex.def)             Requested size: 445.35977pt x 246.61908pt.
  [40] [41 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [42]
-<dst.png, id=520, 281.25075pt x 204.765pt>
+<dst.png, id=521, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
 Package pdftex.def Info: dst.png used on input line 270.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
 
-<dstPareto.png, id=522, 345.08925pt x 215.00325pt>
+<dstPareto.png, id=523, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
 Package pdftex.def Info: dstPareto.png used on input line 282.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
  [43]
-<pw.png, id=528, 249.93375pt x 252.945pt>
+<pw.png, id=529, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
 Package pdftex.def Info: pw.png used on input line 293.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
  [44 <C:/Users/rusashi/Documents/publications/thesis/dst.png>] [45 <C:/Users/ru
 sashi/Documents/publications/thesis/dstPareto.png>] [46 <C:/Users/rusashi/Docum
-ents/publications/thesis/pw.png>] <rg.png, id=543, 269.20575pt x 269.20575pt>
+ents/publications/thesis/pw.png>] <rg.png, id=544, 269.20575pt x 269.20575pt>
 File: rg.png Graphic file (type png)
  <use rg.png>
 Package pdftex.def Info: rg.png used on input line 322.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
 
-<rgpareto.png, id=545, 457.10776pt x 171.039pt>
+<rgpareto.png, id=546, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
  <use rgpareto.png>
 Package pdftex.def Info: rgpareto.png used on input line 332.
@@ -773,7 +769,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
 Package rerunfilecheck Info: File `phd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: EAA54CDE8B85D513579DAA85D0B99641;2856.
+(rerunfilecheck)             Checksum: 6C82254F4D76DDF1F3918B05CC212831;2852.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  )
 (\end occurred inside a group at level 3)
@@ -783,10 +779,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
 ### semi simple group (level 1) entered at line 149 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8946 strings out of 493921
- 133800 string characters out of 3147275
- 225603 words of memory out of 3000000
- 11884 multiletter control sequences out of 15000+200000
+ 8947 strings out of 493921
+ 133846 string characters out of 3147275
+ 225678 words of memory out of 3000000
+ 11885 multiletter control sequences out of 15000+200000
  15241 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,39p,1209b,714s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -806,9 +802,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on phd_thesis.pdf (61 pages, 658654 bytes).
+Output written on phd_thesis.pdf (61 pages, 659300 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
+ 691 PDF objects out of 1000 (max. 8388607)
  173 named destinations out of 1000 (max. 500000)
  383 words of extra memory for PDF output out of 10000 (max. 10000000)
 
