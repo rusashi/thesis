@@ -169,7 +169,7 @@ Q-Learning requires several criteria to be met:
 However, in practice the algorithm converges without some of these strict criteria. For example, in many cases the algorithm is able to converge with fixed $ \alpha $ parameter.
 
 \subsection{Off-policy and On-policy algorithms.}
-Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown for a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return.
+Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown to a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return.
 
 One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns may differ from the value of the starting state predicted by the learned optimal Q-function. That is there will be a difference between the learned optimal Q-function and the actual results while the agent is learning. This behaviour is due to:
 \begin{itemize}
@@ -285,20 +285,28 @@ Reinforcement learning initially was applied to find optimal policies in single 
 This section will review the main work done on temporal-difference multi-objective reinforcement learning. It is only a review of the most seminal works, for more details please refer to Roijers et al. (2013)\nocite{roijers2013survey}. The first subsection will review temporal-difference methods based on the linear scalarization while the second subsection will consider non-linear methods. This separation is selected partially because linear methods are proven to converge while non-linear may not.
 
 \subsection{Multi-Objective Markov Decission Processes (MOMDP).}
-As was mentioned in Section \ref{sec:agent-and-environment}, in Markov decision processes the quality of taking action $a$ in a state $s$ is evaluated via immediate scalar reward signal $r$:
+As was mentioned in Section \ref{sec:agent-and-environment}, in Markov decision processes the quality of taking action $a$ in a state $s$ is evaluated via an immediate scalar reward signal $r$:
 $$ r = \rho(s,a,s'), $$
 where $s'$ is a successor state and $\rho()$ is a scalar reward function:
 $$ \rho : S \times A \times  S \rightarrow \mathbb{R}. $$
-In MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector: 
+In a MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector:
 $$ \vec{r} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
 
 Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be seen from the update rule for this algorithm:
 $$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
-Here maximization operator assumes that there is a clear ordering between available options but in case of multi-objective MDPs there are options which are non-comparable to each other (see Section \ref{sec:dominance}). Hence some modification should be made to address this issue. 
+Here the maximization operator assumes that there is a clear ordering between available actions in state $s_{t+1}$ of an environment and in case of single objective MDPs this ordering is based on which action produces higher scalar return. But in case of multi-objective MDPs it is no longer so easy to determine how ordering of available actions should be performed because there are actions which are non-comparable to each other (see Section \ref{sec:dominance}). Hence some modification must be made to address this issue.
 
 \subsection{Linear Temporal Difference Learning.}
+Previous section pointed out that in order to make algorithms like Q-Learning work in multi-objective MDPs some adjustments must be made to an update rule, namely there must be a clear mechanism which will resolve the ordering of available actions in some state $s$. One way to achieve this is through the use of a general multi-objective optimization technique called linear-weighted averages or simply linear scalarization (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}).
 
-Before linear scalarization (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}) was used in reinforcement learning, Feinberg and Shwartz (1993)\nocite{Feinberg93constrainedmarkov} wrote an extensive paper on using linear scalarization in constrained Markov decision models. The authors proved the existence of optimal policies in such models and also proved that linear scalarization is able to identify members of the Pareto front. Even though this paper didn't mention reinforcement learning, it provided the necessary theoretical foundations for other researchers to try out linear scalarization in multi-objective reinforcement learning.
+Given a multi-objective MDP, a policy $\pi$ and a $n$-component weight vector $\vec{w}$, the linear scalarization will select a greedy action from available actions $a$ in some state $s$ according to the following rule:
+$$ \arg\max_{a}\displaystyle\sum_{i=1}^{n} w_{i}Q^{\pi}_{i}(s,a), $$
+where $n$ is the number of objectives in the MDP, $w_{i}$ is an $i$-th component of the weight vector $\vec{w}$ and $Q^{\pi}_{i}$ is a Q-function for an $i$-th objective under the policy $\pi$ .
+
+Equipping the Q-Learning algorithm with the linear scalarization will result in the following update rule:
+$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; max_{a}\displaystyle\sum_{i=1}^{n} w_{i}Q_{i}(s,a) - Q(s_{t},a_{t})\;\right]. $$
+
+Before linear scalarization was used in reinforcement learning, Feinberg and Shwartz (1993)\nocite{Feinberg93constrainedmarkov} wrote an extensive paper on using linear scalarization in constrained Markov decision models. The authors proved the existence of optimal policies in such models and also proved that linear scalarization is able to identify members of the Pareto front. Even though this paper didn't mention reinforcement learning, it provided the necessary theoretical foundations for other researchers to try out linear scalarization in multi-objective reinforcement learning.
 
 Karlsson (1997)\nocite{Karlsson97learningto}, in his PhD thesis, first tried to combine Q-learning algorithm and linear scalarization. The author argues that when dealing with multi-criteria problem, it is much better to break a complex state space into a number of smaller state spaces, so called modules. For each module we maintain a separate Q-function. It helps to avoid relearning when dealing with a complex task consisting of a number of independent sub-tasks.
 

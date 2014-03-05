@@ -132,7 +132,7 @@ The advantage of the policy iteration over the value iteration lies within the p
 
 
 \subsection{Q-Learning.}
-
+\label{sec:q-learning}
 Policy iteration does not directly translate to the realms of the reinforcement learning as it requires the knowledge of a model of an environment (knowledge of reward and transition functions). Look at the update rule for the policy evaluation:
 $$ V_{k+1}^{\pi_{i}}(s) = \displaystyle\sum_{s'}T(s,\pi_{i}(s),s')\;[R(s,\pi_{i}(s),s')+\gamma V_{k}^{\pi_{i}}(s')]. $$
 And the update rule for the policy improvement:
@@ -213,7 +213,7 @@ Multi-objective problem is the problem of finding actions $a$ from the set $A$ s
 Multi-objective optimization aims to solve difficult real life problems and many of these problems involve objectives that conflict with each other. Introduction of these conflicting objectives means that in many cases we will not have a single best option. Or in other words we cannot improve all objective functions at the same time. Rather we will need to compromise between two or more objectives, gaining more value on one objective at the expense of the other(s).
 
 \subsection{Dominance.}
-
+\label{sec:dominance}
 Given two solutions $a'$ and $a''$ we can map them into two points in the $n$-dimensional objective space:
 $$ x'=(x'_{1},...,x'_{n}) \;\;\;\;\text{and}\;\;\;\; x''=(x''_{1},...,x''_{n})$$
 where
@@ -289,8 +289,12 @@ As was mentioned in Section \ref{sec:agent-and-environment}, in Markov decision 
 $$ r = \rho(s,a,s'), $$
 where $s'$ is a successor state and $\rho()$ is a scalar reward function:
 $$ \rho : S \times A \times  S \rightarrow \mathbb{R}. $$
-In MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector: 
+In MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector:
 $$ \vec{r} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
+
+Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be seen from the update rule for this algorithm:
+$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
+Here maximization operator assumes that there is a clear ordering between available actions in state s_{t+1} of an environment and in case of single objective MDPs this ordering is based on which actions produces higher scalar return. But in case of multi-objective MDPs it is no longer so easy to determine how this ordering should be performed because there are actions which are non-comparable to each other (see Section \ref{sec:dominance}). Hence some modification should be made to address this issue.
 
 \subsection{Linear Temporal Difference Learning.}
 
