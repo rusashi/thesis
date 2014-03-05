@@ -12,6 +12,7 @@ This section will introduce the core concepts of reinforcement learning in the c
 Consider a multi-step decision making process with unknown reward and state transition functions. We can look at this process as an optimization problem in which the aim is to make the correct decision at each step in order to maximize some measure of the rewards received. Any method that solves this optimization problem can be defined as a reinforcement learning method.
 
 \subsection{Agent and environment}
+\label{sec:agent-and-environment}
 
 A reinforcement learning problem can be further divided into two parts: an agent and an environment. The agent or so called decision maker or a learning algorithm is responsible for actions at each time step. The actions chosen by the agent affect the environment and cause it to transition from one state to another. This dynamic interaction constitutes the agent-environment cycle shown in Figure~\ref{fig:agent-env-cycle}.
 
@@ -131,7 +132,7 @@ The advantage of the policy iteration over the value iteration lies within the p
 
 
 \subsection{Q-Learning.}
-
+\label{sec:q-learning}
 Policy iteration does not directly translate to the realms of the reinforcement learning as it requires the knowledge of a model of an environment (knowledge of reward and transition functions). Look at the update rule for the policy evaluation:
 $$ V_{k+1}^{\pi_{i}}(s) = \displaystyle\sum_{s'}T(s,\pi_{i}(s),s')\;[R(s,\pi_{i}(s),s')+\gamma V_{k}^{\pi_{i}}(s')]. $$
 And the update rule for the policy improvement:
@@ -168,7 +169,7 @@ Q-Learning requires several criteria to be met:
 However, in practice the algorithm converges without some of these strict criteria. For example, in many cases the algorithm is able to converge with fixed $ \alpha $ parameter.
 
 \subsection{Off-policy and On-policy algorithms.}
-Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown for a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return. 
+Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown for a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return.
 
 One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns may differ from the value of the starting state predicted by the learned optimal Q-function. That is there will be a difference between the learned optimal Q-function and the actual results while the agent is learning. This behaviour is due to:
 \begin{itemize}
@@ -212,7 +213,7 @@ Multi-objective problem is the problem of finding actions $a$ from the set $A$ s
 Multi-objective optimization aims to solve difficult real life problems and many of these problems involve objectives that conflict with each other. Introduction of these conflicting objectives means that in many cases we will not have a single best option. Or in other words we cannot improve all objective functions at the same time. Rather we will need to compromise between two or more objectives, gaining more value on one objective at the expense of the other(s).
 
 \subsection{Dominance.}
-
+\label{sec:dominance}
 Given two solutions $a'$ and $a''$ we can map them into two points in the $n$-dimensional objective space:
 $$ x'=(x'_{1},...,x'_{n}) \;\;\;\;\text{and}\;\;\;\; x''=(x''_{1},...,x''_{n})$$
 where
@@ -282,6 +283,18 @@ This approach is intuitively easy to understand and in fact in many problems it 
 Reinforcement learning initially was applied to find optimal policies in single objective problems. However, in recent years there has been a significant increase in the interest towards multi-objective reinforcement learning. This can be explained by the fact that sometimes it is just impossible to express a sophisticated problem in terms of just a single objective, and naturally this gave rise to multi-objective reinforcement learning. For further motivation refer to Roijers et al. (2013)\nocite{roijers2013survey}.
 
 This section will review the main work done on temporal-difference multi-objective reinforcement learning. It is only a review of the most seminal works, for more details please refer to Roijers et al. (2013)\nocite{roijers2013survey}. The first subsection will review temporal-difference methods based on the linear scalarization while the second subsection will consider non-linear methods. This separation is selected partially because linear methods are proven to converge while non-linear may not.
+
+\subsection{Multi-Objective Markov Decission Processes (MOMDP).}
+As was mentioned in Section \ref{sec:agent-and-environment}, in Markov decision processes the quality of taking action $a$ in a state $s$ is evaluated via immediate scalar reward signal $r$:
+$$ r = \rho(s,a,s'), $$
+where $s'$ is a successor state and $\rho()$ is a scalar reward function:
+$$ \rho : S \times A \times  S \rightarrow \mathbb{R}. $$
+In MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector: 
+$$ \vec{r} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
+
+Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be seen from the update rule for this algorithm:
+$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
+Here maximization operator assumes that there is a clear ordering between available options but in case of multi-objective MDPs there are options which are non-comparable to each other (see Section \ref{sec:dominance}). Hence some modification should be made to address this issue. 
 
 \subsection{Linear Temporal Difference Learning.}
 
