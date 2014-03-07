@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  5 MAR 2014 14:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  6 MAR 2014 17:29
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -421,10 +421,389 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 )
 Package hyperref Info: Option `linktocpage' set `true' on input line 55.
-\c@thm=\count129
-\c@prop=\count130
-\c@as=\count131
-\c@alg=\count132
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\kpfonts.sty
+Package: kpfonts  2010/08/20 v3.31
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+Package textcomp Info: Changing ? sub-encoding to TS1/0 on input line 72.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+\c@mv@rm=\count129
+\c@mv@boldrm=\count130
+\c@mv@sf=\count131
+\c@mv@boldsf=\count132
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `rm'
+(Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `boldrm'
+(Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `sf'
+(Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `boldsf'
+(Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/b/n on input line 355.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `rm'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/m/n on input line 357.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `boldrm'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/b/n on input line 358.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `sf'
+(Font)                  OT1/jkp/m/n --> OT1/jkpss/m/n on input line 359.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `boldsf'
+(Font)                  OT1/jkp/m/n --> OT1/jkpss/b/n on input line 360.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 364.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/b/n on input line 365.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `rm'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/m/n on input line 366.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `boldrm'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/b/n on input line 367.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `sf'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/m/n on input line 368.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `boldsf'
+(Font)                  OT1/jkp/m/n --> OT1/jkp/b/n on input line 369.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `rm'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldrm'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `sf'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldsf'
+(Font)                  OT1/cmr/bx/n --> OT1/jkp/b/n on input line 378.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/jkp/b/n --> OT1/jkp/b/n on input line 379.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `rm'
+(Font)                  OT1/jkp/b/n --> OT1/jkp/b/n on input line 381.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldrm'
+(Font)                  OT1/jkp/b/n --> OT1/jkp/b/n on input line 382.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `sf'
+(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `boldsf'
+(Font)                  OT1/jkp/b/n --> OT1/jkpss/b/n on input line 384.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `rm'
+(Font)                  OT1/cmr/m/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldrm'
+(Font)                  OT1/cmr/m/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `sf'
+(Font)                  OT1/cmr/m/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldsf'
+(Font)                  OT1/cmr/m/it --> OT1/jkp/m/it on input line 390.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/jkp/m/it --> OT1/jkp/b/it on input line 391.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `rm'
+(Font)                  OT1/jkp/m/it --> OT1/jkp/m/it on input line 393.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldrm'
+(Font)                  OT1/jkp/m/it --> OT1/jkp/b/it on input line 394.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `sf'
+(Font)                  OT1/jkp/m/it --> OT1/jkpss/m/it on input line 395.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `boldsf'
+(Font)                  OT1/jkp/m/it --> OT1/jkpss/b/it on input line 396.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `rm'
+(Font)                  OT1/cmss/m/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldrm'
+(Font)                  OT1/cmss/m/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `sf'
+(Font)                  OT1/cmss/m/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldsf'
+(Font)                  OT1/cmss/m/n --> OT1/jkpss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 402.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `rm'
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 403.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldrm'
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 404.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `sf'
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/m/n on input line 405.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `boldsf'
+(Font)                  OT1/jkpss/m/n --> OT1/jkpss/b/n on input line 406.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `rm'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldrm'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `sf'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldsf'
+(Font)                  OT1/cmtt/m/n --> OT1/jkptt/m/n on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/b/n on input line 411.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `rm'
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 412.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldrm'
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/b/n on input line 413.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `sf'
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/m/n on input line 414.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `boldsf'
+(Font)                  OT1/jkptt/m/n --> OT1/jkptt/b/n on input line 415.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `rm'
+(Font)                  OML/cmm/m/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldrm'
+(Font)                  OML/cmm/m/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `sf'
+(Font)                  OML/cmm/m/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldsf'
+(Font)                  OML/cmm/m/it --> OML/jkp/m/it on input line 423.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/jkp/m/it --> OML/jkp/bx/it on input line 424.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `rm'
+(Font)                  OML/jkp/m/it --> OML/jkp/m/it on input line 426.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldrm'
+(Font)                  OML/jkp/m/it --> OML/jkp/bx/it on input line 427.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `sf'
+(Font)                  OML/jkp/m/it --> OML/jkpss/m/it on input line 428.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldsf'
+(Font)                  OML/jkp/m/it --> OML/jkpss/bx/it on input line 429.
+\symlettersA=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/jkpmia/m/it --> U/jkpmia/bx/it on input line 439.
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `rm'
+(Font)                  U/jkpmia/m/it --> U/jkpmia/m/it on input line 441.
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `boldrm'
+(Font)                  U/jkpmia/m/it --> U/jkpmia/bx/it on input line 442.
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `sf'
+(Font)                  U/jkpmia/m/it --> U/jkpssmia/m/it on input line 443.
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `boldsf'
+(Font)                  U/jkpmia/m/it --> U/jkpssmia/bx/it on input line 444.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 447.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `rm'
+(Font)                  OMS/cmsy/m/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `boldrm'
+(Font)                  OMS/cmsy/m/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `sf'
+(Font)                  OMS/cmsy/m/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `boldsf'
+(Font)                  OMS/cmsy/m/n --> OMS/jkp/m/n on input line 456.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/jkp/m/n --> OMS/jkp/bx/n on input line 457.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `rm'
+(Font)                  OMS/jkp/m/n --> OMS/jkp/m/n on input line 459.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `boldrm'
+(Font)                  OMS/jkp/m/n --> OMS/jkp/bx/n on input line 460.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `sf'
+(Font)                  OMS/jkp/m/n --> OMS/jkp/m/n on input line 461.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `boldsf'
+(Font)                  OMS/jkp/m/n --> OMS/jkp/bx/n on input line 462.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `rm'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `boldrm'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `sf'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `boldsf'
+(Font)                  U/msa/m/n --> U/jkpsya/m/n on input line 475.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/jkpsya/m/n --> U/jkpsya/bx/n on input line 476.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `rm'
+(Font)                  U/jkpsya/m/n --> U/jkpsya/m/n on input line 477.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `boldrm'
+(Font)                  U/jkpsya/m/n --> U/jkpsya/bx/n on input line 478.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `sf'
+(Font)                  U/jkpsya/m/n --> U/jkpsya/m/n on input line 479.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `boldsf'
+(Font)                  U/jkpsya/m/n --> U/jkpsya/bx/n on input line 480.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `rm'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `boldrm'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `sf'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `boldsf'
+(Font)                  U/msb/m/n --> U/jkpsyb/m/n on input line 528.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/jkpsyb/m/n --> U/jkpsyb/bx/n on input line 529.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `rm'
+(Font)                  U/jkpsyb/m/n --> U/jkpsyb/m/n on input line 530.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `boldrm'
+(Font)                  U/jkpsyb/m/n --> U/jkpsyb/bx/n on input line 531.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `sf'
+(Font)                  U/jkpsyb/m/n --> U/jkpsssyb/m/n on input line 532.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `boldsf'
+(Font)                  U/jkpsyb/m/n --> U/jkpsssyb/bx/n on input line 533.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/jkpsyc/m/n --> U/jkpsyc/bx/n on input line 549.
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `rm'
+(Font)                  U/jkpsyc/m/n --> U/jkpsyc/m/n on input line 551.
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `boldrm'
+(Font)                  U/jkpsyc/m/n --> U/jkpsyc/bx/n on input line 552.
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `sf'
+(Font)                  U/jkpsyc/m/n --> U/jkpsyc/m/n on input line 553.
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `boldsf'
+(Font)                  U/jkpsyc/m/n --> U/jkpsyc/bx/n on input line 554.
+LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `bold'
+(Font)                  U/jkpsyd/m/n --> U/jkpsyd/bx/n on input line 583.
+LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `rm'
+(Font)                  U/jkpsyd/m/n --> U/jkpsyd/m/n on input line 585.
+LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `boldrm'
+(Font)                  U/jkpsyd/m/n --> U/jkpsyd/bx/n on input line 586.
+LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `sf'
+(Font)                  U/jkpsyd/m/n --> U/jkpsyd/m/n on input line 587.
+LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `boldsf'
+(Font)                  U/jkpsyd/m/n --> U/jkpsyd/bx/n on input line 588.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `rm'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `boldrm'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `sf'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `boldsf'
+(Font)                  OMX/cmex/m/n --> OMX/jkp/m/n on input line 598.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/jkp/m/n --> OMX/jkp/bx/n on input line 599.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `rm'
+(Font)                  OMX/jkp/m/n --> OMX/jkp/m/n on input line 601.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `boldrm'
+(Font)                  OMX/jkp/m/n --> OMX/jkp/bx/n on input line 602.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `sf'
+(Font)                  OMX/jkp/m/n --> OMX/jkpss/m/n on input line 603.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `boldsf'
+(Font)                  OMX/jkp/m/n --> OMX/jkpss/bx/n on input line 604.
+\symlargesymbolsA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
+(Font)                  U/jkpexa/m/n --> U/jkpexa/bx/n on input line 615.
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `rm'
+(Font)                  U/jkpexa/m/n --> U/jkpexa/m/n on input line 617.
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `boldrm'
+
+(Font)                  U/jkpexa/m/n --> U/jkpexa/bx/n on input line 618.
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `sf'
+(Font)                  U/jkpexa/m/n --> U/jkpexa/m/n on input line 619.
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `boldsf'
+
+(Font)                  U/jkpexa/m/n --> U/jkpexa/bx/n on input line 620.
+LaTeX Info: Redefining \not on input line 1580.
+)
+\c@thm=\count133
+\c@prop=\count134
+\c@as=\count135
+\c@alg=\count136
 
 
 LaTeX Warning: Unused global option(s):
@@ -434,21 +813,58 @@ LaTeX Warning: Unused global option(s):
 (C:\Users\rusashi\Documents\publications\thesis\lit-review.aux)
 (C:\Users\rusashi\Documents\publications\thesis\methodology.aux)
 (C:\Users\rusashi\Documents\publications\thesis\conclusions.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 138.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 138.
 
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omljkp.fd
+File: omljkp.fd 2006/08/15 v1.0
+)
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 138.
+
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omsjkp.fd
+File: omsjkp.fd 2006/08/15 v1.0
+)
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 138.
+
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omxjkp.fd
+File: omxjkp.fd 2006/08/15 v1.0
+)
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 138
+.
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpexa.fd
+File: ujkpexa.fd 2006/08/15 v1.0
+)
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 138.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 138.
+
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ot1jkp.fd
+File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -485,31 +901,31 @@ LaTeX Font Info:    ... okay on input line 137.
 
 (C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
+\scratchcounter=\count137
 \scratchdimen=\dimen143
 \scratchbox=\box30
-\nofMPsegments=\count134
-\nofMParguments=\count135
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count136
+\MPscratchCnt=\count140
 \MPscratchDim=\dimen144
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks31
 )
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 137.
+Package hyperref Info: Link coloring ON on input line 138.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count139
+\c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 137.
-LaTeX Info: Redefining \pageref on input line 137.
-LaTeX Info: Redefining \nameref on input line 137.
+LaTeX Info: Redefining \ref on input line 138.
+LaTeX Info: Redefining \pageref on input line 138.
+LaTeX Info: Redefining \nameref on input line 138.
 
 (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.out)
 (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.out)
@@ -520,60 +936,79 @@ Package caption Info: End \AtBeginDocument code.
 <UBlogo.pdf, id=163, 77.28876pt x 78.2925pt>
 File: UBlogo.pdf Graphic file (type pdf)
  <use UBlogo.pdf>
-Package pdftex.def Info: UBlogo.pdf used on input line 145.
+Package pdftex.def Info: UBlogo.pdf used on input line 146.
 (pdftex.def)             Requested size: 142.26378pt x 144.12444pt.
  [1
 
 
 {C:/Users/rusashi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
 rusashi/Documents/publications/thesis/UBlogo.pdf>] [2]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-LaTeX Font Info:    Try loading font information for U+msa on input line 159.
+Missing character: There is no â in font jkpmn7t!
+Missing character: There is no € in font jkpmn7t!
+Missing character: There is no ™ in font jkpmn7t!
+LaTeX Font Info:    Try loading font information for U+jkpsya on input line 160
+.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsya.fd
+File: ujkpsya.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 159.
+LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 160
+.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyb.fd
+File: ujkpsyb.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 159.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 160.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [3] [4
+)
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 160
+.
 
-]
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.toc [5
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpmia.fd
+File: ujkpmia.fd 2006/08/15 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 160
+.
+
+(C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyc.fd
+File: ujkpsyc.fd 2006/08/15 v1.0
+)
+[3] [4
+
+] (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.toc [5
 
 ])
 \tf@toc=\write4
- [6]
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lot)
+
+[6] (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lot)
 \tf@lot=\write5
  [7
 
 ]
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lof [8
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lof
+Overfull \hbox (2.46692pt too wide) in paragraph at lines 7--7
+ [][] []\OT1/jkp/m/n/12 Each blue dot is a unique pol-icy from the ex-am-ple MD
+P prob-lem. \OT1/jkp/b/n/12 NOTE: 
+ []
+
+[8
 
 ])
 \tf@lof=\write6
- [9]
-(C:\Users\rusashi\Documents\publications\thesis\Listofpub.tex) [10
+ [9] (C:\Users\rusashi\Documents\publications\thesis\Listofpub.tex)
+[10
 
 
-]
-(C:\Users\rusashi\Documents\publications\thesis\lit-review.tex
+] (C:\Users\rusashi\Documents\publications\thesis\lit-review.tex
 Chapter 1.
 [1
 
 
 
 
-] <agent-env-cycle.png, id=293, 336.65775pt x 145.7445pt>
+] <agent-env-cycle.png, id=291, 336.65775pt x 145.7445pt>
 File: agent-env-cycle.png Graphic file (type png)
 
 <use agent-env-cycle.png>
@@ -585,45 +1020,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 [2 <C:/Users/rusashi/Documents/publications/thesis/agent-env-cycle.png>]
+Overfull \hbox (0.82666pt too wide) in paragraph at lines 44--45
+[]\OT1/jkp/m/n/12 Because en-vi-ron-ment is rep-re-sented as a Markov de-ci-sio
+n pro-cess, it has the Markov
+ []
+
 [3] [4] [5] [6] [7] [8] [9]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 144.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 165.
 
+Overfull \hbox (0.94426pt too wide) in paragraph at lines 142--160
+[]\OT1/jkp/m/n/12 Reinforcement learn-ing equiv-a-lent of pol-icy it-er-a-tion 
+is called \OT1/jkp/m/it/12 Q-Learning \OT1/jkp/m/n/12 (Watkins,
+ []
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+[10]
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 165.
+
+ (C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ts1jkp.fd
+File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
- [10] [11] [12]
-[13] [14] <paretofront.png, id=366, 219.82124pt x 175.857pt>
+[11] [12] [13] [14] <paretofront.png, id=360, 219.82124pt x 175.857pt>
 File: paretofront.png Graphic file (type png)
 
 <use paretofront.png>
 Package pdftex.def Info: paretofront.png used on input line 236.
 (pdftex.def)             Requested size: 197.83728pt x 158.26984pt.
  [15 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
-Overfull \hbox (22.71126pt too wide) in paragraph at lines 262--263
-[]\OT1/cmr/m/n/12 Assume so-lu-tion $\OML/cmm/m/it/12 a[]$ \OT1/cmr/m/n/12 max-
-i-mizes this given op-ti-miza-tion prob-lem. Let $[] = (\OML/cmm/m/it/12 f[]\OT
-1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; :::; f[]\
-OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 ))$,
+Overfull \hbox (23.46115pt too wide) in paragraph at lines 262--263
+[]\OT1/jkp/m/n/12 Assume so-lu-tion $\OML/jkp/m/it/12 a[]$ \OT1/jkp/m/n/12 max-
+i-mizes this given op-ti-miza-tion prob-lem. Let $[] = (\OML/jkp/m/it/12 f[]\OT
+1/jkp/m/n/12 (\OML/jkp/m/it/12 a[]\OT1/jkp/m/n/12 )\OML/jkp/m/it/12 ; :::; f[]\
+OT1/jkp/m/n/12 (\OML/jkp/m/it/12 a[]\OT1/jkp/m/n/12 ))$,
  []
 
-[16]
-Overfull \hbox (12.50363pt too wide) in paragraph at lines 281--281
-[]\OT1/cmr/bx/n/17.28 Multi-objective Re-in-force-ment Learn-ing Re-search. 
+[16] [17] [18] [19]
+Overfull \hbox (7.07872pt too wide) in paragraph at lines 309--310
+[]\OT1/jkp/m/n/12 Before lin-ear scalar-iza-tion was used in re-in-force-ment l
+earn-ing, Fein-berg and Shwartz
  []
 
-[17] [18] [19] [20]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [21]
+[20] [21]
+Missing character: There is no â in font jkpmn7t!
+Missing character: There is no € in font jkpmn7t!
+Missing character: There is no ™ in font jkpmn7t!
+Missing character: There is no â in font jkpmn7t!
+Missing character: There is no € in font jkpmn7t!
+Missing character: There is no ™ in font jkpmn7t!
+
 Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
@@ -633,7 +1077,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 413--415
 
  []
@@ -643,168 +1087,188 @@ Underfull \hbox (badness 10000) in paragraph at lines 419--421
 
  []
 
-[27]) [28] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
+[28]) [29] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
 Chapter 2.
-[29
+[30
 
 
 
-] [30] [31] [32] [33] <hypervolume.png, id=468, 244.5135pt x 213.79875pt>
+] [31] [32]
+Overfull \hbox (7.43814pt too wide) in paragraph at lines 43--44
+[]\OT1/jkp/m/n/12 Standard ap-proaches to ex-per-i-men-tal method-ol-ogy and re
+-port-ing of re-sults should
+ []
+
+[33] [34] <hypervolume.png, id=466, 244.5135pt x 213.79875pt>
 File: hypervolume.png Graphic file (type png)
 
 <use hypervolume.png>
 Package pdftex.def Info: hypervolume.png used on input line 64.
 (pdftex.def)             Requested size: 220.0601pt x 192.41708pt.
 
+Overfull \hbox (0.3187pt too wide) in paragraph at lines 73--74
+\OT1/jkp/m/n/12 Single-policy al-go-rithms (Castel-leti et al., 2002 or Ga-bor,
+ Kalmar and Szepes-vari, 1998)
+ []
+
+[35 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-<decisionTree.png, id=470, 543.02875pt x 304.13625pt>
+<decisionTree.png, id=472, 543.02875pt x 304.13625pt>
 File: decisionTree.png Graphic file (type png)
  <use decisionTree.png>
 Package pdftex.def Info: decisionTree.png used on input line 79.
 (pdftex.def)             Requested size: 325.81975pt x 182.48315pt.
 
-[34 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<exampleMDPFront.png, id=477, 530.98375pt x 377.41pt>
+[36 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy)
+>] <exampleMDPFront.png, id=479, 530.98375pt x 377.41pt>
 File: exampleMDPFront.png Graphic file (type png)
 
 <use exampleMDPFront.png>
 Package pdftex.def Info: exampleMDPFront.png used on input line 90.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
 
-<exampleMDPOneMarkedPolicy.png, id=479, 530.98375pt x 377.41pt>
+<exampleMDPOneMarkedPolicy.png, id=481, 530.98375pt x 377.41pt>
 File: exampleMDPOneMarkedPolicy.png Graphic file (type png)
 
 <use exampleMDPOneMarkedPolicy.png>
 Package pdftex.def Info: exampleMDPOneMarkedPolicy.png used on input line 99.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
- [35 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy
-)>] [36 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PN
-G copy)>] [37 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMark
-edPolicy.png (PNG copy)>]
-<reasonForMPLearning.png, id=497, 273.02pt x 353.32pt>
+ [37 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PNG c
+opy)>] [38 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMarkedP
+olicy.png (PNG copy)>] [39]
+<reasonForMPLearning.png, id=500, 273.02pt x 353.32pt>
 File: reasonForMPLearning.png Graphic file (type png)
 
 <use reasonForMPLearning.png>
 Package pdftex.def Info: reasonForMPLearning.png used on input line 128.
 (pdftex.def)             Requested size: 163.81326pt x 211.99364pt.
- [38] [39 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.p
-ng (PNG copy)>] [40] [41]
-<glue.png, id=523, 494.84875pt x 274.02374pt>
+ [40 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.png (P
+NG copy)>] [41]
+Overfull \hbox (10.43651pt too wide) in paragraph at lines 200--201
+[]\OT1/jkp/m/n/12 Run a spec-i-fied num-ber of episodes. In ev-ery episode, dur
+-ing ev-ery state-transition,
+ []
+
+[42] [43] <glue.png, id=525, 494.84875pt x 274.02374pt>
 File: glue.png Graphic file (type png)
  <use glue.png>
 Package pdftex.def Info: glue.png used on input line 219.
 (pdftex.def)             Requested size: 445.35977pt x 246.61908pt.
- [42] [43 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [44]
-<dst.png, id=537, 281.25075pt x 204.765pt>
+
+Overfull \hbox (0.90611pt too wide) in paragraph at lines 230--231
+\OT1/jkp/m/n/12 ogy. Be-cause the en-vi-ron-ment mod-ule is well-documented and
+ well-standardized
+ []
+
+[44 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [45] [46]
+<dst.png, id=540, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
 Package pdftex.def Info: dst.png used on input line 270.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
 
-<dstPareto.png, id=539, 345.08925pt x 215.00325pt>
+<dstPareto.png, id=542, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
 Package pdftex.def Info: dstPareto.png used on input line 282.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
- [45]
-<pw.png, id=546, 249.93375pt x 252.945pt>
+ [47 <C:/Users/rusashi/Documents/publications/thesis/dst.png>]
+<pw.png, id=548, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
 Package pdftex.def Info: pw.png used on input line 293.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
- [46 <C:/Users/rusashi/Documents/publications/thesis/dst.png>] [47 <C:/Users/ru
-sashi/Documents/publications/thesis/dstPareto.png>] [48 <C:/Users/rusashi/Docum
-ents/publications/thesis/pw.png>] <rg.png, id=560, 269.20575pt x 269.20575pt>
+ [48 <C:/Users/rusashi/Documents/publications/thesis/dstPareto.png>] [49 <C:/Us
+ers/rusashi/Documents/publications/thesis/pw.png>] <rg.png, id=558, 269.20575pt
+ x 269.20575pt>
 File: rg.png Graphic file (type png)
- <use rg.png>
+
+<use rg.png>
 Package pdftex.def Info: rg.png used on input line 322.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
-
-<rgpareto.png, id=562, 457.10776pt x 171.039pt>
+ <rgpareto.png, id=560, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
- <use rgpareto.png>
+
+<use rgpareto.png>
 Package pdftex.def Info: rgpareto.png used on input line 332.
 (pdftex.def)             Requested size: 365.68669pt x 136.83138pt.
-) [49 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/rusashi
-/Documents/publications/thesis/rgpareto.png>]
+) [50] [51 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/ru
+sashi/Documents/publications/thesis/rgpareto.png>]
 No file conclusions.tex.
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [50
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [52
 
 
 
 
 
 
-] [51]
-[52]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-
-Underfull \hbox (badness 1043) in paragraph at lines 131--138
-[]\OT1/cmr/m/n/12 Yaman, F., Walsh, T. J., Littman, M. L. and des-Jardins, M., 
-\OT1/cmr/m/it/12 Demo-cratic
+] [53]
+[54]
+Missing character: There is no â in font jkpmn7t!
+Missing character: There is no € in font jkpmn7t!
+Missing character: There is no “ in font jkpmn7t!
+LaTeX Font Info:    Try loading font information for OT1+jkptt on input line 13
+5.
+ (C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ot1jkptt.fd
+File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
+)
+Underfull \hbox (badness 2119) in paragraph at lines 131--138
+[]\OT1/jkp/m/n/12 Yaman, F., Walsh, T. J., Littman, M. L. and des-Jardins, M., 
+\OT1/jkp/m/it/12 Demo-cratic
  []
 
-
-Underfull \hbox (badness 1325) in paragraph at lines 131--138
-\OT1/cmr/m/it/12 ap-prox-i-ma-tion of lex-i-co-graphic pref-er-ence mod-els\OT1
-/cmr/m/n/12 , Ar-ti-fi-cial In-tel-li-gence, 2011,
- []
-
-) [53]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
+) [55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
 (C:\Users\rusashi\Documents\publications\thesis\lit-review.aux)
 (C:\Users\rusashi\Documents\publications\thesis\methodology.aux)
 (C:\Users\rusashi\Documents\publications\thesis\conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
 Package rerunfilecheck Info: File `phd_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: E74D6AE485919ADEE7A0667E98E19072;2965.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  )
 (\end occurred inside a group at level 3)
 
 ### simple group (level 3) entered at line 174 ({)
 ### simple group (level 2) entered at line 137 ({)
-### semi simple group (level 1) entered at line 149 (\begingroup)
+### semi simple group (level 1) entered at line 150 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8954 strings out of 493921
- 133952 string characters out of 3147275
- 225821 words of memory out of 3000000
- 11889 multiletter control sequences out of 15000+200000
- 15241 words of font info for 61 fonts, out of 3000000 for 9000
+ 10216 strings out of 493921
+ 151030 string characters out of 3147275
+ 230410 words of memory out of 3000000
+ 13093 multiletter control sequences out of 15000+200000
+ 55379 words of font info for 129 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,12n,39p,1209b,714s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb>
-Output written on phd_thesis.pdf (63 pages, 665720 bytes).
+ 36i,13n,39p,1209b,714s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C
+:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expe
+rt.enc}<C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/
+jkpbn8a.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpf
+onts/jkpbne.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/type1/public
+/kpfonts/jkpex.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/type1/pub
+lic/kpfonts/jkpmi.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/type1/
+public/kpfonts/jkpmit8a.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/public/kpfonts/jkpmite.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/rusashi/AppData/Roaming/MiKTeX/
+2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/rusashi/AppData/Roaming/Mi
+KTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/rusashi/AppData/Roamin
+g/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/rusashi/AppData/Roa
+ming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/rusashi/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on phd_thesis.pdf (65 pages, 573887 bytes).
 PDF statistics:
- 708 PDF objects out of 1000 (max. 8388607)
- 176 named destinations out of 1000 (max. 500000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
