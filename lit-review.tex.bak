@@ -291,21 +291,23 @@ where $s'$ is a successor state and $\rho()$ is a scalar reward function:
 $$ \rho : S \times A \times  S \rightarrow \mathbb{R}. $$
 In a MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector:
 $$ \vec{r} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
-This in turn makes the Q-function be a vector-valued function:
-$$ \vec{Q(s,a)} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
-Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be seen from the update rule for this algorithm:
+This in turn makes the Q-function a vector-valued function:
+$$ \overrightarrow{Q(s,a)} = (R_{1},R_{2},...,R_{n}), $$
+where $R_{i}$ is the total cumulative return for an objective function $i$ if an agent decides to take an action $a$ in a state $s$.
+
+Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be observed from the update rule for this algorithm:
 $$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
-Here the maximization operator assumes that there is a clear ordering between available actions in state $s_{t+1}$ of an environment and in case of single objective MDPs this ordering is based on which action produces higher scalar return. But in case of multi-objective MDPs it is no longer so easy to determine how ordering of available actions should be performed because there are actions which are non-comparable to each other (see Section \ref{sec:dominance}). Hence some modification must be made to address this issue.
+Here the maximization operator assumes that there is a clear ordering between available actions in state $s_{t+1}$ of an environment and in case of single objective MDPs this ordering is based on which action produces a higher scalar return. In contrast, in case of multi-objective MDPs it is no longer clear how to perform ordering of available actions as a Q-function for each action no longer produces a scalar number but rather a vector of values and those vectors may be non-comparable to each other (see Section \ref{sec:dominance}).
+
+\subsection{Utility Functions.}
+Hello world.
 
 \subsection{Linear Temporal Difference Learning.}
-Previous section pointed out that in order to make algorithms like Q-Learning work in multi-objective MDPs some adjustments must be made to an update rule, namely there must be a clear mechanism which will resolve the ordering of available actions in some state $s$. One way to achieve this is through the use of a general multi-objective optimization technique called linear-weighted averages or simply linear scalarization (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}).
+Previous section pointed out that in order to make algorithms like the Q-Learning work in multi-objective MDPs some adjustments must be made to an update rule, namely there must be a clear mechanism which will resolve the ordering of available actions in some state $s$. One way to achieve this is through the use of a general multi-objective optimization technique called linear-weighted averages or simply linear scalarization (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}).
 
-Given a multi-objective MDP, a policy $\pi$ and a $n$-component weight vector $\vec{w}$, the linear scalarization will select a greedy action from available actions $a$ in some state $s$ according to the following rule:
-$$ \arg\max_{a}\displaystyle\sum_{i=1}^{n} w_{i}Q^{\pi}_{i}(s,a), $$
-where $n$ is the number of objectives in the MDP, $w_{i}$ is an $i$-th component of the weight vector $\vec{w}$ and $Q^{\pi}_{i}$ is a Q-function for an $i$-th objective under the policy $\pi$ .
-
-Equipping the Q-Learning algorithm with the linear scalarization will result in the following update rule:
-$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; max_{a}\displaystyle\sum_{i=1}^{n} w_{i}Q_{i}(s,a) - Q(s_{t},a_{t})\;\right]. $$
+Given a multi-objective MDP, a policy $\pi$ and a $n$-component weight vector $\vec{w}$, a maximization operator based on the linear scalarization will compute a scalarized value for each available action $a$ in some state $s$ according to the following rule:
+$$ \displaystyle\sum_{i=1}^{n} w_{i}Q^{\pi}_{i}(s,a), $$
+where $n$ is the number of objectives in the MDP, $w_{i}$ is an $i$-th component of the weight vector $\vec{w}$ and $Q^{\pi}_{i}$ is an $i$-th component of a vector-valued Q-function under the policy $\pi$. The actions are ordered according to the scalarized value they produce.
 
 Before linear scalarization was used in reinforcement learning, Feinberg and Shwartz (1993)\nocite{Feinberg93constrainedmarkov} wrote an extensive paper on using linear scalarization in constrained Markov decision models. The authors proved the existence of optimal policies in such models and also proved that linear scalarization is able to identify members of the Pareto front. Even though this paper didn't mention reinforcement learning, it provided the necessary theoretical foundations for other researchers to try out linear scalarization in multi-objective reinforcement learning.
 

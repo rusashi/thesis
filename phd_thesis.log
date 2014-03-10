@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  6 MAR 2014 17:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  9 MAR 2014 23:04
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -1025,81 +1025,81 @@ Overfull \hbox (0.82666pt too wide) in paragraph at lines 44--45
 n pro-cess, it has the Markov
  []
 
-[3] [4] [5] [6] [7] [8] [9]
+[3] [4] [5] [6] [7] [8] [9] [10]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 144.
+put line 161.
 
-Overfull \hbox (0.94426pt too wide) in paragraph at lines 142--160
+Overfull \hbox (0.94426pt too wide) in paragraph at lines 159--177
 []\OT1/jkp/m/n/12 Reinforcement learn-ing equiv-a-lent of pol-icy it-er-a-tion 
 is called \OT1/jkp/m/it/12 Q-Learning \OT1/jkp/m/n/12 (Watkins,
  []
 
-[10]
-LaTeX Font Info:    Try loading font information for TS1+jkp on input line 165.
+[11]
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 182.
 
  (C:\Users\rusashi\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
-[11] [12] [13] [14] <paretofront.png, id=360, 219.82124pt x 175.857pt>
+[12] [13] [14] [15] <paretofront.png, id=370, 219.82124pt x 175.857pt>
 File: paretofront.png Graphic file (type png)
 
 <use paretofront.png>
-Package pdftex.def Info: paretofront.png used on input line 236.
+Package pdftex.def Info: paretofront.png used on input line 253.
 (pdftex.def)             Requested size: 197.83728pt x 158.26984pt.
- [15 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
-Overfull \hbox (23.46115pt too wide) in paragraph at lines 262--263
+ [16 <C:/Users/rusashi/Documents/publications/thesis/paretofront.png>]
+Overfull \hbox (23.46115pt too wide) in paragraph at lines 279--280
 []\OT1/jkp/m/n/12 Assume so-lu-tion $\OML/jkp/m/it/12 a[]$ \OT1/jkp/m/n/12 max-
 i-mizes this given op-ti-miza-tion prob-lem. Let $[] = (\OML/jkp/m/it/12 f[]\OT
 1/jkp/m/n/12 (\OML/jkp/m/it/12 a[]\OT1/jkp/m/n/12 )\OML/jkp/m/it/12 ; :::; f[]\
 OT1/jkp/m/n/12 (\OML/jkp/m/it/12 a[]\OT1/jkp/m/n/12 ))$,
  []
 
-[16] [17] [18] [19]
-Overfull \hbox (7.07872pt too wide) in paragraph at lines 309--310
+[17] [18] [19] [20]
+Overfull \hbox (7.07872pt too wide) in paragraph at lines 326--327
 []\OT1/jkp/m/n/12 Before lin-ear scalar-iza-tion was used in re-in-force-ment l
 earn-ing, Fein-berg and Shwartz
  []
 
-[20] [21]
+[21] [22]
 Missing character: There is no â in font jkpmn7t!
 Missing character: There is no € in font jkpmn7t!
 Missing character: There is no ™ in font jkpmn7t!
 Missing character: There is no â in font jkpmn7t!
 Missing character: There is no € in font jkpmn7t!
 Missing character: There is no ™ in font jkpmn7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-[22] [23] [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
+[24] [25] [26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 430--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--421
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
-[28]) [29] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
+[29]) [30] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
 Chapter 2.
-[30
+[31
 
 
 
-] [31] [32]
+] [32] [33]
 Overfull \hbox (7.43814pt too wide) in paragraph at lines 43--44
 []\OT1/jkp/m/n/12 Standard ap-proaches to ex-per-i-men-tal method-ol-ogy and re
 -port-ing of re-sults should
  []
 
-[33] [34] <hypervolume.png, id=466, 244.5135pt x 213.79875pt>
+[34] [35] <hypervolume.png, id=475, 244.5135pt x 213.79875pt>
 File: hypervolume.png Graphic file (type png)
 
 <use hypervolume.png>
@@ -1111,12 +1111,12 @@ Overfull \hbox (0.3187pt too wide) in paragraph at lines 73--74
  Kalmar and Szepes-vari, 1998)
  []
 
-[35 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
+[36 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-<decisionTree.png, id=472, 543.02875pt x 304.13625pt>
+<decisionTree.png, id=481, 543.02875pt x 304.13625pt>
 File: decisionTree.png Graphic file (type png)
  <use decisionTree.png>
 Package pdftex.def Info: decisionTree.png used on input line 79.
@@ -1126,37 +1126,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[36 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy)
->] <exampleMDPFront.png, id=479, 530.98375pt x 377.41pt>
+[37 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy)
+>] <exampleMDPFront.png, id=488, 530.98375pt x 377.41pt>
 File: exampleMDPFront.png Graphic file (type png)
 
 <use exampleMDPFront.png>
 Package pdftex.def Info: exampleMDPFront.png used on input line 90.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
 
-<exampleMDPOneMarkedPolicy.png, id=481, 530.98375pt x 377.41pt>
+<exampleMDPOneMarkedPolicy.png, id=490, 530.98375pt x 377.41pt>
 File: exampleMDPOneMarkedPolicy.png Graphic file (type png)
 
 <use exampleMDPOneMarkedPolicy.png>
 Package pdftex.def Info: exampleMDPOneMarkedPolicy.png used on input line 99.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
- [37 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PNG c
-opy)>] [38 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMarkedP
-olicy.png (PNG copy)>] [39]
-<reasonForMPLearning.png, id=500, 273.02pt x 353.32pt>
+ [38 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PNG c
+opy)>] [39 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMarkedP
+olicy.png (PNG copy)>] [40]
+<reasonForMPLearning.png, id=509, 273.02pt x 353.32pt>
 File: reasonForMPLearning.png Graphic file (type png)
 
 <use reasonForMPLearning.png>
 Package pdftex.def Info: reasonForMPLearning.png used on input line 128.
 (pdftex.def)             Requested size: 163.81326pt x 211.99364pt.
- [40 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.png (P
-NG copy)>] [41]
+ [41 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.png (P
+NG copy)>] [42]
 Overfull \hbox (10.43651pt too wide) in paragraph at lines 200--201
 []\OT1/jkp/m/n/12 Run a spec-i-fied num-ber of episodes. In ev-ery episode, dur
 -ing ev-ery state-transition,
  []
 
-[42] [43] <glue.png, id=525, 494.84875pt x 274.02374pt>
+[43] [44] <glue.png, id=534, 494.84875pt x 274.02374pt>
 File: glue.png Graphic file (type png)
  <use glue.png>
 Package pdftex.def Info: glue.png used on input line 219.
@@ -1167,50 +1167,50 @@ Overfull \hbox (0.90611pt too wide) in paragraph at lines 230--231
  well-standardized
  []
 
-[44 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [45] [46]
-<dst.png, id=540, 281.25075pt x 204.765pt>
+[45 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [46] [47]
+<dst.png, id=549, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
 Package pdftex.def Info: dst.png used on input line 270.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
 
-<dstPareto.png, id=542, 345.08925pt x 215.00325pt>
+<dstPareto.png, id=551, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
 Package pdftex.def Info: dstPareto.png used on input line 282.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
- [47 <C:/Users/rusashi/Documents/publications/thesis/dst.png>]
-<pw.png, id=548, 249.93375pt x 252.945pt>
+ [48 <C:/Users/rusashi/Documents/publications/thesis/dst.png>]
+<pw.png, id=557, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
 Package pdftex.def Info: pw.png used on input line 293.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
- [48 <C:/Users/rusashi/Documents/publications/thesis/dstPareto.png>] [49 <C:/Us
-ers/rusashi/Documents/publications/thesis/pw.png>] <rg.png, id=558, 269.20575pt
+ [49 <C:/Users/rusashi/Documents/publications/thesis/dstPareto.png>] [50 <C:/Us
+ers/rusashi/Documents/publications/thesis/pw.png>] <rg.png, id=567, 269.20575pt
  x 269.20575pt>
 File: rg.png Graphic file (type png)
 
 <use rg.png>
 Package pdftex.def Info: rg.png used on input line 322.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
- <rgpareto.png, id=560, 457.10776pt x 171.039pt>
+ <rgpareto.png, id=569, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
 
 <use rgpareto.png>
 Package pdftex.def Info: rgpareto.png used on input line 332.
 (pdftex.def)             Requested size: 365.68669pt x 136.83138pt.
-) [50] [51 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/ru
+) [51] [52 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/ru
 sashi/Documents/publications/thesis/rgpareto.png>]
 No file conclusions.tex.
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [52
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [53
 
 
 
 
 
 
-] [53]
-[54]
+] [54]
+[55]
 Missing character: There is no â in font jkpmn7t!
 Missing character: There is no € in font jkpmn7t!
 Missing character: There is no “ in font jkpmn7t!
@@ -1224,7 +1224,7 @@ Underfull \hbox (badness 2119) in paragraph at lines 131--138
 \OT1/jkp/m/it/12 Demo-cratic
  []
 
-) [55]
+) [56]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
@@ -1234,7 +1234,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
 Package rerunfilecheck Info: File `phd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E74D6AE485919ADEE7A0667E98E19072;2965.
+(rerunfilecheck)             Checksum: 09F899E9C738A1E8507640B0011CBC7F;2965.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  )
 (\end occurred inside a group at level 3)
@@ -1244,9 +1244,9 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
 ### semi simple group (level 1) entered at line 150 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10216 strings out of 493921
- 151030 string characters out of 3147275
- 230410 words of memory out of 3000000
+ 10221 strings out of 493921
+ 151073 string characters out of 3147275
+ 230411 words of memory out of 3000000
  13093 multiletter control sequences out of 15000+200000
  55379 words of font info for 129 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1266,9 +1266,9 @@ KTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/rusashi/AppData/Roamin
 g/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/rusashi/AppData/Roa
 ming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/rusashi/AppData
 /Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on phd_thesis.pdf (65 pages, 573887 bytes).
+Output written on phd_thesis.pdf (66 pages, 577969 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
+ 709 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 
