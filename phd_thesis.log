@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  9 MAR 2014 23:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  11 MAR 2014 01:53
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -1072,22 +1072,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
-[24] [25] [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-
- []
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+[24] [25] [26] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--438
+Underfull \hbox (badness 10000) in paragraph at lines 439--441
 
  []
 
-[29]) [30] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
+
+ []
+
+) [30] (C:\Users\rusashi\Documents\publications\thesis\methodology.tex
 Chapter 2.
 [31
 
@@ -1266,7 +1266,7 @@ KTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/rusashi/AppData/Roamin
 g/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/rusashi/AppData/Roa
 ming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/rusashi/AppData
 /Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on phd_thesis.pdf (66 pages, 577969 bytes).
+Output written on phd_thesis.pdf (66 pages, 579316 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  183 named destinations out of 1000 (max. 500000)
