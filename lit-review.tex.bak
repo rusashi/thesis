@@ -63,6 +63,7 @@ And again $\gamma$ is the discount factor and $\emph{$s_{t+1}$}$ = $\emph{f}$ ($
 Essentially, $ \gamma $ converts an infinite horizon MDP into a finite one. It is important to notice that in some cases it is possible to remove $ \gamma $ completely. For example, consider a case of a finite MDP with a -1 penalty for each move of an agent. In this setting this penalty will essentially work as $\gamma$.
 
 \subsection{Dynamic Programming influence.}
+\label{sec:dynamic-programming-influence}
 
 Dynamic programming (Bellman, 1956\nocite{bellman1956dynamic}) is the scientific discipline centered around calculating the optimal policies for a given MDP. It has a strong assumption that we have a perfect model of the MDP (full knowledge of the transition and the reward functions).
 
@@ -185,18 +186,17 @@ Q-Learning requires several criteria to be met:
 \end{itemize}
 However, in practice the algorithm converges without some of these strict criteria. For example, in many cases the algorithm is able to converge with fixed $ \alpha $ parameter.
 
-\subsection{Off-policy and On-policy algorithms.}
-Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown to a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must at some point ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return.
+\subsection{Exploration vs Exploitation.}
+Previous section noted that temporal-difference methods such as the Q-Learning must be built in a way that ensures that every state-action pair is visited infinitely many times. This criterium is essential from the convergence point of view, remember that in the reinforcement learning a reward function is unknown to a learning algorithm and the only way to find the optimum sequence of actions is to try them all and calculate which one produces higher return. This means that the learning algorithm must \textit{explore} a state-action space of an environment and regularly (but not necessary frequently) ignore a greedy action suggested by his current approximation of an optimal value function and instead choose some other action hoping that it will lead to a higher return.
 
-One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns may differ from the value of the starting state predicted by the learned optimal Q-function. That is there will be a difference between the learned optimal Q-function and the actual results while the agent is learning. This behaviour is due to:
-\begin{itemize}
-  \item Q-learning learns the value of optimal sequence of actions given any starting state.
-  \item The algorithm will introduce a randomness into action-selection process to insure that every state-action pair is selected (required by proof of convergence). Thus the actual sequence of actions taken by the agent will almost never be optimal.
-\end{itemize}
+One way to achieve this behaviour is to use the $\epsilon$-greedy action selection mechanism (Watkins, 1989\nocite{watkins1989learning}) - select a greedy action with probability $(1-\epsilon)$ and a random action with probability $\epsilon$, where the $\epsilon$ is between 0 and 1. In many cases an experimenter will want to have a low value for $\epsilon$ because he not only wants to learn the optimal behaviour but also cares about the algorithm's performance during learning. For example, while learning the best medical treatment for a patient one still cares about consequences of the actions taken while learning. Although, the goal of the learning algorithm was to find the best treatment, the experimenter still wanted to \textit{exploit} a current optimal behaviour.
+
+\subsection{Off-policy and On-policy algorithms.}
+One can run a series of episodes starting from the same starting state and record the return in each of the episodes. The average of those returns may differ from the value of the starting state predicted by the learnt optimal Q-function. That is there will be a difference between the learnt optimal Q-function and the actual results while the agent is learning. This behaviour is due to the exploration vs exploitation phenomenon.
 
 Off-policy algorithms, such as Q-learning, do not record the actual value of each state-action pair, rather they record optimal value; They miss the fact that during each action-selection phase there might be a random action with potential negative outcome. As a result the agent might easily identify the greediest action among available actions but it will miss the fact that taking that greedy action might potentially result in big penalties due to possible exploratory actions.
 
-On the other hand, on-policy methods do take into account the randomness associated with the action selection mechanism of the policy being followed. Thus the values $ Q_{\pi}(s,a) $, for each state action pair, reflect the average of all sequences of actions that are possible under the policy $ \pi $.
+On the other hand, on-policy methods do take into account the randomness associated with the action selection mechanism of the policy being followed. Thus the values $ Q_{\pi}(s,a) $, for each state action pair, reflect the average of all sequences of actions that are possible under the policy $ \pi $, including the effect of exploratory actions (for example, the Sarsa algorithm which is discussed in the next section).
 
 Q-learning is ideal for applications where an identification of optimal policy is the only goal. That is when there is no harm done to the agent itself or other involved parties if the agent has performed an action which results in big penalties. An example is escaping from a maze - the goal is to find an optimal escape route. It doesn't matter how many times the agent was circling around the maze while exploring. On the other hand, if a Mars rover is exploring the surface of the planet, it becomes very expensive and potentially dangerous for the equipment.
 
@@ -284,7 +284,7 @@ And we already know that point \textbf{x} is the maximum of the given optimizati
 
 The more weight we apply to the specified objective the more favourable to the specified objective will be the identified point of the Pareto front. This allows us to perceive weights as a form of preference. However, setting the preferences a priori means human interaction and sometimes it is not so clear how to set these preferences.
 
-Another limitation of this approach is the inability to locate concave points of the Pareto front. For example if the Pareto front has a concave shape then this approach will only locate extreme points.
+A far greater limitation of this approach is the inability to locate concave points of the Pareto front, which significantly limits the area of application of this technique.
 
 \subsubsection{Lexicographical Ordering.}
 Another widely used approach is to order objective functions $ f_{1}(),...,f_{n}() $ according to their importance.
@@ -302,14 +302,14 @@ Reinforcement learning initially was applied to find optimal policies in single 
 This section will review the main work done on temporal-difference multi-objective reinforcement learning. It is only a review of the most seminal works, for more details please refer to Roijers et al. (2013)\nocite{roijers2013survey}. The first subsection will review temporal-difference methods based on the linear scalarization while the second subsection will consider non-linear methods. This separation is selected partially because linear methods are proven to converge while non-linear may not.
 
 \subsection{Multi-Objective Markov Decission Processes (MOMDP).}
-As was mentioned in Section \ref{sec:agent-and-environment}, in Markov decision processes the quality of taking action $a$ in a state $s$ is evaluated via an immediate scalar reward signal $r$:
+As was mentioned in Section \ref{sec:agent-and-environment}, in single objective Markov decision processes the quality of taking an action $a$ in a state $s$ is evaluated via an immediate scalar reward signal $r$:
 $$ r = \rho(s,a,s'), $$
 where $s'$ is a successor state and $\rho()$ is a scalar reward function:
 $$ \rho : S \times A \times  S \rightarrow \mathbb{R}. $$
 In a MOMDP there are $n$ such reward functions $\rho_{1},\rho_{2},...,\rho_{n}$ and the immediate reward signal is a vector:
 $$ \vec{r} = (\rho_{1}(s,a,s'),\rho_{2}(s,a,s'),...,\rho_{n}(s,a,s')). $$
 This in turn makes the Q-function a vector-valued function:
-$$ \overrightarrow{Q(s,a)} = (R_{1},R_{2},...,R_{n}), $$
+$$ \vec{Q}(s,a) = (R_{1},R_{2},...,R_{n}), $$
 where $R_{i}$ is the total cumulative return for an objective function $i$ if an agent decides to take an action $a$ in a state $s$.
 
 Q-Learning, which was introduced in Section \ref{sec:q-learning}, was developed originally for single-objective MDPs, it can be observed from the update rule for this algorithm:
@@ -343,20 +343,20 @@ In the experimental results section the authors compared their proposed approach
 
 It is important to notice that it was probably the earliest work where non-uniform weights were used.
 
-Natarajan and Tadepalli (2005)\nocite{natarajan2005dynamic} used linear scalarization to sequentially learn multiple optimal policies. All the papers discussed so far
-organized trials in similar manner:
-
+Natarajan and Tadepalli (2005)\nocite{natarajan2005dynamic} used linear scalarization to sequentially learn multiple optimal policies. This work was motivated by scenarios where the objective weights may change over time, such as where these weights correspond to prices of different resources. All the papers discussed so far organized trials in similar manner:
 \begin{enumerate}
   \item Set preferences for each objective.
   \item Initialize value function.
-  \item Learn optimal policy for a the specified set of weights.
+  \item Learn optimal policy for the specified set of weights.
 \end{enumerate}
 
-All these steps need to be performed when preferences are changed. The authors noticed that the learnt value function for previous set of weights can be used to speed-up the learning process. If sets of weights are significantly different then one will not observe noticeable improvements. On the other hand, if the preferences correspond to nearby points in the objective space then the learning process will take full advantage of the value function learnt before. The authors propose mechanism which allows to determine which of the previously learnt policies should be used when the preferences are changed.
+All these steps need to be performed when preferences are changed. The authors noticed that the learnt value function for previous set of weights can be used to speed-up the learning process. If sets of weights are significantly different then one will not observe noticeable improvements. On the other hand, if the preferences correspond to nearby points in the objective space then the learning process will take full advantage of the value function learnt before. The authors propose a mechanism which allows to determine which of the previously learnt policies should be used when the preferences are changed.
 
-Two experimental domains are included in the paper: modified Buridan’s ass problem and network routing problem. The modified Buridan’s ass is the modification of the original problem (G{\'a}bor et al., 1998\nocite{gabor1998multi}). The modified version has an increased state-space - 3 by 3 grid world. A donkey is located in the middle of the grid world and two plates of food are located in top-left corner and bottom-right corner of the world respectively. The donkey must reach either of the plates with food to stay alive but every time he reaches for one of the plates the one might be stolen. Oveall there are three objectives: amount of food eaten, number of plates stolen and a number of moves made by the donkey. The authors demonstrate experimental results, which show a significant reduction of time-steps needed to learn optimal policies when prior value functions.
+Two experimental domains are included in the paper: modified Buridan's ass problem and network routing problem. The modified Buridan's ass is the modification of the original problem (G{\'a}bor et al., 1998\nocite{gabor1998multi}). The modified version has an increased state-space - 3 by 3 grid world. A donkey is located in the middle of the grid world and two plates of food are located in top-left corner and bottom-right corner of the world respectively. The donkey must reach either of the plates with food to stay alive but every time he reaches for one of the plates the one might be stolen. Oveall there are three objectives: amount of food eaten, number of plates stolen and a number of moves made by the donkey. The authors demonstrate experimental results, which show a significant reduction of time-steps needed to learn optimal policies when prior value functions.
 
-The network routing domain represents typical computer network with a number of nodes connected though a specified network topology. Three objectives are present: end to end delay, number of packets lost and power consumed by a node. Each state is represented by a current node and destination node. Actions are represented by neighbors of the current node through which the packet might be sent. Overall goal is to find an optimal routing policy according to specified preferences. The experimental results again demonstrate that learning from scratch for each set of weights takes a significantly loner amount of time than learning from prior policies.\\
+The network routing domain represents a typical computer network with a number of nodes connected through a specified network topology. Three objectives are present: an end to end delay, number of packets lost and a power consumed by a node. Each state is represented by a current node and a destination node. Actions are represented by neighbors of the current node through which a packet might be sent. Overall goal is to find an optimal routing policy according to specified preferences. The experimental results again demonstrate that learning from scratch for each set of weights takes a significantly longer amount of time than learning from previously learnt policies.
+
+As discussed by Roijers et al. (2013)\nocite{roijers2013survey}, a linearly-weighted MOMDP can be mapped to a single objective MDP and so existing convergence proofs for single objective temporal-difference methods apply to linearly-scalarized multi-objective temporal-difference. However it is important to note that the limitations of linear scalarization discussed in Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front} also apply - that is linearly-scalarized temporal-difference will not find Pareto-optimal policies which lie in concave regions of the Pareto front, as demonstrated by Vamplew et al. (2008)\nocite{vamplew2008limitations}. Despite this, linear-scalarized temporal-difference remains the most widely used approach to MORL, particulary in applied work\footnote{Peter, can you suggest which papers I should reference here}.
 
 \subsection{Non-linear Temporal Difference Learning.}
 
@@ -414,24 +414,28 @@ We know from Roijers et al. (2009)\nocite{roijers2013survey} that TD methods usi
 
 The algorithms reviewed in previous two sections belong to the class of single-policy methods, in that each run of the algorithm finds a single Pareto optimal policy (Vamplew et al., 2011\nocite{vamplew2011empirical}). To find an approximated Pareto front it is required to run the algorithm multiple times with different parameter setting (one for each Pareto optimal policy) and then manually combine them. In contrast, multi-policy algorithms aim to identify an approximated Pareto front in a single run. This section will examine important research in this direction.
 
-Barrett et al. (2008) \nocite{barrett2008learning} developed the method, called Convex Hull Value Iteration (CHVI), which successfully learns all the optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by the Q-vector of that trajectory. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. The authors define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull.
+Barrett et al. (2008) \nocite{barrett2008learning} developed the method, called Convex Hull Value Iteration (CHVI), which successfully learns all optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by it's Q-vector. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. They define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull. This function is analogous to a normal Q-function for single objective MDPs as it also returns the optimal cumulative return. But in multi-objective MDPs, optimal means non-dominated and there are more than one optimal cumulative return for any state-action pair $(s,a)$ and the function $\overset{\circ}{Q}(s,a)$ stores all optimal cumulative returns.
 
-Single objective problems are naturally suitable for the Q-Learning update rule
-$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
-Here we are backing a Q-value for previous state-action pair with immediate reward and maximum expected reward from successor state. In single-objective problems, it is always easy to find which sequence of actions will gain more rewards. So it always clear which value to use in this update rule. In contrast, multi-objective problems lack this clarity of choice. Now, we may have a multiple number of incomparable sequences of actions. The authors propose that we should use all optimal sequences of actions from a successor state and use all of them to back previous state-action pair. We no longer keep a single value for any state-action pair, rather we keep a set of values (convex hull of optimal Q-values). Thus we keep track of all possibilities for each state-action pair. At any time we can apply preferences (represented as a set of weights) to identify optimal policy.
-
-The paper contains proof of correctness of this approach. The authors also included one test problem called Resource Gathering. This problem is a two dimensional grid world, an agent can locate two types of resources in this grid world. The agent receives a reward for each item brought home. However there are also two enemy positions were the agent can be attacked. If attacked, the agent receives a penalty and is moved to the home state.
-
-This paper proposes an idea of learning optimal policies without ever specifying our preferences. This is a complectly opposite approach to most of the research done. Usually, we first set preferences and only after that we learn policy optimal to those preferences.
-
-
+Before defining a recurrence relation for the $\overset{\circ}{Q}$-function, the authors define following operations:\\
 Translation and scaling operations
 $$ \vec{u}+b\overset{\circ}{Q}  \equiv \left\{ \vec{u} + b\vec{q} \;\;|\;\; \vec{q} \in \overset{\circ}{Q} \right\} $$
-
 Addition of two convex hulls
 $$ \overset{\circ}{Q} + \overset{\circ}{U} \equiv \left\{ \vec{q} + \vec{u} \;\;|\;\; \vec{q} \in \overset{\circ}{Q},\vec{u} \in \overset{\circ}{U} \right\} $$
+The recurrence relation is
+$$ \overset{\circ}{Q}(s,a) = \mathbb{E}\left[ \vec{r}(s,,a) + \gamma \; hull \; \underset{a'}{\bigcup} \; \overset{\circ}{Q}(s',a') | s,a \right], $$
+where the operator \textit{hull} extracts all vertices of a resulting convex hull. The authors used the value iteration algorithm (see Section \ref{sec:dynamic-programming-influence}) to solve this recurrence relation.
 
+After the algorithm has converged, it is possible to extract an optimal Q-vector for some weight vector $\vec{w}$:
+$$ Q_{\vec{w}}(s,a) \equiv \underset{\vec{q}\in\overset{\circ}{Q}(s,a)}{\max} \vec{w} \cdot \vec{q}. $$
 
+The authors tested the CHVI on the test problem called Resource Gathering (see Section \ref{sec:resource-gathering}) and were able to find all optimal policies.
+
+CHVI is a planning algorithm which requires that a model of an environment must be learnt first. This idea was further developed by Mukai, Kuroe and Lima (2012)\nocite{Mukai2012}, who used the $\overset{\circ}{Q}$-function in a learning context. They replaced CHVI's recurrence relation with the temporal-difference update rule:
+$$ \overset{\circ}{Q}(s,a) \leftarrow (1-\alpha)\;\overset{\circ}{Q}(s,a) + \alpha \; \left[\; \vec{r}(s,a,s') + \gamma \; hull \; \underset{a'}{\bigcup} \; \overset{\circ}{Q}(s',a')\;\right]. $$
+
+They also proposed the improvement to the CHVI - for a state-action pair $(s,a)$, remove a Q-vector $\vec{q}$ from a $\overset{\circ}{Q}(s,a)$ if there is another vector $\vec{u}$ in the $\overset{\circ}{Q}(s,a)$ for which the following holds:
+$$ || \vec{q} - \vec{u} || < p, $$
+where $p$ is a threshold parameter.
 
 Lizotte et al. (2010) \nocite{lizotte2010efficient} also propose a mechanism to learn all optimal policies. They work with data from randomized medical treatments. These are the trials set up to find out how different patients react to different sequences of trials. The set of available actions consists of all possible treatments and set of all states consists of patient's health observations. They concentrate on two-objectives scenario, however, they do propose suggestions on how to extend their approach to more than two objectives. The first objective is the severity of the symptoms and the second objective measures the severity of the side-effects. \\
 

@@ -12,29 +12,30 @@
 \BOOKMARK [2][]{subsection.1.1.3}{1.1.3 Agent's goals.}{section.1.1}% 12
 \BOOKMARK [2][]{subsection.1.1.4}{1.1.4 Dynamic Programming influence.}{section.1.1}% 13
 \BOOKMARK [2][]{subsection.1.1.5}{1.1.5 Q-Learning.}{section.1.1}% 14
-\BOOKMARK [2][]{subsection.1.1.6}{1.1.6 Off-policy and On-policy algorithms.}{section.1.1}% 15
-\BOOKMARK [2][]{subsection.1.1.7}{1.1.7 SARSA.}{section.1.1}% 16
-\BOOKMARK [1][]{section.1.2}{1.2 Multi-objective Optimization.}{chapter.1}% 17
-\BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Multi-objective Problem.}{section.1.2}% 18
-\BOOKMARK [2][]{subsection.1.2.2}{1.2.2 Tradeoffs.}{section.1.2}% 19
-\BOOKMARK [2][]{subsection.1.2.3}{1.2.3 Dominance.}{section.1.2}% 20
-\BOOKMARK [2][]{subsection.1.2.4}{1.2.4 The Pareto Front.}{section.1.2}% 21
-\BOOKMARK [2][]{subsection.1.2.5}{1.2.5 Selecting a Solution in The Pareto Front.}{section.1.2}% 22
-\BOOKMARK [1][]{section.1.3}{1.3 Multi-objective Reinforcement Learning Research.}{chapter.1}% 23
-\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Multi-Objective Markov Decission Processes \(MOMDP\).}{section.1.3}% 24
-\BOOKMARK [2][]{subsection.1.3.2}{1.3.2 Linear Temporal Difference Learning.}{section.1.3}% 25
-\BOOKMARK [2][]{subsection.1.3.3}{1.3.3 Non-linear Temporal Difference Learning.}{section.1.3}% 26
-\BOOKMARK [2][]{subsection.1.3.4}{1.3.4 Simultaneous Learning of More Than One Policy.}{section.1.3}% 27
-\BOOKMARK [0][]{chapter.2}{2 Empirical Evaluation.}{}% 28
-\BOOKMARK [1][]{section.2.1}{2.1 Introduction.}{chapter.2}% 29
-\BOOKMARK [1][]{section.2.2}{2.2 The Empirical Evaluation Methodology.}{chapter.2}% 30
-\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Performance metrics.}{section.2.2}% 31
-\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Experiment Structure.}{section.2.2}% 32
-\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Benchmarking Software.}{section.2.2}% 33
-\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 34
-\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 35
-\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 36
-\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 37
-\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 38
-\BOOKMARK [0][]{section*.35}{Conclusions}{}% 39
-\BOOKMARK [0][]{section*.36}{References}{}% 40
+\BOOKMARK [2][]{subsection.1.1.6}{1.1.6 Exploration vs Exploitation.}{section.1.1}% 15
+\BOOKMARK [2][]{subsection.1.1.7}{1.1.7 Off-policy and On-policy algorithms.}{section.1.1}% 16
+\BOOKMARK [2][]{subsection.1.1.8}{1.1.8 SARSA.}{section.1.1}% 17
+\BOOKMARK [1][]{section.1.2}{1.2 Multi-objective Optimization.}{chapter.1}% 18
+\BOOKMARK [2][]{subsection.1.2.1}{1.2.1 Multi-objective Problem.}{section.1.2}% 19
+\BOOKMARK [2][]{subsection.1.2.2}{1.2.2 Tradeoffs.}{section.1.2}% 20
+\BOOKMARK [2][]{subsection.1.2.3}{1.2.3 Dominance.}{section.1.2}% 21
+\BOOKMARK [2][]{subsection.1.2.4}{1.2.4 The Pareto Front.}{section.1.2}% 22
+\BOOKMARK [2][]{subsection.1.2.5}{1.2.5 Selecting a Solution in The Pareto Front.}{section.1.2}% 23
+\BOOKMARK [1][]{section.1.3}{1.3 Multi-objective Reinforcement Learning Research.}{chapter.1}% 24
+\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Multi-Objective Markov Decission Processes \(MOMDP\).}{section.1.3}% 25
+\BOOKMARK [2][]{subsection.1.3.2}{1.3.2 Linear Temporal Difference Learning.}{section.1.3}% 26
+\BOOKMARK [2][]{subsection.1.3.3}{1.3.3 Non-linear Temporal Difference Learning.}{section.1.3}% 27
+\BOOKMARK [2][]{subsection.1.3.4}{1.3.4 Simultaneous Learning of More Than One Policy.}{section.1.3}% 28
+\BOOKMARK [0][]{chapter.2}{2 Empirical Evaluation.}{}% 29
+\BOOKMARK [1][]{section.2.1}{2.1 Introduction.}{chapter.2}% 30
+\BOOKMARK [1][]{section.2.2}{2.2 The Empirical Evaluation Methodology.}{chapter.2}% 31
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Performance metrics.}{section.2.2}% 32
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Experiment Structure.}{section.2.2}% 33
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Benchmarking Software.}{section.2.2}% 34
+\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 35
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 36
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 37
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 38
+\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 39
+\BOOKMARK [0][]{section*.35}{Conclusions}{}% 40
+\BOOKMARK [0][]{section*.36}{References}{}% 41
