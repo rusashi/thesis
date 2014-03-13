@@ -65,6 +65,12 @@ Lizotte, D.~J., Bowling, M.~H. and Murphy, S.~A., \emph{Efficient reinforcement
   analysis}, in \emph{Proceedings of the 27th International Conference on
   Machine Learning (ICML-10)}, 2010 pp. 695--702
 
+\bibitem{Mukai2012}
+Mukai, Y., Kuroe, Y. and Iima, H., \emph{Multi-objective reinforcement learning
+  method for acquiring all pareto optimal policies simultaneously}, in
+  \emph{Systems, Man, and Cybernetics (SMC), 2012 IEEE International Conference
+  on}, Oct 2012 pp. 1917--1923, \doi{10.1109/ICSMC.2012.6378018}
+
 \bibitem{natarajan2005dynamic}
 Natarajan, S. and Tadepalli, P., \emph{Dynamic preferences in multi-criteria
   reinforcement learning}, in \emph{Proceedings of the 22nd international

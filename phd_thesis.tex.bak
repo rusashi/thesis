@@ -65,15 +65,8 @@
 %\renewcommand{\headrulewidth}{0pt} % optional
 %\fancyhead[L]{\nouppercase{\leftmark}}
 %\fancyhead[R]{\thepage}
-\usepackage{kpfonts}
-\usepackage{stackengine}
-\usepackage{calc}
-\newlength\shlength
-\newcommand\xshlongvec[2][0]{\setlength\shlength{#1pt}%
-  \stackengine{-5.6pt}{$#2$}{\smash{$\kern\shlength%
-    \stackengine{7.55pt}{$\mathchar"017E$}%
-      {\rule{\widthof{$#2$}}{.57pt}\kern.4pt}{O}{r}{F}{F}{L}\kern-\shlength$}}%
-      {O}{c}{F}{T}{S}}
+%\usepackage{kpfonts}
+\newcommand*{\vv}[1]{\vec{\mkern0mu#1}}
 
 %\setlength{\headheight}{20pt}% adjust the value
 

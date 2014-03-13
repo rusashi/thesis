@@ -235,3 +235,11 @@ keywords = "Bayesian methods "
   year={1995},
   publisher={Morgan Kaufmann Publishers}
 }
+@article{sutton1996generalization,
+  title={Generalization in reinforcement learning: Successful examples using sparse coarse coding},
+  author={Sutton, Richard S},
+  journal={Advances in neural information processing systems},
+  pages={1038--1044},
+  year={1996},
+  publisher={Citeseer}
+}

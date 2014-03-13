@@ -63,6 +63,7 @@ And again $\gamma$ is the discount factor and $\emph{$s_{t+1}$}$ = $\emph{f}$ ($
 Essentially, $ \gamma $ converts an infinite horizon MDP into a finite one. It is important to notice that in some cases it is possible to remove $ \gamma $ completely. For example, consider a case of a finite MDP with a -1 penalty for each move of an agent. In this setting this penalty will essentially work as $\gamma$.
 
 \subsection{Dynamic Programming influence.}
+\label{sec:dynamic-programming-influence}
 
 Dynamic programming (Bellman, 1956\nocite{bellman1956dynamic}) is the scientific discipline centered around calculating the optimal policies for a given MDP. It has a strong assumption that we have a perfect model of the MDP (full knowledge of the transition and the reward functions).
 
@@ -414,24 +415,19 @@ We know from Roijers et al. (2009)\nocite{roijers2013survey} that TD methods usi
 
 The algorithms reviewed in previous two sections belong to the class of single-policy methods, in that each run of the algorithm finds a single Pareto optimal policy (Vamplew et al., 2011\nocite{vamplew2011empirical}). To find an approximated Pareto front it is required to run the algorithm multiple times with different parameter setting (one for each Pareto optimal policy) and then manually combine them. In contrast, multi-policy algorithms aim to identify an approximated Pareto front in a single run. This section will examine important research in this direction.
 
-Barrett et al. (2008) \nocite{barrett2008learning} developed the method which successfully learns all the optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by the Q-vector of that trajectory. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. The authors define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull.
+Barrett et al. (2008) \nocite{barrett2008learning} developed the method, called Convex Hull Value Iteration (CHVI), which successfully learns all optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by it's Q-vector. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. They define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull. This function is analogous to a normal Q-function for single objective MDPs as it also returns the optimal cumulative return. But in multi-objective MDPs, optimal means non-dominated and there are more than one optimal cumulative return for any state-action pair $(s,a)$ and the function $\overset{\circ}{Q}(s,a)$ stores all optimal cumulative returns.
 
-Single objective problems are naturally suitable for the Q-Learning update rule
-$$ Q(s_{t},a_{t}) \leftarrow Q(s_{t},a_{t}) + \alpha \; \left[\;r_{t+1} + \gamma\; \max_{a}Q(s_{t+1},a) - Q(s_{t},a_{t})\;\right]. $$
-Here we are backing a Q-value for previous state-action pair with immediate reward and maximum expected reward from successor state. In single-objective problems, it is always easy to find which sequence of actions will gain more rewards. So it always clear which value to use in this update rule. In contrast, multi-objective problems lack this clarity of choice. Now, we may have a multiple number of incomparable sequences of actions. The authors propose that we should use all optimal sequences of actions from a successor state and use all of them to back previous state-action pair. We no longer keep a single value for any state-action pair, rather we keep a set of values (convex hull of optimal Q-values). Thus we keep track of all possibilities for each state-action pair. At any time we can apply preferences (represented as a set of weights) to identify optimal policy.
-
-The paper contains proof of correctness of this approach. The authors also included one test problem called Resource Gathering. This problem is a two dimensional grid world, an agent can locate two types of resources in this grid world. The agent receives a reward for each item brought home. However there are also two enemy positions were the agent can be attacked. If attacked, the agent receives a penalty and is moved to the home state.
-
-This paper proposes an idea of learning optimal policies without ever specifying our preferences. This is a complectly opposite approach to most of the research done. Usually, we first set preferences and only after that we learn policy optimal to those preferences.
-
-
+Before defining a recurrence relation for the $\overset{\circ}{Q}$-function, the authors define following operations:\\
 Translation and scaling operations
 $$ \vec{u}+b\overset{\circ}{Q}  \equiv \left\{ \vec{u} + b\vec{q} \;\;|\;\; \vec{q} \in \overset{\circ}{Q} \right\} $$
-
 Addition of two convex hulls
 $$ \overset{\circ}{Q} + \overset{\circ}{U} \equiv \left\{ \vec{q} + \vec{u} \;\;|\;\; \vec{q} \in \overset{\circ}{Q},\vec{u} \in \overset{\circ}{U} \right\} $$
+The recurrence relation is
+$$ \overset{\circ}{Q}(s,a) = \mathbb{E}\left[ \vec{r}(s,,a) + \gamma \; hull \; \underset{a'}{\bigcup} \; \overset{\circ}{Q}(s',a') | s,a \right] $$
 
+The authors used the value iteration algorithm (see Section \ref{sec:dynamic-programming-influence}) to solve this recurrence relation. They tested this new algorithm on the test problem called Resource Gathering (see Section \ref{sec:resource-gathering}) and were able to find all optimal policies. 
 
+CHVI is a planning algorithm which requires that a model of an environment must be learnt first. This idea was further developed my Mukai, Kuroe and Lima (2012)\nocite{Mukai2012}.
 
 Lizotte et al. (2010) \nocite{lizotte2010efficient} also propose a mechanism to learn all optimal policies. They work with data from randomized medical treatments. These are the trials set up to find out how different patients react to different sequences of trials. The set of available actions consists of all possible treatments and set of all states consists of patient's health observations. They concentrate on two-objectives scenario, however, they do propose suggestions on how to extend their approach to more than two objectives. The first objective is the severity of the symptoms and the second objective measures the severity of the side-effects. \\
 
