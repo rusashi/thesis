@@ -35,6 +35,10 @@ Boyan, J. and Moore, A.~W., \emph{Generalization in reinforcement learning:
   Safely approximating the value function}, Advances in neural information
   processing systems, 1995, pp. 369--376
 
+\bibitem{brysmulti}
+Brys, T., Harutyunyan, A., Vrancx, P., Taylor, M.~E., Kudenko, D. and Now{\'e},
+  A., \emph{Multi-objectivization in reinforcement learning}
+
 \bibitem{castelletti2002reinforcement}
 Castelletti, A., Corani, G., Rizzolli, A., Soncinie-Sessa, R. and Weber, E.,
   \emph{Reinforcement learning in the operational management of a water
@@ -103,6 +107,12 @@ Sutton, R.~S. and Barto, A.~G., \emph{Time-derivative models of pavlovian
 Tanner, B. and White, A., \emph{Rl-glue: Language-independent software for
   reinforcement-learning experiments}, The Journal of Machine Learning
   Research, 2009, vol.~10:pp. 2133--2136
+
+\bibitem{Uchibe2007}
+Uchibe, E. and Doya, K., \emph{Constrained reinforcement learning from
+  intrinsic and extrinsic rewards}, in \emph{Development and Learning, 2007.
+  ICDL 2007. IEEE 6th International Conference on}, July 2007 pp. 163--168,
+  \doi{10.1109/DEVLRN.2007.4354030}
 
 \bibitem{vamplew2011empirical}
 Vamplew, P., Dazeley, R., Berry, A., Issabekov, R. and Dekker, E.,

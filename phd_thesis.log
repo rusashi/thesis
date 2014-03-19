@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  13 MAR 2014 01:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.10)  19 MAR 2014 14:53
 entering extended mode
 **C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
 (C:/Users/rusashi/Documents/publications/thesis/phd_thesis.tex
@@ -517,7 +517,7 @@ LaTeX Info: Redefining \nameref on input line 138.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<UBlogo.pdf, id=167, 77.28876pt x 78.2925pt>
+<UBlogo.pdf, id=171, 77.28876pt x 78.2925pt>
 File: UBlogo.pdf Graphic file (type pdf)
  <use UBlogo.pdf>
 Package pdftex.def Info: UBlogo.pdf used on input line 146.
@@ -557,7 +557,15 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
  [7
 
 ]
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lof [8
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.lof
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
+ [8
 
 ])
 \tf@lof=\write6
@@ -573,7 +581,7 @@ Chapter 1.
 
 
 
-] <agent-env-cycle.png, id=298, 336.65775pt x 145.7445pt>
+] <agent-env-cycle.png, id=295, 336.65775pt x 145.7445pt>
 File: agent-env-cycle.png Graphic file (type png)
 
 <use agent-env-cycle.png>
@@ -588,17 +596,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 [3] [4] [5] [6] [7] [8] [9] [10]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 162.
- [11]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 183.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 183.
- [12] [13] [14]
-[15] <paretofront.png, id=381, 219.82124pt x 175.857pt>
+ [11] [12] [13] [14] [15]
+<paretofront.png, id=379, 219.82124pt x 175.857pt>
 File: paretofront.png Graphic file (type png)
  <use paretofront.png>
 Package pdftex.def Info: paretofront.png used on input line 253.
@@ -624,143 +623,137 @@ Chapter 2.
 
 
 
-] [32] [33] [34] [35] <hypervolume.png, id=494, 244.5135pt x 213.79875pt>
+] [32] [33] [34] [35] <hypervolume.png, id=488, 244.5135pt x 213.79875pt>
 File: hypervolume.png Graphic file (type png)
 
 <use hypervolume.png>
 Package pdftex.def Info: hypervolume.png used on input line 64.
 (pdftex.def)             Requested size: 220.0601pt x 192.41708pt.
-
+ [36 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-<decisionTree.png, id=496, 543.02875pt x 304.13625pt>
+<decisionTree.png, id=494, 543.02875pt x 304.13625pt>
 File: decisionTree.png Graphic file (type png)
  <use decisionTree.png>
 Package pdftex.def Info: decisionTree.png used on input line 79.
 (pdftex.def)             Requested size: 325.81975pt x 182.48315pt.
 
-[36 <C:/Users/rusashi/Documents/publications/thesis/hypervolume.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<exampleMDPFront.png, id=503, 530.98375pt x 377.41pt>
+[37 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy)
+>] <exampleMDPFront.png, id=501, 530.98375pt x 377.41pt>
 File: exampleMDPFront.png Graphic file (type png)
 
 <use exampleMDPFront.png>
 Package pdftex.def Info: exampleMDPFront.png used on input line 90.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
 
-<exampleMDPOneMarkedPolicy.png, id=505, 530.98375pt x 377.41pt>
+<exampleMDPOneMarkedPolicy.png, id=503, 530.98375pt x 377.41pt>
 File: exampleMDPOneMarkedPolicy.png Graphic file (type png)
 
 <use exampleMDPOneMarkedPolicy.png>
 Package pdftex.def Info: exampleMDPOneMarkedPolicy.png used on input line 99.
 (pdftex.def)             Requested size: 318.5927pt x 226.44774pt.
- [37 <C:/Users/rusashi/Documents/publications/thesis/decisionTree.png (PNG copy
-)>] [38 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PN
-G copy)>] [39 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMark
-edPolicy.png (PNG copy)>]
-<reasonForMPLearning.png, id=524, 273.02pt x 353.32pt>
-File: reasonForMPLearning.png Graphic file (type png)
-
-<use reasonForMPLearning.png>
-Package pdftex.def Info: reasonForMPLearning.png used on input line 128.
-(pdftex.def)             Requested size: 163.81326pt x 211.99364pt.
- [40] [41 <C:/Users/rusashi/Documents/publications/thesis/reasonForMPLearning.p
-ng (PNG copy)>] [42] [43]
-<glue.png, id=549, 494.84875pt x 274.02374pt>
+ [38 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPFront.png (PNG c
+opy)>] [39 <C:/Users/rusashi/Documents/publications/thesis/exampleMDPOneMarkedP
+olicy.png (PNG copy)>] [40] [41]
+<glue.png, id=532, 494.84875pt x 274.02374pt>
 File: glue.png Graphic file (type png)
  <use glue.png>
-Package pdftex.def Info: glue.png used on input line 219.
+Package pdftex.def Info: glue.png used on input line 229.
 (pdftex.def)             Requested size: 445.35977pt x 246.61908pt.
- [44] [45 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [46]
-<dst.png, id=564, 281.25075pt x 204.765pt>
+ [42] [43 <C:/Users/rusashi/Documents/publications/thesis/glue.png>] [44] [45]
+<dst.png, id=551, 281.25075pt x 204.765pt>
 File: dst.png Graphic file (type png)
  <use dst.png>
-Package pdftex.def Info: dst.png used on input line 270.
+Package pdftex.def Info: dst.png used on input line 283.
 (pdftex.def)             Requested size: 253.12332pt x 184.28677pt.
-
-<dstPareto.png, id=566, 345.08925pt x 215.00325pt>
+ [46 <C:/Users/rusashi/Documents/publications/thesis/dst.png>]
+<dstPareto.png, id=557, 345.08925pt x 215.00325pt>
 File: dstPareto.png Graphic file (type png)
  <use dstPareto.png>
-Package pdftex.def Info: dstPareto.png used on input line 282.
+Package pdftex.def Info: dstPareto.png used on input line 295.
 (pdftex.def)             Requested size: 310.57745pt x 193.50113pt.
- [47]
-<pw.png, id=572, 249.93375pt x 252.945pt>
+
+<pw.png, id=559, 249.93375pt x 252.945pt>
 File: pw.png Graphic file (type png)
  <use pw.png>
-Package pdftex.def Info: pw.png used on input line 293.
+Package pdftex.def Info: pw.png used on input line 306.
 (pdftex.def)             Requested size: 224.9383pt x 227.64839pt.
- [48 <C:/Users/rusashi/Documents/publications/thesis/dst.png>] [49 <C:/Users/ru
-sashi/Documents/publications/thesis/dstPareto.png>] [50 <C:/Users/rusashi/Docum
-ents/publications/thesis/pw.png>] <rg.png, id=586, 269.20575pt x 269.20575pt>
+ [47 <C:/Users/rusashi/Documents/publications/thesis/dstPareto.png>] [48 <C:/Us
+ers/rusashi/Documents/publications/thesis/pw.png>] <rg.png, id=569, 269.20575pt
+ x 269.20575pt>
 File: rg.png Graphic file (type png)
- <use rg.png>
-Package pdftex.def Info: rg.png used on input line 323.
+
+<use rg.png>
+Package pdftex.def Info: rg.png used on input line 336.
 (pdftex.def)             Requested size: 161.52469pt x 161.52469pt.
-
-<rgpareto.png, id=588, 457.10776pt x 171.039pt>
+ <rgpareto.png, id=571, 457.10776pt x 171.039pt>
 File: rgpareto.png Graphic file (type png)
- <use rgpareto.png>
-Package pdftex.def Info: rgpareto.png used on input line 333.
+
+<use rgpareto.png>
+Package pdftex.def Info: rgpareto.png used on input line 346.
 (pdftex.def)             Requested size: 365.68669pt x 136.83138pt.
-) [51 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/rusashi
-/Documents/publications/thesis/rgpareto.png>]
+ [49]) [50 <C:/Users/rusashi/Documents/publications/thesis/rg.png> <C:/Users/ru
+sashi/Documents/publications/thesis/rgpareto.png>]
 No file conclusions.tex.
-(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [52
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.bbl [51
 
 
 
 
 
 
-] [53]
-[54]
+] [52]
+[53]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 
-Underfull \hbox (badness 1043) in paragraph at lines 141--148
+Underfull \hbox (badness 1043) in paragraph at lines 151--158
 []\OT1/cmr/m/n/12 Yaman, F., Walsh, T. J., Littman, M. L. and des-Jardins, M., 
 \OT1/cmr/m/it/12 Demo-cratic
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 141--148
+Underfull \hbox (badness 1325) in paragraph at lines 151--158
 \OT1/cmr/m/it/12 ap-prox-i-ma-tion of lex-i-co-graphic pref-er-ence mod-els\OT1
 /cmr/m/n/12 , Ar-ti-fi-cial In-tel-li-gence, 2011,
  []
 
-) [55]
+) [54]
+
+Package caption Warning: Unused \captionsetup[table] on input line 53.
+See the caption package documentation for explanation.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
- (C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
+(C:\Users\rusashi\Documents\publications\thesis\phd_thesis.aux
 (C:\Users\rusashi\Documents\publications\thesis\lit-review.aux)
 (C:\Users\rusashi\Documents\publications\thesis\methodology.aux)
 (C:\Users\rusashi\Documents\publications\thesis\conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
 Package rerunfilecheck Info: File `phd_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A4404EAEBCC118EC513553452A776F78;3053.
+(rerunfilecheck)             Checksum: CFFDCC958AE5356BA8A10896587D1933;3147.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
  )
-(\end occurred inside a group at level 3)
+(\end occurred inside a group at level 1)
 
-### simple group (level 3) entered at line 174 ({)
-### simple group (level 2) entered at line 137 ({)
 ### semi simple group (level 1) entered at line 150 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8975 strings out of 493921
- 134303 string characters out of 3147275
- 226035 words of memory out of 3000000
- 11900 multiletter control sequences out of 15000+200000
+ 8974 strings out of 493921
+ 134255 string characters out of 3147275
+ 224012 words of memory out of 3000000
+ 11903 multiletter control sequences out of 15000+200000
  15241 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,12n,39p,1228b,708s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,39p,1228b,705s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
@@ -768,18 +761,17 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb>
-Output written on phd_thesis.pdf (65 pages, 680355 bytes).
+lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl
+12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on phd_thesis.pdf (64 pages, 655730 bytes).
 PDF statistics:
- 738 PDF objects out of 1000 (max. 8388607)
- 186 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
+ 402 words of extra memory for PDF output out of 10000 (max. 10000000)
 

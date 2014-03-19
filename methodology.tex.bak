@@ -2,7 +2,7 @@
 
 \section{Introduction.}
 
-Whiteson and Littman (2011)\nocite{whiteson2011introduction} argued the importance of the empirical evaluation due to the natural limitations of other means to assess algorithms:
+Whiteson and Littman (2011)\nocite{whiteson2011introduction} argued the importance of the empirical evaluation of reinforcement learning algorithms due to the natural limitations of other means to assess algorithms:
 
 \begin{itemize}
   \item Subjective assessment (intuitive understanding) of an algorithm is prone to initial erroneous assumptions.
@@ -12,28 +12,28 @@ Thus the empirical evaluation is an important part of a research process.
 
 To conduct an empirical study one needs means to compare different algorithms. For example, classification algorithms are tested on data sets from special repositories. These data sets guarantee that different algorithms will be tested on the same set of benchmarks and thus they introduce more consistency into an assessment. They also allow an experimenter to make cross-comparison between different algorithms.
 
-Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from research areas like classification or clustering. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. In reinforcement learning a test problem is not a static data set but rather a software which reacts dynamically to the actions of an agent.
+Reinforcement learning in general and multi-objective reinforcement learning in particular are very different from research areas like classification or clustering. Reinforcement learning is a multi-step decision making process with a number of actions available at each state at every time step. Add to this a factor of randomness associated with state transition and reward functions. Having all these factors substantially complicates the creation of a test problem. In reinforcement learning a test problem is not a static data set but rather a piece of software which reacts dynamically to the actions of an agent.
 
-The absence of a central repository of test problems lead to the fact that every published paper (prior to 2011\footnote{Vamplew et all. (2011)\nocite{vamplew2011empirical} introduced a number of test problems which were picked up later by other researchers.}) is disconnected from all other papers in terms of test problems. All papers described in the literature review present a brand new test environments. Moreover the majority of the papers use only small amount of test problems, usually two\footnote{Peter, I still need some time to clarify how many test problems I will use, after that I will correct this section if needed}. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high, thereby allowing meaningful comparisons to be made between different algorithms.
+The absence of a central repository of test problems for multi-objective reinforcement learning lead to the fact that every published paper (prior to 2011\footnote{Vamplew et all. (2011)\nocite{vamplew2011empirical} introduced a number of test problems which were picked up later by other researchers.}) is disconnected from all other papers in terms of test problems. All papers described in the literature review present a brand new test environments. Moreover the majority of the papers use only a small amount of test problems, usually two\footnote{Peter, I still need some time to clarify how many test problems I will use, after that I will correct this section if needed}. This is in contrast with other areas of machine learning where each published paper is connected with other papers by using the same test data sets and the number of tested data sets is usually high, thereby allowing meaningful comparisons to be made between different algorithms.
 
-The last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the algorithm. The following information may be included in such a guidance:
+The last section of the first chapter reviewed some of the most important research in temporal difference multi-objective reinforcement learning. All reviewed papers were mainly concerned with proving the convergence of their algorithms. In each paper authors presented a small number of their own test problems and their own methodology. It is enough in terms of convergence proof but clearly not enough to provide the full guidance about the types of problems for which the algorithm will perform well. Importantly, the convergence proofs do not generally provide any guarantees about the speed of convergence. The following information may be included in such a guidance:
 \begin{itemize}
-  \item Information about the structure of a reward function. Whether the reward is intrinsic or extrinsic\footnote{Peter, can you suggest the papaer I should cite here?} may have a profound effect on the performance of some algorithms.
-  \item Each test problem must be built around particular property, which can be observed in realistic domains, such as the shape of the Pareto front.
-  \item Each algorithm should be subjected to a number of different test problems, to identify a realistic domain of application.
+  \item Information about the structure of a reward function. An extrinsic reward function assigns zero rewards for the majority of state transitions of an environment except for special ones (for example, a transition to a goal state). In contrast, an intrinsic reward function is non-zero most of the time (for example, a time penalty applied at every time step to make an agent learn the shortest path). For more information about the application of both extrinsic and intrinsic reward functions in reinforcement learning refer to Uchibe and Doya (2007)\nocite{Uchibe2007}.
+  \item Each test problem must be built around a particular property, which can be observed in realistic domains, such as a shape of the Pareto front.
+  \item Each algorithm should be subjected to a range of different test problems with varying characteristics, to identify a realistic domain of application.
 \end{itemize}
 
-One can also notice the absence of common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of a different algorithm. Even if the same test problem is used, each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not. Some of those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers. One major example can clarify the point. In multi-objective optimization the quality of an algorithm is evaluated by how close the algorithm approximates the Pareto front of a problem. Different methodologies measure this notion of "closeness" in a different way\footnote{Peter, can you suggest which paper I should cite here?} and therefore it becomes meaningless to compare the results which were obtained using different methodologies.
+One can also notice the absence of a common methodology across all reviewed papers. Thus one cannot easily compare the results of an algorithm presented in one paper with the results of a different algorithm. Even if the same test problem is used, each methodology essentially incorporates a unique idea of how to show whether an algorithm is effective or not, and those ideas may drastically differ. Overall it substantially complicates the process of comparing the results presented in different papers. One major example can clarify the point. In multi-objective optimization the quality of an algorithm is evaluated by how close the algorithm approximates the Pareto front of a problem. Different methodologies measure this notion of "closeness" in a different way (Berry, 2008\nocite{berry2008phd}) and therefore it becomes meaningless to compare the results which were obtained using different methodologies.
 
-The arguments above can explain the absence of empirical results so far. No single attempt was made to perform empirical evaluation of the proposed algorithms. Some of the papers provided empirical comparisons but only to prior versions of the same algorithms.
+The arguments above can explain the absence of empirical comparisons so far. No single attempt was made to perform a consolidated empirical evaluation of the proposed algorithms. Some of the papers provided empirical comparisons but only to prior versions of the same algorithms.
 
 \section{The Empirical Evaluation Methodology.}
 
 All of the works reviewed in the literature review chapter have the same limitations:
 \begin{itemize}
   \item Limited number of test problems.
-  \item No mention about the inability of the linear scalarization based algorithms to find concave points of the Pareto front. This limitation was quite known in traditional multi-objective optimization but until recently (Vamplew et al., 2008\nocite{vamplew2008limitations}) was never specifically mentioned in reinforcement learning theory. As a result later research work with uniform weights (Ferreira et al., 2012\nocite{F6363312}, Aissani, Beldjilali, and Trentesaux (2008)\nocite{aissani2008use}, Shabani (2009)\nocite{shabani2009incorporating}) also didn't mention possible limitations of this approach.
-  \item Each author or team of authors used their own evaluating methodology which complicates cross-comparison.
+  \item No mention about the inability of the linear scalarization based algorithms to find concave points of the Pareto front. This limitation was quite known in traditional multi-objective optimization but until recently (Vamplew et al., 2008\nocite{vamplew2008limitations}) was never specifically mentioned in reinforcement learning theory. As a result later research work with uniform weights (Ferreira et al., 2012\nocite{F6363312}, Aissani, Beldjilali, and Trentesaux (2008)\nocite{aissani2008use}, Shabani (2009)\nocite{shabani2009incorporating}) also did not mention possible limitations of this approach.
+  \item Each author or team of authors used their own evaluating methodology which complicates the cross-comparison.
 \end{itemize}
 
 This document will use the methodology previously proposed by Vamplew et al. (2011)\nocite{vamplew2011empirical}. This paper outlined very important aspects that should be introduced:
@@ -44,14 +44,14 @@ This document will use the methodology previously proposed by Vamplew et al. (20
 \end{itemize}
 
 \subsection{Performance metrics.}
-
+\label{sec:performance-metrics}
 Every multi-objective problem implies the existence of a set of Pareto optimal solutions. The task of the learning algorithm is to find an approximation to that front. The quality of the approximation defines the quality of the algorithm.
 
 Although every task has a true set of Pareto optimal solutions, machine learning algorithms can usually only approximate this set, and algorithms may vary in how well they estimate the front. Thus performance metrics should be introduced to facilitate in assessing the quality of the found set of Pareto optimal solutions.  Multi-objective reinforcement learning is similar to general multi-objective optimization in terms of a set of Pareto optimal solutions and so metrics previously considered in multi-objective optimization could easily be used in MORL.
 
-Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How these points are spread between each other? How many points are captured? And to which extent does the the approximation cover the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representation of these features. But each scalar representation captures only specific detail of the front such as diversity, cardinality or accuracy.
+Each approximation to a set of Pareto optimal solutions captures only particular points of the true set. How are these points spread relative to each other? How many points are captured? And to which extent does the the approximation cover the true set? All these important features could be encapsulated into a metric which allows us to compare two different learning algorithms. Early work in multi-objective optimization used scalar representations of these features. But each scalar metric captures only specific detail of the front such as diversity, cardinality or accuracy.
 
-Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, a composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\nocite{berry2008phd}) showed a preference of such composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization.
+Later work in multi-objective optimization used different approach. Instead of multiple number of scalar metrics, composite metrics compatible with the notion of Pareto dominance were proposed. Berry (2008)\nocite{berry2008phd} presented arguments for composite metrics over a number of scalar ones. A number of such approaches were used in multi-objective optimization. For the purposes of this study, I will follow the lead of Vamplew et al. (2011)\nocite{vamplew2011empirical} and focus on the hypervolume metric.
 
 \subsubsection{Hypervolume metric.}
 
@@ -62,7 +62,7 @@ Given two learning algorithms, an experimenter can run them on the same test pro
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.9]{hypervolume.png}
-\caption{The figure shows how points from a Pareto front approximation and a reference point together define the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point. The hyperolume of the enclosed region can be used as a measure of the quality of the frontal approximation.}
+\caption{The figure shows how points from a Pareto front approximation and a reference point together define the region of objective space. The black dots are Pareto optimal solutions and the red dot is the reference point. The hypervolume of the enclosed region can be used as a measure of the quality of the frontal approximation.}
 \label{fig:hyperVolume}
 \end{figure}
 
@@ -70,9 +70,9 @@ Given two learning algorithms, an experimenter can run them on the same test pro
 
 \subsubsection{Single-Policy Algorithms.}
 
-Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement} or Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of preferences. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified preferences.
+Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement}, Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of preferences. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified preferences.
 
-To illustrate the work of single policy algorithms consider the following example; A simple MDP was constructed, it consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic i.e. each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.\\
+To illustrate the work of single policy algorithms consider the following example of a simple MDP which consists only of three time steps. On every time step two actions are available - left and right. State transition is deterministic i.e. each action always leads to the same successor state. For more details refer to Figure~\ref{fig:decisionTree}.\\
 
 \begin{figure}[ht]
 \centering
@@ -81,9 +81,9 @@ To illustrate the work of single policy algorithms consider the following exampl
 \label{fig:decisionTree}
 \end{figure}
 
-One can identify four different policies for this example MDP. Essentially, every branch of this tree is a unique policy with it's associated return.
+One can identify four different deterministic policies for this example MDP. Essentially, every branch of this tree defines a unique policy with it's associated return.
 
-It is possible to look at this problem from a different perspective - from the objective space. Figure~\ref{fig:exampleMDPFront} shows two dimensional objective space for the example MDP problem. Each blue dot corresponds to a unique policy and it's coordinates are exactly this policy's return. Overall there are four points in the objective space, one for each policy. One can notice that this four points together constitute the Pareto front for this problem. This is because the example MDP problem doesn't have dominated policies.\\
+It is possible to look at this problem from a different perspective - in terms of the objective space. Figure~\ref{fig:exampleMDPFront} shows the two dimensional objective space for the example MDP problem. Each blue dot corresponds to a unique policy and it's coordinates are exactly this policy's return. Overall there are four points in the objective space, one for each policy. One can notice that this four points together constitute the Pareto front for this problem. This is because the example MDP problem doesn't have dominated policies.\\
 
 \begin{figure}[ht]
 \centering
@@ -92,24 +92,24 @@ It is possible to look at this problem from a different perspective - from the o
 \label{fig:exampleMDPFront}
 \end{figure}
 
-Consider any single-policy algorithm, for example one discussed in Castelleti et al. (2002)\nocite{castelletti2002reinforcement}. This algorithm requires a set of weights to be specified before the algorithm can start learning; Let $ \textbf{w} = \{0.4,0.6\} $ be this set of weights. Essentially, this algorithm is the multi-objective reinforcement learning adaptation of the linear-weighted average algorithm from general multi-objective optimization. Linear-weighted average algorithm will find which of the available solutions ( policies) will maximize the dot product of the return vector and the weight vector. In case of the example MDP, the policy with the return of [60,60] (see Figure~\ref{fig:exampleMDPOneMarkedPolicy}) will maximize the weighted average. The single-policy algorithm will learn the Q-function associated with this policy.
+Consider any single-policy algorithm, for example the linear scalarization approach discussed in Castelleti et al. (2002)\nocite{castelletti2002reinforcement}. This algorithm requires a set of weights to be specified before the algorithm can start learning; Let $ \textbf{w} = \{0.4,0.6\} $ be this set of weights. Essentially, this algorithm is the multi-objective reinforcement learning adaptation of the linear-weighted average algorithm from general multi-objective optimization. Linear-weighted average algorithm will find which of the available solutions (policies) will maximize the dot product of the return vector and the weight vector. In case of the example MDP, the policy with the return of [60,60] (see Figure~\ref{fig:exampleMDPOneMarkedPolicy}) will maximize the weighted average. The single-policy algorithm will learn the Q-function associated with this policy.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{exampleMDPOneMarkedPolicy.png}
-\caption{The blue dot which represents the policy with return [60,60] is marked with red circle around. The single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot.}
+\caption{The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}}
 \label{fig:exampleMDPOneMarkedPolicy}
 \end{figure}
 
-Even though the algorithm was able to identify one element of the Pareto front, it is still preferable to find the whole approximation of the front. The only way to achieve this with single policy algorithms is to reset the preferences every time the algorithm tries to identify another member of the Pareto front. This requires a special experiment design:
+Even though the algorithm was able to identify one element of the Pareto front, it is still preferable to find the whole approximation of the front as an algorithm is only useful if it performs well across it's entire range of parameters. The only way to achieve this with single policy algorithms is to reset the preferences every time the algorithm tries to identify another member of the Pareto front. This requires a special experiment design:
 
 \begin{enumerate}
-  \item Initialize an array of preferences, where each preference is an array itself(for example a set of weights).
-  \item For each item in the array of preferences run a single-policy algorithm for a specified number of episodes. After the algorithm has converged, extract the greediest Q-value of a starting state and record it. \textbf{NOTE:} Notice that a'priori an experimenter cannot identify which member of the Pareto front will be targeted by a certain set of preferences. One can only wait until the algorithm has learned the Q-function of a policy which is associated with the set of preferences. After that the greediest Q-value of the starting state will identify which point in the Pareto front was identified.
+  \item Initialize an array of preferences, where each preference is an array itself (for example a set of weights).
+  \item For each item in the array of preferences run a single-policy algorithm for a specified number of episodes. After the algorithm has converged, extract the greediest Q-value of a starting state and record it. \textbf{NOTE:} Notice that a priori an experimenter cannot identify which member of the Pareto front will be targeted by a certain set of preferences. One can only wait until the algorithm has learned the Q-function of a policy which is associated with the set of preferences. After that the greediest Q-value of the starting state will identify which point in the Pareto front was identified.
   \item Combine all recorded points into an approximation of the Pareto front.
 \end{enumerate}
 
-This experiment setting will allow to create an effective approximation of the Pareto front of an underlying problem. It is vital to have this approximation if one is to compare the performances of different algorithms.
+This experiment setting will allow us to create an effective approximation of the Pareto front of an underlying problem. It is vital to have this approximation if one is to compare the performances of different algorithms.
 
 \subsubsection{Multi-Policy Algorithms.}
 

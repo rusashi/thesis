@@ -127,6 +127,12 @@ doi={10.1109/SBR-LARS.2012.10},}
   year={1992},
   publisher={Springer}
 }
+@phdthesis{watkins1989learning,
+  title={Learning from delayed rewards.},
+  author={Watkins, Christopher John Cornish Hellaby},
+  year={1989},
+  school={University of Cambridge}
+}
 @article{pareto1896cours,
   title={Cours d$\backslash$'economie politique},
   author={Pareto, Vilfredo},
@@ -252,3 +258,12 @@ month={Oct},
 pages={1917-1923},
 keywords={Pareto optimisation;learning (artificial intelligence);multi-agent systems;vectors;Pareto optimal policies;agent;environment model;multiobjective reinforcement learning method;reward vector;scalarizing method;weight vector;Equations;Information science;Learning;Markov processes;Mathematical model;Pareto optimization;Vectors;Multi-objective problem;Pareto optimal policy;Reinforcement learning},
 doi={10.1109/ICSMC.2012.6378018},}
+@INPROCEEDINGS{Uchibe2007,
+author={Uchibe, E. and Doya, K.},
+booktitle={Development and Learning, 2007. ICDL 2007. IEEE 6th International Conference on},
+title={Constrained reinforcement learning from intrinsic and extrinsic rewards},
+year={2007},
+month={July},
+pages={163-168},
+keywords={Markov processes;constraint handling;decision making;learning (artificial intelligence);manipulator dynamics;multi-agent systems;nonlinear programming;CPGRL method;MDP problem;Markov decision process;constrained optimization problem;constrained policy gradient reinforcement learning;curiosity;extrinsic rewards;inequality constraints;intrinsic rewards;learning agent;learning progress;nonlinear programming;prediction error;robot arm control task;scalar reward function maximization;stochastic policy;Algorithm design and analysis;Cities and towns;Constraint optimization;Learning;Linear programming;Orbital robotics;Predictive models;Robot programming;Stochastic processes;Intrinsic and extrinsic rewards;reinforcement learning},
+doi={10.1109/DEVLRN.2007.4354030},}

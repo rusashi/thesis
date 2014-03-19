@@ -32,10 +32,11 @@
 \BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Performance metrics.}{section.2.2}% 32
 \BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Experiment Structure.}{section.2.2}% 33
 \BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Benchmarking Software.}{section.2.2}% 34
-\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 35
-\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 36
-\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 37
-\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 38
-\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 39
-\BOOKMARK [0][]{section*.35}{Conclusions}{}% 40
-\BOOKMARK [0][]{section*.36}{References}{}% 41
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Multi-Objective RL-Glue framework.}{section.2.2}% 35
+\BOOKMARK [1][]{section.2.3}{2.3 Benchmarks.}{chapter.2}% 36
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Deep sea treasure.}{section.2.3}% 37
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 MO-Puddleworld.}{section.2.3}% 38
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 MO-Mountain Car.}{section.2.3}% 39
+\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Resource gathering.}{section.2.3}% 40
+\BOOKMARK [0][]{section*.32}{Conclusions}{}% 41
+\BOOKMARK [0][]{section*.33}{References}{}% 42

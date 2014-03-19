@@ -359,14 +359,13 @@ The network routing domain represents a typical computer network with a number o
 As discussed by Roijers et al. (2013)\nocite{roijers2013survey}, a linearly-weighted MOMDP can be mapped to a single objective MDP and so existing convergence proofs for single objective temporal-difference methods apply to linearly-scalarized multi-objective temporal-difference. However it is important to note that the limitations of linear scalarization discussed in Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front} also apply - that is linearly-scalarized temporal-difference will not find Pareto-optimal policies which lie in concave regions of the Pareto front, as demonstrated by Vamplew et al. (2008)\nocite{vamplew2008limitations}. Despite this, linear-scalarized temporal-difference remains the most widely used approach to MORL, particulary in applied work\footnote{Peter, can you suggest which papers I should reference here}.
 
 \subsection{Non-linear Temporal Difference Learning.}
+Due to the limitations of linear scalarization, a small number of papers have explored the use of non-linear scalarization functions in combination with temporal-difference. Roijers et al. (2013)\nocite{roijers2013survey} also note that for some problem domains a non-linear scalarization may more naturally represent the preferences of the user of a system.
 
-In many applications there is a natural ordering of the objectives; For example, consider a cleaning robot with two objectives: maintain a battery charged at all times, and clean an office. In this scenario there is natural ordering - the battery of the robot should never deplete (cleaning is not possible if the robot's battery is depleted), thus maintaining the battery level is considered more important. Non-linear temporal-difference methods can accurately reflect this ordering of the objectives and thus are more suitable for this domain.
+In many applications there is a natural ordering of the objectives; For example, consider a cleaning robot with two objectives: maintain a battery charged at all times, and clean an office. In this scenario there is a natural ordering - the battery of the robot should never deplete (cleaning is not possible if the robot's battery is depleted), thus maintaining the battery level is considered more important. Non-linear temporal-difference methods can accurately reflect this ordering of the objectives and thus are more suitable for this domain. Importantly, it has also been shown (Yaman et al., 2010\nocite{Yaman20111290}) that people often employ lexicographic ordering of the objectives while making complex decisions.
 
-More importantly, it has been shown (Yaman et al., 2010\nocite{Yaman20111290}) that people often employ lexicographic ordering of the objectives while making complex decisions.
+One of the earliest and most widely cited publications in MORL is Gabor, Kalmar and Szepesvari (1998)\nocite{gabor1998multi}. The publication first develops a solution for multi-criteria dynamic programming. After that the solution is modified to be extended to multi-criteria reinforcement learning.
 
-One of the most earliest and most widely cited publications in MORL is Gabor, Kalmar and Szepesvari (1998)\nocite{gabor1998multi}. The publication first develops a solution for multi-criteria dynamic programming. After that the solution is modified to be extended to multi-criteria reinforcement learning.
-
-The authors aimed at developing a mechanism to order policies. For this purposes, they used a minimum threshold on one of the objectives. This allowed authors to use only one objective as a maximization criteria. This paper builds upon lexicographical ordering of objective functions, which was described in the the multi-objective optimization section (Section 1.2.5).
+The authors aimed at developing a mechanism to order policies. For this purposes, they used a minimum threshold on one of the objectives. This allowed authors to use only one objective as a maximization criteria. This paper builds upon lexicographical ordering of objective functions, which was described in Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front}.
 
 After showing that this approach converges for abstract multi-criteria dynamic programming problem, the authors extend the technique for multi-criteria reinforcement learning.
 
@@ -377,9 +376,9 @@ $$ SQ(s,a) = \max_{o=1...m} w_{o} \cdot | Q(s,a,o) - z^{*}_{o} | $$
 , where $m$ is the number of objectives. Given any state $s$ and all available actions $a$, we define a greedy action to be a solution to the following optimization problem:
 $$ \min_{a} SQ(s,a). $$
 
-The authors tested their approach on two well studied multi-objective reinforcement learning problems: the Deep Sea Treasure and the multi-objective Mountain Car. They were able to demonstrate that on both problems their non-linear scalarization approach was able to locate more optimal polices than usual linear scalarization.
+The authors tested their approach on two well studied multi-objective reinforcement learning problems: the Deep Sea Treasure and the multi-objective Mountain Car. They were able to demonstrate that on both problems their non-linear scalarization approach was able to locate more optimal polices than linear scalarization.
 
-Van Moffaert et al. (2013)\nocite{van2013hypervolume} proposed to use hypervolume indicator to guide action selection process. Their action-selection strategy (algorithm~\ref{alg:hb-as}) drastically differs from both linear and non-linear scalarization methods.
+Van Moffaert et al. (2013)\nocite{van2013hypervolume} proposed to use hypervolume indicator (see Section \ref{sec:performance-metrics}) to guide action selection process. Their action-selection strategy (algorithm~\ref{alg:hb-as}) drastically differs from both linear and non-linear scalarization methods.
 
 The agent maintains a list $l$ of points in the objective space. The list $l$ is empty at the beginning of an episode. On every step of the episode we map selected state-action to the objective space, according to q-value of the state-action pair. The resulting point is added to the list $l$.
 
@@ -408,13 +407,13 @@ This approach utilizes search in the objective space of a problem. That is the m
 
 The authors used the same set of test problems as in their work with Chebyshev scalarization function. On the Deep Sea Treasure problem, the hypervolume-based algorithm slightly outperformed one based on Chebyshev scalariation function, and significantly overpowered linear scalarization. On the multi-objective Mountain Car problem, the new algorithm performed comparably to Chebyshev scalarization function, and significantly outperformed one based on linear scalarization.
 
-We know from Roijers et al. (2009)\nocite{roijers2013survey} that TD methods using non-linear scalarization may fail to converge due to the non-additive structure of the returns. While the work discussed in this section reports successful results based on non-linear temporal-difference, it may be that this is due to the specific characteristics of the small number of test problems on which performance has been evaluated. A need exists for more comprehensive evaluation of such methods.
+It is known from Roijers et al. (2013)\nocite{roijers2013survey} that TD methods using non-linear scalarization may fail to converge due to the non-additive structure of the returns (see discussion about utility functions in Section \ref{sec:dynamic-programming-influence}). While the work discussed in this section reports successful results based on non-linear temporal-difference, it may be that this is due to the specific characteristics of the small number of test problems on which performance has been evaluated. A need exists for more comprehensive evaluation of such methods.
 
 \subsection{Simultaneous Learning of More Than One Policy.}
+\lable{sec:simultaneous-learning-of-more-than-one-policy}
+The algorithms reviewed in previous two sections belong to the class of single-policy methods, in that each run of the algorithm finds a single Pareto optimal policy (Vamplew et al., 2011\nocite{vamplew2011empirical}). To find an approximated Pareto front it is required to run the algorithm multiple times with different parameter settings (one for each Pareto optimal policy) and then manually combine them. In contrast, multi-policy algorithms aim to identify an approximated Pareto front in a single run. This section will examine the most important research in this direction.
 
-The algorithms reviewed in previous two sections belong to the class of single-policy methods, in that each run of the algorithm finds a single Pareto optimal policy (Vamplew et al., 2011\nocite{vamplew2011empirical}). To find an approximated Pareto front it is required to run the algorithm multiple times with different parameter setting (one for each Pareto optimal policy) and then manually combine them. In contrast, multi-policy algorithms aim to identify an approximated Pareto front in a single run. This section will examine important research in this direction.
-
-Barrett et al. (2008) \nocite{barrett2008learning} developed the method, called Convex Hull Value Iteration (CHVI), which successfully learns all optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by it's Q-vector. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. They define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull. This function is analogous to a normal Q-function for single objective MDPs as it also returns the optimal cumulative return. But in multi-objective MDPs, optimal means non-dominated and there are more than one optimal cumulative return for any state-action pair $(s,a)$ and the function $\overset{\circ}{Q}(s,a)$ stores all optimal cumulative returns.
+Barrett et al. (2008) \nocite{barrett2008learning} propose an algorithm called Convex Hull Value Iteration (CHVI) which allows learning all optimal policies at the same time. Given a state $s$ and an action $a$ in a multi-objective Markov decision process, there is a set of possible trajectories that follow taking the action $a$ in the state $s$. Utility of each trajectory is defined by it's Q-vector. It is possible to map all these Q-vectors into an objective space. The authors claim that each vertex of the resulting convex hull is a Q-vector of a non-dominated trajectory from which a non-dominated policy can be extracted. They define the function $\overset{\circ}{Q}(s,a)$ which returns the Q-vectors associated with each vertex of the resulting convex hull. This function is analogous to a normal Q-function for single objective MDPs as it also returns the optimal cumulative return. But in multi-objective MDPs, optimal means non-dominated and there are more than one optimal cumulative return for any state-action pair $(s,a)$ and the function $\overset{\circ}{Q}(s,a)$ stores all optimal cumulative returns.
 
 Before defining a recurrence relation for the $\overset{\circ}{Q}$-function, the authors define following operations:\\
 Translation and scaling operations
@@ -437,17 +436,17 @@ They also proposed the improvement to the CHVI - for a state-action pair $(s,a)$
 $$ || \vec{q} - \vec{u} || < p, $$
 where $p$ is a threshold parameter.
 
-Lizotte et al. (2010) \nocite{lizotte2010efficient} also propose a mechanism to learn all optimal policies. They work with data from randomized medical treatments. These are the trials set up to find out how different patients react to different sequences of trials. The set of available actions consists of all possible treatments and set of all states consists of patient's health observations. They concentrate on two-objectives scenario, however, they do propose suggestions on how to extend their approach to more than two objectives. The first objective is the severity of the symptoms and the second objective measures the severity of the side-effects. \\
+Lizotte et al. (2010) \nocite{lizotte2010efficient} also propose a mechanism to learn all optimal policies. They work with data from randomized medical treatments. These are the trials set up to find out how different patients react to different sequences of drug treatments. The set of available actions consists of all possible treatments and the set of all states consists of patient's health observations. They concentrate on two-objectives scenario, however, they do propose suggestions on how to extend their approach to more than two objectives. The first objective is the severity of the symptoms and the second objective measures the severity of the side-effects.
 
-They use model-based approach; Originally state-transition probabilities and reward function are not known for apparent reasons but it is possible to analyze data from the trials and make approximations for both state-transition probabilities and reward function. Each episode:
+They use a model-based approach; For this scenario, state-transition probabilities and reward function are not directly available but it is possible to analyze data from the trials and make approximations for both state-transition probabilities and reward function. Each episode:
 $$ s_{0},a_{0},r_{0},s_{1},a_{1s},r_{1}, ... , s_{T},a_{T},r_{T} $$
-is a history of prescribed treatments for one particular patient. At each time step $t$, $s_{t}$ is the health observations and $a_{t}$ is the prescribed treatment at this time step. These trajectories are used to make a model of the MDP. \\
+is a history of prescribed treatments for one particular patient. At each time step $t$, $s_{t}$ is the health observations and $a_{t}$ is the prescribed treatment at this time step. These trajectories are used to make a model of the MDP.
 
-After the the state-transition probabilities and the reward function are approximated, the authors use bottom-up dynamic programming approach. First they calculate the Q-function for the last time step $T$:
+After the state-transition probabilities and the reward function are approximated, the authors use a bottom-up dynamic programming approach. First they calculate the Q-function for the last time step $T$:
 $$ Q_{T}(s,a,\delta) = r_{T}(s,a,\delta), $$
 where $r(s,a,\delta)$ is
 $$ r(s,a,\delta) = (1 - \delta) \cdot r_{0}(s,a) + \delta \cdot r_{1}(s,a), $$
-where $ \delta \in [0,1] $, $ r_{0}(s,a) $ returns immediate reward for the first objective and $ r_{1}(s,a) $ returns immediate reward for the second objective. \\
+where $ \delta \in [0,1] $, $ r_{0}(s,a) $ returns immediate reward for the first objective and $ r_{1}(s,a) $ returns immediate reward for the second objective.
 
 After calculation of $ Q_{T} $ it is possible to calculate the Q-function for a time step $ t $ that precedes time step $ T $:
 $$ Q_{t}(s,a,\delta) = r_{t}(s,a,\delta) + E_{s'|s,a} \left[\; V_{t+1}(s',\delta)\;\right], $$
@@ -455,7 +454,7 @@ where $ V(s,\delta) = \max_a Q(s,a,\delta). $
 
 Modifying delta essentially changes preferences between the objectives and allows us to target different individual points of the Pareto front. The authors noticed that it is possible to choose a few values of $ \delta $ and calculate their respective representations in the objective space. After that it is possible to use linear spline interpolation to approximate all other points.
 
-The authors compare their approach to the Barrett et al. (2008)\nocite{barrett2008learning} and show that asymptotically their approach is better in terms of time and space complexity.
+The authors compare their approach to Barrett et al. (2008)\nocite{barrett2008learning} and show that asymptotically their approach is better in terms of time and space complexity.
 
 
 
