@@ -1,9 +1,9 @@
 \contentsline {chapter}{Abstract}{ii}{section*.1}
 \contentsline {chapter}{Statement of Authorship}{iii}{section*.2}
 \contentsline {chapter}{Acknowledgments}{iv}{chapter*.3}
-\contentsline {chapter}{List of Tables}{vii}{chapter*.5}
-\contentsline {chapter}{List of Figures}{viii}{chapter*.6}
-\contentsline {chapter}{List of Publications}{x}{section*.7}
+\contentsline {chapter}{List of Tables}{viii}{chapter*.5}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.6}
+\contentsline {chapter}{List of Publications}{xi}{section*.7}
 \contentsline {chapter}{\numberline {1}Literature review.}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Elements of reinforcement learning}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}The Problem.}{1}{subsection.1.1.1}
@@ -48,5 +48,11 @@
 \contentsline {subsection}{\numberline {2.3.2}MO-Puddleworld.}{47}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}MO-Mountain Car.}{49}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Resource gathering.}{49}{subsection.2.3.4}
-\contentsline {chapter}{Conclusions}{51}{section*.32}
-\contentsline {chapter}{\textbf {References}}{51}{section*.33}
+\contentsline {chapter}{\numberline {3}Evaluation of the single policy algorithms.}{51}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction.}{51}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Linear Scalarizaiton.}{51}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Lexicographic Ordering.}{52}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Benchmarks.}{53}{section.3.2}
+\contentsline {section}{\numberline {3.3}Limitations.}{53}{section.3.3}
+\contentsline {chapter}{Conclusions}{54}{section*.33}
+\contentsline {chapter}{\textbf {References}}{54}{section*.34}

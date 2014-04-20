@@ -8,17 +8,8 @@ An algorithm, which implements linear scalarization (for example Castelleti et a
 
 An experiment structure for a single policy algorithm based on the linear scalarization was given in Section \ref{sec:experiment-structure}. It is important to point out that a priori an experimenter does not know which preferences correspond to which policy and the experimenter will need to perform a number of test learning episodes to get an idea of a shape of a Pareto front for some MOMDP.
 
-\subsection{Lexicographic Ordering.}
-Lexicographic ordering of objectives relies on restricting all but one of the objectives to a certain threshold values thus allowing to use a maximization operator on the last unrestricted objective. This requires a domain knowledge which is not always practical to obtain, however, in many realistic domains it is possible to probe a problem with linear scalarization implementation to obtain a range of values for each of the objectives and use that knowledge to build a system of thresholds which will cover a Pareto front for the problem. 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.6]{exampleMDPOneMarkedPolicy.png}
-\caption{The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}}
-\label{fig:how-tlo-works}
-\end{figure}
-
-To illustrate how linear scalarization allows an experimenter to obtain the threshold values consider the Figure \ref{fig:how-tlo-works}. This is the example MOMDP with two objectives from Chapter two (see Section \ref{sec:experiment-structure}) with four non-dominated policies. The experimenter randomly chooses a set of weights $ \textbf{w} $ (for example let $ \textbf{w} = \{0.4,0.6\} $). This will make linear scalarization to learn optimal value function for the policy with return [60,60] (marked with a red circle on the Figure \ref{fig:how-tlo-works}). After that the experimenter can set a threshold of 60 for the first objective.
-
+\subsection{TLO.}
+TLO, due to its nature, requires some knowledge about the problem under consideration. Namely, thresholds should be provided for the first n-1 objectives, which clearly require some prior knowledge of the range of values expected for each objective. One way to obtain the required knowledge is to observe the results produced by the WS algorithm. The WS produced approximation to the Pareto front and by observing the actual points from that approximated front we can identify the region of objective space in which all points fell. Thus we can find min and max value for first n-1 objectives. Then we can use that information to tell TLO to look in the specific objective space region. Effectively we bound first n-1 objectives and leave the last objective unbound to see whether TLO can produce better results than WS. The following pseudo code sketches an action selection mechanism for the TLO algorithm.
 
 \section{Benchmarks.}
 
