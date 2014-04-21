@@ -1,19 +1,54 @@
 \chapter{Evaluation of the single policy algorithms.}
 
 \section{Introduction.}
-Last two chapters provided necessary background information, as well as, arguments for empirical evaluation of multi-objective reinforcement learning algorithms. This and all following chapters will be concentrating on empirical analysis of different groups of algorithms. This chapter will focus on single policy algorithms. That is, algorithms which upon completion will produce an optimal value function for one policy. Arguably, two of the most important approaches are linear scalarization (see Section \ref{sec:linear-temporal-difference-learning}) and lexicographic ordering (see Section \ref{sec:non-linear-temporal-difference-learning}).
+Last two chapters provided necessary background information, as well as, arguments for empirical evaluation of multi-objective reinforcement learning algorithms. This and all following chapters will be concentrating on an empirical analysis of different groups of algorithms. This chapter will focus on single policy algorithms. That is, algorithms which upon completion will produce an optimal value function for one policy. Two of the most common approaches are based on the well-established techniques from the multiobjective optimization: linear-weighted averages and lexicographic ordering (see Section \ref{sec:Selecting-a-solution-in-the-Pareto-Front} for explanation of both techniques).
 
-\subsection{Linear Scalarizaiton.}
-An algorithm, which implements linear scalarization (for example Castelleti et al., 2002\nocite{castelletti2002reinforcement}), can locate a single point of the Pareto front. The located point depends on a set of preferences which was given to the algorithm. By gradually changing the preferences over objectives the algorithm can locate optimal value functions for different policies, thus approximating the Pareto front.
+It is impossible to say which approach is better, rather like two non-dominated policies, these techniques are not comparable. Both have strong and weak points and ultimately the decision which algorithm to use should be based on a problem at hand. This chapter will present empirical results of both approaches for a range of test problems. Each of the problems exhibits a property found in realistic domains which will significantly affect the performance an algorithm under consideration.
 
-An experiment structure for a single policy algorithm based on the linear scalarization was given in Section \ref{sec:experiment-structure}. It is important to point out that a priori an experimenter does not know which preferences correspond to which policy and the experimenter will need to perform a number of test learning episodes to get an idea of a shape of a Pareto front for some MOMDP.
+\subsection{Weighted Scalarization.}
+Section \ref{sec:linear-temporal-difference-learning} documented how the linear-weighted averages algorithm was adopted in multi-objective reinforcement learning. Arguably the most seminal work in this direction was the linear-weighted averages implementation by Castelleti et al., (2002\nocite{castelletti2002reinforcement}), which is essentially a weighted scalarization of objective functions to reduce a multi-objective problem to a single objective one. 
 
-\subsection{TLO.}
-TLO, due to its nature, requires some knowledge about the problem under consideration. Namely, thresholds should be provided for the first n-1 objectives, which clearly require some prior knowledge of the range of values expected for each objective. One way to obtain the required knowledge is to observe the results produced by the WS algorithm. The WS produced approximation to the Pareto front and by observing the actual points from that approximated front we can identify the region of objective space in which all points fell. Thus we can find min and max value for first n-1 objectives. Then we can use that information to tell TLO to look in the specific objective space region. Effectively we bound first n-1 objectives and leave the last objective unbound to see whether TLO can produce better results than WS. The following pseudo code sketches an action selection mechanism for the TLO algorithm.
+Weighted scalarization allows an experimenter to locate a single point of the Pareto front. The located point depends on a set of preferences which was given to the algorithm. By gradually changing the preferences over objectives the algorithm can locate optimal value functions for different policies, thus approximating the Pareto front.
+
+An experiment structure for this type of a single policy algorithm was given in Section \ref{sec:experiment-structure}. It is important to point out that a priori the experimenter does not know which preferences correspond to which policy and the experimenter will need to perform a number of test learning episodes to get an idea of a shape of a Pareto front for some MOMDP.
+
+\subsection{Thresholded Lexicographic Ordering.}
+Gabor, Kalmar and Szepesvari (1998)\nocite{gabor1998multi} implemented lexicographic ordering of objectives in their algorithm called thresholded lexicographic ordering (see Section \ref{sec:non-linear-temporal-difference-learning}). Lexicographic ordering of objectives relies on restricting all but one of the objectives to a certain threshold values thus allowing to use a maximization operator on the last unrestricted objective. This requires a domain knowledge which is not always practical to obtain, however, in many realistic domains it is possible to probe a problem with weighted scalarization to obtain a range of values for each of the objectives and use that knowledge to build a system of thresholds which will cover a Pareto front for the problem.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{exampleMDPOneMarkedPolicy.png}
+\caption{Using the weighted scalarization will provide insights about points of a Pareto front for some problem. In this example the weighted scalarization identified one member of the Pareto front and obtained information can be used to specify thresholds for the thresholded lexicographic ordering algorithm. The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}}
+\label{fig:how-tlo-works}
+\end{figure}
+
+To illustrate how weighted scalarization allows an experimenter to obtain the threshold values consider the Figure \ref{fig:how-tlo-works}. This is the example MOMDP with two objectives from Chapter two (see Section \ref{sec:experiment-structure}) with four non-dominated policies. An experimenter randomly chooses a set of weights $ \textbf{w} $ (for example let $ \textbf{w} = \{0.4,0.6\} $). This will make weighted scalarization to learn optimal value function for the policy with return [60,60] (marked with a red circle on the Figure \ref{fig:how-tlo-works}). After that the experimenter initializes the thresholded lexicographic ordering algorithm with the threshold of 60 for the first objective and starts the algorithm. The algorithm will try to maximize the second objective given that it satisfied the threshold for the first objective.
 
 \section{Benchmarks.}
+As was mentioned in first two chapters of this paper MORL-Glue facilitates the creation of a central repository of test problems. This central repository should have a wide variety of test problems each of which subjects a learning algorithm to a particular property which is found in real life problems. All these properties should be well documented to facilitate exchange of the test problems.
 
-Provide empirical results of all algorithms.
+An example of such property is the type of rewards being used in a test problem. There are two types of rewards: extrinsic and intrinsic [10]. Intrinsic rewards are nonzero most of the time (like time penalty applied every time step), extrinsic rewards are non-zero only at special moments (like reaching a goal state). This is an important property as the algorithms may behave differently depending on the type of rewards. Another important property is the shape of the Pareto front. Research in multiobjective optimization has shown that frontal properties such as the presence of concave regions, discontinuities or uneven distribution of frontal points can significantly affect the performance of some algorithms.
+
+In this paper we will examine three benchmarks that were presented in [8].
+
+\subsection{Deep Sea Treasure.}
+Deep Sea Treasure is a two-dimensional environment. The environment represents an undersea world with multiple numbers of treasure locations with varying values. The agent controls a submarine, four actions are available: left, right, up, down. The agent faces two objectives: maximizing found treasure value and minimizing time penalty.
+
+Deep Sea Treasure is an interesting problem because of the fact that one of the objectives, treasure, is extrinsic and the second one, time, is intrinsic. In addition the Pareto front for this problem is globally concave. This structure of rewards is really suitable for showcasing advantages of TLO algorithm over WS.
+
+Table 1 shows the results of WS and TLO runs on the Deep Sea Treasure. As was expected the WS algorithm was not able to find concave Pareto front members. Contrary to the WS, the TLO algorithm was able to locate concave Pareto front members. So the TLO was able to find extreme members of the Pareto front as well as intermediate, this leads to higher hypervolume values.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  & 10k & 20k & 30k & 40k & 50k \\
+  \hline
+  WS & 388 & 292 & 462 & 288 & 142 \\
+  \hline
+  TLO & 460 & 510 & 510 & 510 & 510 \\
+  \hline
+\end{tabular}
+\end{center}
+
 
 \section{Limitations.}
 

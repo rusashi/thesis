@@ -275,6 +275,7 @@ Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of
 Some of the benchmarks presented in Vamplew et al (2011)\nocite{vamplew2011empirical} are already being widely adopted in the MORL community. For example, Van Moffaert et al. (2012)\nocite{vamplew2011empirical}, Brys (2013)\nocite{brysmulti} etc.
 
 \subsection{Deep sea treasure.}
+\label{sec:deep-sea-treasure}
 This test problem is a 10 by 11 grid world as shown in Figure \ref{fig:DSTOverview}. The grid represents an undersea surface with multiple number of treasure spots available. Each treasure spot has a different treasure value. The agent is represented as a submarine. Four actions are available to the agent - left, right, up, down. Each of the actions move the submarine by one square in appropriate direction; If an action results in the agent moving outside of the grid world then the agent is returned to his previous location. The reward signal for this problem is a two dimensional vector; the first component represents the amount of treasure that was found during a single episode, while the second component of the reward signal is an accumulated penalty over an episode (-1 for each move).
 
 \begin{figure}[ht]
@@ -298,6 +299,7 @@ Also this test problem comes with a known Pareto front which is shown in Figure 
 \end{figure}
 
 \subsection{MO-Puddleworld.}
+\label{sec:mo-puddleworld}
 This test problem is a two dimensional grid world with puddles located across the world as shown on Figure \ref{fig:PWOverview}. Each episode the agent starts at a random location and must reach the goal position(top-right corner) while avoiding the puddles. Four actions are available to the agent - left, right, up, down. In this test problem the reward signal is represented as a two dimensional vector; The first component is an accumulated time step penalty over an episode (-1 for each move), while the second component of the reward vector is an accumulated puddle penalty (each time the agent walks into a puddle a penalty is given to the agent).
 
 \begin{figure}[ht]
@@ -320,6 +322,7 @@ MO-Puddleworld is a modification of the original Puddleworld problem (Boyan and 
 \end{itemize}
 
 \subsection{MO-Mountain Car.}
+\label{sec:mo-mountain-car}
 This test problem represents a valley with a car that must escape from the valley. But the car's engine is too weak to overcome the gravity force so the car must first climb a hill on the left side of the valley with reverse acceleration to build enough momentum to escape from the valley through the hill on the right side. Three actions are available to the agent - full throttle forward, full throttle backward, and zero throttle. A penalty of -1 is received on all states except the goal state. There are two additional penalties: -1 for each reverse acceleration and -1 for each forward acceleration.
 
 As well as the MO-Puddleworld, the MO-Mountain Car is also a modification of the original single objective problem (Sutton, 1996\nocite{sutton1996generalization}). The original problem was modified by extending the reward signal from a scalar representation to a three component vector as described above.

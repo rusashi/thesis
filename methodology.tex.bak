@@ -67,7 +67,7 @@ Given two learning algorithms, an experimenter can run them on the same test pro
 \end{figure}
 
 \subsection{Experiment Structure.}
-
+\label{sec:experiment-structure}
 \subsubsection{Single-Policy Algorithms.}
 
 Single-policy algorithms (Castelleti et al., 2002\nocite{castelletti2002reinforcement}, Gabor, Kalmar and Szepesvari, 1998\nocite{gabor1998multi}) are initialized with a set of preferences. After that the algorithm executes a number of learning episodes and hopefully it will learn the Q-function of the optimal policy for the specified preferences.
@@ -129,7 +129,7 @@ However, not all multi-policy algorithms require such parameters (for example, L
 
 There is a trade-off between two types of multi-policy algorithms:
 \begin{itemize}
-  \item Parallel learning of policies (each policy specified by a set of parameters) is easier to implement but it requires a somewhat complicated experiment design.  
+  \item Parallel learning of policies (each policy specified by a set of parameters) is easier to implement but it requires a somewhat complicated experiment design.
   \item On the other hand, learning all policies without using parameters requires a less complicated experiment structure but the algorithms themselves are much more complicated.
 \end{itemize}
 %Single-policy algorithms are initialized with a set of parameters, usually its a set of weights - one for each objective. Eventually, this set of parameters gets mapped into one of the policies and the algorithm will learn the Q-function for this policy. As was mentioned before, an experimenter needs to prepare a number of sets of preferences (weights), and hopefully those sets will approximate the Pareto front and restart the experiment for every set of preferences.
@@ -245,7 +245,7 @@ The plug-in nature of the RL-glue framework perfectly addresses three aspects of
 Originally, RL-Glue is a software for single objective reinforcement learning but it can be adapted to multi-objective (which is also a part of this thesis) by replacing scalar reward signal with a vector-valued signal.
 
 \subsection{Multi-Objective RL-Glue framework.}
-RL-Glue framework is a perfect testing platform for reinforcement learning but it is hardcoded to work with single-objective domains. As a part of the contribution made by this thesis the RL-Glue framework was extended to work with multi-objective domains. RL-Glue framework is an open source software which allowed me to thoroughly study the architecture of the framework and to introduce changes which allowed the RL-Glue framework to represent a reward signal as a vector. 
+RL-Glue framework is a perfect testing platform for reinforcement learning but it is hardcoded to work with single-objective domains. As a part of the contribution made by this thesis the RL-Glue framework was extended to work with multi-objective domains. RL-Glue framework is an open source software which allowed me to thoroughly study the architecture of the framework and to introduce changes which allowed the RL-Glue framework to represent a reward signal as a vector.
 
 \section{Benchmarks.}
 
@@ -266,8 +266,8 @@ Each benchmark or test problem is created to address a particular aspect of real
 \item A mixture of episodic and continuing tasks;
 
 \item Each real-life problem assumes existence of Pareto front of optimal solutions. This front exhibits a number of different characteristics. A number of benchmarks should be created to expose the learning algorithms to all possible characteristics of the Pareto front.
-    
-\item Characteristics of a reward structure, such as different combinations of intrinsic and extrinsic rewards. 
+
+\item Characteristics of a reward structure, such as different combinations of intrinsic and extrinsic rewards.
 \end{itemize}
 
 Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of benchmarks with known Pareto fronts. This greatly facilitates in the evaluation of the multi-objectives algorithms. We will use this these benchmarks as the basis for the empirical studies reported in this thesis.
@@ -275,6 +275,7 @@ Vamplew et al (2011)\nocite{vamplew2011empirical} already introduced a number of
 Some of the benchmarks presented in Vamplew et al (2011)\nocite{vamplew2011empirical} are already being widely adopted in the MORL community. For example, Van Moffaert et al. (2012)\nocite{vamplew2011empirical}, Brys (2013)\nocite{brysmulti} etc.
 
 \subsection{Deep sea treasure.}
+\label{sec:deep-sea-treasure}
 This test problem is a 10 by 11 grid world as shown in Figure \ref{fig:DSTOverview}. The grid represents an undersea surface with multiple number of treasure spots available. Each treasure spot has a different treasure value. The agent is represented as a submarine. Four actions are available to the agent - left, right, up, down. Each of the actions move the submarine by one square in appropriate direction; If an action results in the agent moving outside of the grid world then the agent is returned to his previous location. The reward signal for this problem is a two dimensional vector; the first component represents the amount of treasure that was found during a single episode, while the second component of the reward signal is an accumulated penalty over an episode (-1 for each move).
 
 \begin{figure}[ht]

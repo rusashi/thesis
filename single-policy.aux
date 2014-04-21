@@ -5,14 +5,33 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction.}{51}{section.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Linear Scalarizaiton.}{51}{subsection.3.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Lexicographic Ordering.}{52}{subsection.3.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}\relax }}{52}{figure.caption.32}}
-\newlabel{fig:how-tlo-works}{{3.1}{52}{The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}\relax }{figure.caption.32}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Benchmarks.}{53}{section.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Limitations.}{53}{section.3.3}}
+\citation{gabor1998multi}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Weighted Scalarization.}{52}{subsection.3.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Thresholded Lexicographic Ordering.}{52}{subsection.3.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Using the weighted scalarization will provide insights about points of a Pareto front for some problem. In this example the weighted scalarization identified one member of the Pareto front and obtained information can be used to specify thresholds for the thresholded lexicographic ordering algorithm. The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}\relax }}{53}{figure.caption.32}}
+\newlabel{fig:how-tlo-works}{{3.1}{53}{Using the weighted scalarization will provide insights about points of a Pareto front for some problem. In this example the weighted scalarization identified one member of the Pareto front and obtained information can be used to specify thresholds for the thresholded lexicographic ordering algorithm. The blue dot which represents the policy with return [60,60] is marked with a red circle. The linear-scalarized single policy algorithm mentioned above will learn the Q-function for the policy associated with the marked blue dot, when given weight \{0.4,0.6\}\relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Empirical Results.}{53}{section.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Deep Sea Treasure.}{53}{subsection.3.2.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces TLO and WS algorithms tested on Deap Sea Treasure. Reference point is (0,-20). Epsilon is 0.17, alpha is 0.9, gamma is 1.0. Step limit is 200 per episode.\relax }}{54}{table.caption.33}}
+\newlabel{tab:deep-sea-treasure}{{3.1}{54}{TLO and WS algorithms tested on Deap Sea Treasure. Reference point is (0,-20). Epsilon is 0.17, alpha is 0.9, gamma is 1.0. Step limit is 200 per episode.\relax }{table.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces WS vs TLO tested on Deep Sea Treasure. Reference point is (0;-20). Epsilon is 0.17, alpha is 0.9, gamma is 1.0.\relax }}{54}{figure.caption.34}}
+\newlabel{fig:ws-tlo-dst-results}{{3.2}{54}{WS vs TLO tested on Deep Sea Treasure. Reference point is (0;-20). Epsilon is 0.17, alpha is 0.9, gamma is 1.0.\relax }{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}MO-PuddleWorld.}{54}{subsection.3.2.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces WS algorithm tested on MO-PuddleWorld problem with 5 different starting positions. Reference point is (-100,-100). Epsion is 0.15, alpha is 0.9, gamma is 1.0. Step limit is 100 steps per episode.\relax }}{55}{table.caption.35}}
+\newlabel{tab:mo-puddleworld-1}{{3.2}{55}{WS algorithm tested on MO-PuddleWorld problem with 5 different starting positions. Reference point is (-100,-100). Epsion is 0.15, alpha is 0.9, gamma is 1.0. Step limit is 100 steps per episode.\relax }{table.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces TLO algorithm tested on MO-PuddleWorld problem with 5 different starting positions. Reference point is (-100,-100). Epsion is 0.15, alpha is 0.9, gamma is 1.0. Step limit is 100 steps per episode.\relax }}{55}{table.caption.36}}
+\newlabel{tab:mo-puddleworld-2}{{3.3}{55}{TLO algorithm tested on MO-PuddleWorld problem with 5 different starting positions. Reference point is (-100,-100). Epsion is 0.15, alpha is 0.9, gamma is 1.0. Step limit is 100 steps per episode.\relax }{table.caption.36}{}}
+\citation{vamplew2011empirical}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces WS algorithm results on MO-MountainCar problem over 5 runs. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }}{56}{table.caption.37}}
+\newlabel{tab:mo-mountaincar-1}{{3.4}{56}{WS algorithm results on MO-MountainCar problem over 5 runs. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }{table.caption.37}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}MO-MountainCar.}{56}{subsection.3.2.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces TLO algorithm results on MO-MountainCar problem over 5 runs. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }}{57}{table.caption.38}}
+\newlabel{tab:mo-mountaincar-2}{{3.5}{57}{TLO algorithm results on MO-MountainCar problem over 5 runs. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }{table.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces WS vs TLO hypervolume growth on MO-MountainCar problem. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }}{57}{figure.caption.39}}
+\newlabel{fig:ws-tlo-mc-results}{{3.3}{57}{WS vs TLO hypervolume growth on MO-MountainCar problem. Starting position is always fixed and is -0.5. Reference point is (-300;-300;-300). Epsilon is 0.0, alpha is 0.9, gamma is 1.0.\relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Conclusion.}{57}{section.3.3}}
 \@setckpt{single-policy}{
-\setcounter{page}{54}
+\setcounter{page}{59}
 \setcounter{equation}{0}
 \setcounter{enumi}{5}
 \setcounter{enumii}{0}
@@ -27,8 +46,8 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{1}
-\setcounter{table}{0}
+\setcounter{figure}{3}
+\setcounter{table}{5}
 \setcounter{NAT@ctr}{0}
 \setcounter{parentequation}{0}
 \setcounter{float@type}{8}
@@ -41,7 +60,7 @@
 \setcounter{lotdepth}{1}
 \setcounter{Item}{13}
 \setcounter{Hfootnote}{5}
-\setcounter{bookmark@seq@number}{46}
+\setcounter{bookmark@seq@number}{49}
 \setcounter{ContinuedFloat}{0}
 \setcounter{thm}{0}
 \setcounter{prop}{0}
